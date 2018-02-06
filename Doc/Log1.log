@@ -1,0 +1,10 @@
+Microsoft HTML Help Compiler 4.73.8198
+
+Compiling d:\KapsulCVS\Doc\KapsulDoc.chm
+
+HHC5003: Error: Compilation failed while compiling Entities\Index.html.
+HHC3001: Warning: The file "d:\KapsulCVS\Doc\TechDoc\Index.html" has a link to a non-existent file: "d:\KapsulCVS\Doc\TechDoc\Messages\Index.html".
+
+
+The following files were not compiled:
+Entities\Index.html
