@@ -1,0 +1,110 @@
+- Le racourci Delete ne marche pas sur les lamps et camera
+OK
+- Les lightmaps qui sont pas en 256x256 ne sont pas plaqué correctement
+OK mais a retester avec les lumels 
+- On doit quitter et redémarrer pour voir la différence quand on recalcul les lightmaps
+OK 
+- Save ouvre a chaque fois la boite de dialogue Save As
+OK mais bugs a la sortie du prog messagebox(save ? yes no cancel) bug
+- La taille du brush de base, quand on crée, s'élargit tres vite quand on change le nombre de coté du brush de base
+OK ca change moins de taille mais maintenant, ca diminue au bout de ++ changements.
+- Il faudrais un rouge plus clair pour la sélection pcq on ne voit pas certaine texture sombre
+glColor4f(1,0.3f,0.3f,1); au lieu de 1,0,0,1
+- Rescaling, quand on arrive a un scaling fractionnaire, le pas est trop espacé...  fodrais un pas de 0.01...
+OK mais bug au bout de ++ centaines de frames
+- Ctrl-C, Ctrl-V, espace, crash...
+- Créer un brush/delete it, plus possible de créer d'autres brush
+OK 
+- Le undo marche pas toujours...
+Attente de le mettre partout ...en cours
+- Quand on annule la création d'un lampe ca crash a tout les coup
+OK 
+--- NEW ---
+- Créer un brush/delete it, plus possible de créer d'autres brush,
+ ca marche mais je doit clearer la selection en appuyant sur Escape avant de
+ pouvoir recrer un brush, a mon avis fo just clearer la selection automatiquement.
+OK a tester
+- Les lightmaps ne sont pas bien reloadé. Quand on quitte et relance Kapsul.
+- Le texte dans le fenetre n'est plus rendu apres le calcul des lightmaps.
+OK
+- Y'a une bordure blanche sur les lightmaps dans le rendu
+OK pour le debuggage, je les mets, si tu n'en veut pas, il faut decocher "round lightmap" dans le plugin lumiere.
+- Le calcul des spotslights ne correspond pas au rayons dessiné en jaune
+OK
+- Les fichiers lightmaps ne sont pas toujours enregistré dans le meme répertoire ke la map
+- Quand on sélectionne une lumiere on ne voit pas ses propriété dans le panneau des lumieres.
+ok Features:il faut faire 1 clic droit sur la lumiere (ou camera) et faire propriété dans le menu.
+- L'intensité de la lumiére ne s'affaiblit pas avec la distance.
+- Crash quand j'essaye de faire un undo sur la création des caméras.
+- Quand on switch d'un plugin vers le plugin map et que l'on clique dans une fenetre sélecitonnée il crée automatiquement un brush de 1 sur 1.
+OK mais si déplacement de la souris (meme 1 pixel) avec bt enfoncé, ya création
+- Bug de plaquage des lightmaps quand on utilise un lightmap de  128x128.
+- Bug de plaquage quand on utilise 16 lumel/coord.
+- Pas de possibilité de changer la texture des primitives, et la sélection ne marche
+  pas non plus.
+Pas de pb chez moi.+d'infos necessaire
+- Je sélectionne un brush, je change la texture, et y change la texture d'autres brush
+  aussi.
+pas de pb chez moi.+d'infos necessaire
+// -- New release ----------------------------
+- Les noms des vues ne sont plus rendues
+OK
+- Hollow brush replaque la texture par défaut sur le brush hollowé.
+- Impossible de cacher la skybox une fois k'on la chargé
+OK
+- Impossible de restaurer les barres d'outils et de plugin une fois
+  qu'on les a caché avec le menu view.
+OK
+- Exporter le nom de la skybox dans le fichier texte.
+- Ajouter deux raccourci : roulette de la souris - Zoom In/Out
+  dans la vue et bouton du milieu Panning.
+OK
+- La touche C pour changer la vue en caméra ne marche pas.
+OK
+- Quand on fait un CSG substract des brush/faces qui ne sont pas
+  touchée par le brush a soustraire sont aussi coupée.
+- Ajouter un outil régle qui permet de mesurer la distance entre
+  deux points.
+- Quand on a sélectionne un objet dans la liste des sélections
+  l'affichage n'est pas mis a jour automatiquement.
+- Lire les sous-répertoires des répertoire de textures.
+- Utiliser un ZBuffer 24/32 bits, probleme d'affichage avec
+  le Zbuffer 16 bits.
+- Sélection par face pour la modification des coordonnées de textures.
+- Crash kand on essaye d'utiliser des textures 256 couleurs.
+- Enlever completement le support des fichiers au format GIF,
+  pas supporté par le moteur, non pas par parressse ;) mais pcq
+  le format et copyrighté et qu'il fo payer des droits si on
+  l'utilise dans un application commercial. De plus le format
+  PCX le remplace parfaitement meme si il compresse un peu moin.
+- Tu peut utiliser des brushs non convexe, il faut juste qu'il soit
+  solide.
+??? je sais!?!
+- Il faut banire les faces a deux cotés pour la construction
+  des géométries du monde. != des entitiés.
+OK avec property objet force tri
+- DefaultTexture comme nom de texture a l'exportation n'est pas
+  tres pratik si on veut importer la meme dans le moteur 3D :)
+Ben si tu l'as, tu met 1 msg d'erreur lors de la compilation ou tu la gere.
+- L'affichage par type (Object, camera, ...) ne marche pas, il
+  affiche toujours tout.
+C'est pas 1 affichage, si tu sectionne camera, tu le pourra selectionner que des camera mais tu vera tjrs le reste ( a la 3DSMAx)
+--- NOTE DIVERS ---
+- Serait t'il possible d'avoir la liste des touches de raccourcis pour le scaling,
+  moving, rotation, et pour repasser en mode sélection stp...
+Liste des touches apres verification des accels & unifomisation
+- Une listes des objets créé avec possiblité de les sélectionner et de les supprimers.
+OK liste avec case a cocher pour la selection
+- La gestion de scripts n'a aucun lien avec la 3D pour l'instant.
+- A chaque version (ou presque), le format texte evolue (et evoluera). so, be carrefull.
+
+-- to do list
+
+- verifier ttes les selection & corriger si besoin
+- copy/cut/paste/delete
+- tooltips
+- noms des fenetres
+- bout de doc
+- undo dans modify,standard.
+- verif crossing et centering pour operation (avec axis)
+

@@ -1,0 +1,58 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: TOpen - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Debug/TOpen.res" /d "_DEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\TOpen\TOpen.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP11.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/TOpen.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\TOpen\KBrowseFolder2.cpp"
+"D:\KapsulCVS\src\TOpen\KFileDialog2.cpp"
+"D:\KapsulCVS\src\TOpen\TOpen.cpp"
+"D:\KapsulCVS\src\TOpen\TOpenDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP11.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP12.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/TOpen.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\TOpen\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP12.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13.tmp" with contents
+[
+kore.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/TOpen.pdb" /debug /machine:I386 /out:"../workspace/TOpen.exe" /pdbtype:sept 
+.\Debug\KBrowseFolder2.obj
+.\Debug\KFileDialog2.obj
+.\Debug\StdAfx.obj
+.\Debug\TOpen.obj
+.\Debug\TOpenDlg.obj
+.\Debug\TOpen.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+KBrowseFolder2.cpp
+KFileDialog2.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+TOpen.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+TOpenDlg.cpp
+Generating Code...
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Linking...
+   Creating library ../workspace/TOpen.lib and object ../workspace/TOpen.exp
+
+
+
+<h3>Results</h3>
+TOpen.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

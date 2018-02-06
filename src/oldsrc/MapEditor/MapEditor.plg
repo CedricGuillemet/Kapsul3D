@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MapEditor - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP151.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Release/MapEditor.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\KapsulCVS\src\MapEditor\MapEdUtils.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP151.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP152.tmp" with contents
+[
+opengl32.lib glu32.lib kore.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/Mapeditor.pdb" /machine:I386 /out:"../workspace/plugins/Mapeditor.dll" /implib:"Release/Mapeditor.lib" 
+.\Release\EditorFunc.obj
+.\Release\MapEd.obj
+.\Release\MapEditor.obj
+.\Release\MapEdUtils.obj
+.\Release\StdAfx.obj
+.\Release\ThumbnailDlg.obj
+.\Release\MapEditor.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP152.tmp"
+<h3>Output Window</h3>
+Compiling...
+MapEdUtils.cpp
+D:\KAPSULCVS\SRC\KORE\Entity.h(93) : warning C4800: 'unsigned int' : forcing value to bool 'true' or 'false' (performance warning)
+Linking...
+   Creating library Release/Mapeditor.lib and object Release/Mapeditor.exp
+
+
+
+<h3>Results</h3>
+Mapeditor.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Microsoft Developer Studio Generated Dependency File, included by TerrainEd.mak
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	
+
+.\TerrainEd.cpp : \
+	".\StdAfx.h"\
+	".\TerrainEd.h"\
+	".\TerrainEdDlg.h"\
+	
+
+.\TerrainEd.rc : \
+	".\res\TerrainEd.ico"\
+	".\res\TerrainEd.rc2"\
+	
+
+.\TerrainEdDlg.cpp : \
+	".\StdAfx.h"\
+	".\TerrainEd.h"\
+	".\TerrainEdDlg.h"\
+	

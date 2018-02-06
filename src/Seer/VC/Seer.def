@@ -1,0 +1,104 @@
+LIBRARY
+DESCRIPTION "SeeR scripting library"
+VERSION 0.940
+
+EXPORTS
+
+scInit_SeeR				@100
+scErrorNo               @101
+scErrorMsg              @102
+scErrorLine             @103
+scRuntime_Error         @104
+scSeeR_Get                              @105
+scSeeR_Set                              @106
+scProgressCallback              @107
+
+scScript_Title                  @109
+scScript_Author                 @110
+scScript_SeeR                   @111
+scParamCount                    @112
+scStandardDispatcher            @113
+scCDispatcher                   @114
+
+scCreate_Instance       @201
+scFree_Instance         @202
+scGet_This              @203
+scActual_Instance       @204
+scAssignInstance        @205
+
+scCompile_File          @301
+scCompile_Text          @302
+scLoad_Script           @303
+
+scStart_Instance        @401
+scGet_Script_Size       @402
+scCall_Instance         @403
+scVCall_Instance        @404
+scGet_Symbol            @405
+
+
+scAdd_Internal_Header   @501
+scAdd_External_Symbol   @502
+scExport_Kernel         @503
+scAdd_Member_Symbol             @504
+
+scGet_Scheduler         @601
+scSet_Scheduler         @602
+scVLaunch_Instance      @603
+scLaunch_Instance       @604
+scContinue_Instances    @605
+
+scPause_Instance        @606
+scKill_Instance         @607
+
+scGet_Forked            @608
+scFork_Instance         @609
+scKill_Forked_Instances @610
+
+scGet_Actual_Forked     @611
+scGet_Forked_Status     @612
+scKill_My_Forked_Instances   @613
+scKill_Forked           @614
+scGet_Instance_Status   @615
+
+scGet_Title             @701
+scGet_Author            @702
+scGet_Instance_Title    @703
+
+scToggle_Debug          @801
+scOpen_Debug            @802
+scClose_Debug           @803
+
+scIgnore_Rights         @901
+scSet_Priority          @902
+scGet_Priority          @903
+scGet_Actual_Priority   @904
+
+string_string_char              @1001
+string_string                   @1002
+string_operatorSET_int          @1003
+string_string_int               @1004
+string_destroy                  @1005
+string_copy                     @1006
+string_operatorSET              @1007
+string_operatorSET_char         @1008
+string_operatorPLUS             @1009
+string_operatorPLUS_char        @1010
+string_sub                      @1011
+string_cmp                      @1012
+string_eq                       @1013
+string_eq_char                  @1014
+string_gt                       @1015
+string_lt                       @1016
+string_ge                       @1017
+string_le                       @1018
+string_del                      @1019
+string_insert                   @1020
+string_find                     @1021
+string_replace                  @1022
+string_length                   @1023
+string_append                   @1024
+string_append_char              @1025
+string_toInt                    @1026
+string_operatorIDX              @1027
+string_reconstruct              @1028

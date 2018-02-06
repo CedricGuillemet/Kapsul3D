@@ -1,0 +1,7 @@
+; KGUI.def : Declares the module parameters for the DLL.
+
+LIBRARY      "KGUI"
+DESCRIPTION  'KGUI Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,24 @@
+#
+# Update Packages list
+#
+# Format is:
+# 1 Package name
+# Package Description
+# Package Zip name to download and install
+# Directory where to unzip it
+# 
+# The $ in the Directory line corresponds to Application installation directory
+# Do not add '\' at the end of that line
+#
+Developper
+Headers and libraries 
+DevPack.zip
+$\Dev
+Runtime
+Modeling package
+ModelingPack.zip
+$
+Examples
+Examples 
+ExamplePack.zip
+$\Meshes

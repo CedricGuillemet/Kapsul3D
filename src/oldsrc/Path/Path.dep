@@ -1,0 +1,72 @@
+# Microsoft Developer Studio Generated Dependency File, included by Path.mak
+
+.\ModdPath.cpp : \
+	".\stdafx.h"\
+	
+
+.\ModPath.cpp : \
+	".\ModdPath.h"\
+	".\stdafx.h"\
+	{$(INCLUDE)}"Bone.h"\
+	{$(INCLUDE)}"ButtonBar.h"\
+	{$(INCLUDE)}"Camera.h"\
+	{$(INCLUDE)}"Desk.h"\
+	{$(INCLUDE)}"Emitter.h"\
+	{$(INCLUDE)}"Face.h"\
+	{$(INCLUDE)}"font\font.h"\
+	{$(INCLUDE)}"font\gltga.h"\
+	{$(INCLUDE)}"font\tga.h"\
+	{$(INCLUDE)}"font\utility.h"\
+	{$(INCLUDE)}"GenericLib.h"\
+	{$(INCLUDE)}"GenericThread.h"\
+	{$(INCLUDE)}"headers.h"\
+	{$(INCLUDE)}"Image.h"\
+	{$(INCLUDE)}"jconfig.h"\
+	{$(INCLUDE)}"jmorecfg.h"\
+	{$(INCLUDE)}"jpeglib.h"\
+	{$(INCLUDE)}"Kapsul3D.h"\
+	{$(INCLUDE)}"KeyFrame.h"\
+	{$(INCLUDE)}"LibContainer.h"\
+	{$(INCLUDE)}"Light.h"\
+	{$(INCLUDE)}"Maps.h"\
+	{$(INCLUDE)}"Material.h"\
+	{$(INCLUDE)}"Maths.h"\
+	{$(INCLUDE)}"Matrix.h"\
+	{$(INCLUDE)}"Object.h"\
+	{$(INCLUDE)}"OGLView.h"\
+	{$(INCLUDE)}"Option.h"\
+	{$(INCLUDE)}"Particle.h"\
+	{$(INCLUDE)}"Plan.h"\
+	{$(INCLUDE)}"png.h"\
+	{$(INCLUDE)}"pngconf.h"\
+	{$(INCLUDE)}"PrivateData.h"\
+	{$(INCLUDE)}"quat.h"\
+	{$(INCLUDE)}"Script.h"\
+	{$(INCLUDE)}"Segment.h"\
+	{$(INCLUDE)}"SelectCam.h"\
+	{$(INCLUDE)}"Selection.h"\
+	{$(INCLUDE)}"Shape.h"\
+	{$(INCLUDE)}"Skeletton.h"\
+	{$(INCLUDE)}"SkyBox.h"\
+	{$(INCLUDE)}"Texture.h"\
+	{$(INCLUDE)}"tif_dir.h"\
+	{$(INCLUDE)}"tif_msrc.h"\
+	{$(INCLUDE)}"tiff.h"\
+	{$(INCLUDE)}"tiffcomp.h"\
+	{$(INCLUDE)}"tiffconf.h"\
+	{$(INCLUDE)}"tiffio.h"\
+	{$(INCLUDE)}"tiffiop.h"\
+	{$(INCLUDE)}"utils.h"\
+	{$(INCLUDE)}"VertBuf.h"\
+	{$(INCLUDE)}"Vertex.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+.\PathRes.rc : \
+	".\res\bitmap.bmp"\
+	
+
+.\stdafx.cpp : \
+	".\stdafx.h"\
+	

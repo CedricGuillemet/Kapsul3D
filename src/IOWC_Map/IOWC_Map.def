@@ -1,0 +1,9 @@
+; IOWC_Map.def : Declares the module parameters for the DLL.
+
+LIBRARY      "IOWC_Map"
+DESCRIPTION  'IOWC_Map Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateFileInterface
+	DeleteFileInterface

@@ -1,0 +1,174 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winresrc.h"
+#include "fontpgrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""winresrc.h""\r\n"
+    "#include ""fontpgrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FONTTYPE            BITMAP  DISCARDABLE     "res\\fonttype.bmp"
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_FONTPAGE DIALOG DISCARDABLE  13, 54, 232, 226
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "&Font:",stc1,5,5,175,10
+    COMBOBOX        IDC_FONT,5,15,175,85,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Size:",stc3,190,5,35,10
+    COMBOBOX        IDC_FONTSIZE,190,15,35,85,CBS_SIMPLE | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sc&ript:",stc2,5,95,60,10
+    COMBOBOX        IDC_SCRIPT,65,95,125,54,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sample",grp2,5,150,220,70,WS_GROUP
+    CTEXT           "AaBbYyZz",IDC_SAMPLE,10,160,210,55,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_ENCODING,65,115,125,160,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Default &encoding:",IDC_STATIC,5,115,60,10
+    CONTROL         "Per&form encoding conversion automatically",IDC_RECODE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,65,135,160,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FONTPAGE DLGINIT
+BEGIN
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0038, 
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0039, 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3832, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3633, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3834, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3237, "\000" 
+    IDC_SCRIPT, 0x403, 8, 0
+0x6557, 0x7473, 0x7265, 0x006e, 
+    IDC_SCRIPT, 0x403, 7, 0
+0x6548, 0x7262, 0x7765, "\000" 
+    IDC_SCRIPT, 0x403, 7, 0
+0x7241, 0x6261, 0x6369, "\000" 
+    IDC_SCRIPT, 0x403, 6, 0
+0x7247, 0x6565, 0x006b, 
+    IDC_SCRIPT, 0x403, 8, 0
+0x7554, 0x6b72, 0x7369, 0x0068, 
+    IDC_SCRIPT, 0x403, 7, 0
+0x6142, 0x746c, 0x6369, "\000" 
+    IDC_SCRIPT, 0x403, 17, 0
+0x6543, 0x746e, 0x6172, 0x206c, 0x7545, 0x6f72, 0x6570, 0x6e61, "\000" 
+    IDC_SCRIPT, 0x403, 9, 0
+0x7943, 0x6972, 0x6c6c, 0x6369, "\000" 
+    0
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

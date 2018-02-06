@@ -1,0 +1,129 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODDIAG DIALOGEX 0, 0, 110, 230
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Shapes",IDC_STATIC,0,0,100,76
+    PUSHBUTTON      "Get",IDC_GETSHAPE,3,10,26,11
+    CTEXT           "-",IDC_SHAPENAME,30,10,65,11,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "Type",IDC_STATIC,6,28,17,8
+    CONTROL         "Base",IDC_BASE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,
+                    39,32,10
+    CONTROL         "Median",IDC_MEDIAN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,50,39,10
+    CONTROL         "End",IDC_END,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,3,61,
+                    29,10
+    PUSHBUTTON      "Generate",IDC_GENERATE,46,58,50,14
+    GROUPBOX        "Maps",IDC_STATIC,0,78,99,147
+    COMBOBOX        IDC_MAPDIRS,3,149,94,206,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_ASSIGNED,4,102,91,44,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_ASSIGNED2,4,164,91,57,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "+",IDC_PLUS,4,89,15,11
+    PUSHBUTTON      "-",IDC_MOINS,20,89,15,11
+    PUSHBUTTON      "New",IDC_NEW,46,42,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP              BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MODDIAG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 108
+        BOTTOMMARGIN, 225
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER_NOTFOUND    CURSOR  DISCARDABLE     "cur00001.cur"
+IDC_POINTER_FOUND       CURSOR  DISCARDABLE     "selsingl.cur"
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

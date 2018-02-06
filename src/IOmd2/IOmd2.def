@@ -1,0 +1,8 @@
+
+LIBRARY      "IOmd2"
+DESCRIPTION  'Iomd2 Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateFileInterface
+	DeleteFileInterface

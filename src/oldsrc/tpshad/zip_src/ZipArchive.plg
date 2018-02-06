@@ -1,0 +1,64 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ZipArchive - Win32 Static Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP36.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "ZLIB_DLL" /Fp"Static_Release/ZipArchive.pch" /Yu"stdafx.h" /Fo"Static_Release/" /Fd"Static_Release/" /FD /c 
+"E:\seer\zip_src\ZipArchive.cpp"
+"E:\seer\zip_src\ZipAutoBuffer.cpp"
+"E:\seer\zip_src\ZipBigFile.cpp"
+"E:\seer\zip_src\ZipCentralDir.cpp"
+"E:\seer\zip_src\ZipException.cpp"
+"E:\seer\zip_src\ZipFileHeader.cpp"
+"E:\seer\zip_src\ZipInternalInfo.cpp"
+"E:\seer\zip_src\ZipStorage.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP36.tmp" 
+Creating temporary file "C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP37.tmp" with contents
+[
+/nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "ZLIB_DLL" /Fp"Static_Release/ZipArchive.pch" /Yc"stdafx.h" /Fo"Static_Release/" /Fd"Static_Release/" /FD /c 
+"E:\seer\zip_src\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP37.tmp" 
+Creating temporary file "C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP38.tmp" with contents
+[
+/nologo /out:"Static_Release\ZipArchive.lib" 
+.\Static_Release\StdAfx.obj
+.\Static_Release\ZipArchive.obj
+.\Static_Release\ZipAutoBuffer.obj
+.\Static_Release\ZipBigFile.obj
+.\Static_Release\ZipCentralDir.obj
+.\Static_Release\ZipException.obj
+.\Static_Release\ZipFileHeader.obj
+.\Static_Release\ZipInternalInfo.obj
+.\Static_Release\ZipStorage.obj
+.\zlib.lib
+]
+Creating command line "link.exe -lib @C:\DOCUME~1\CGUILL~1.BRO\LOCALS~1\Temp\RSP38.tmp"
+<h3>Output Window</h3>
+Compiling...
+StdAfx.cpp
+Compiling...
+ZipArchive.cpp
+ZipAutoBuffer.cpp
+ZipBigFile.cpp
+ZipCentralDir.cpp
+ZipException.cpp
+ZipFileHeader.cpp
+ZipInternalInfo.cpp
+ZipStorage.cpp
+Generating Code...
+Creating library...
+
+
+
+<h3>Results</h3>
+ZipArchive.lib - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

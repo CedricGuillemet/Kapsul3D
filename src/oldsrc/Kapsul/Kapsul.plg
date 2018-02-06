@@ -1,0 +1,169 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Kapsul - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Debug/Kapsul.res" /d "_DEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\Kapsul\Kapsul.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP389.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Kapsul.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\Kapsul\AboutDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\Animate.cpp"
+"D:\KapsulCVS\src\Kapsul\AnimateDialogBar.cpp"
+"D:\KapsulCVS\src\Kapsul\CCrystalEditView.cpp"
+"D:\KapsulCVS\src\Kapsul\CCrystalTextBuffer.cpp"
+"D:\KapsulCVS\src\Kapsul\CCrystalTextView.cpp"
+"D:\KapsulCVS\src\Kapsul\CCrystalTextView2.cpp"
+"D:\KapsulCVS\src\Kapsul\CEditReplaceDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\CFindTextDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\ChildFrm.cpp"
+"D:\KapsulCVS\src\Kapsul\CoolDialogBar.cpp"
+"D:\KapsulCVS\src\Kapsul\CoolScroll.cpp"
+"D:\KapsulCVS\src\Kapsul\cplusplus.cpp"
+"D:\KapsulCVS\src\Kapsul\CSkyView.cpp"
+"D:\KapsulCVS\src\Kapsul\DeskDoc.cpp"
+"D:\KapsulCVS\src\Kapsul\DesksShowDialogBar.cpp"
+"D:\KapsulCVS\src\Kapsul\DirTreeCtrl.cpp"
+"D:\KapsulCVS\src\Kapsul\EntiDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\EntityName.cpp"
+"D:\KapsulCVS\src\Kapsul\Kapsul.cpp"
+"D:\KapsulCVS\src\Kapsul\KapsulDoc.cpp"
+"D:\KapsulCVS\src\Kapsul\KapsulView.cpp"
+"D:\KapsulCVS\src\Kapsul\MainEdit.cpp"
+"D:\KapsulCVS\src\Kapsul\MainFrm.cpp"
+"D:\KapsulCVS\src\Kapsul\MatBrowser.cpp"
+"D:\KapsulCVS\src\Kapsul\MatBrowserDialogBar.cpp"
+"D:\KapsulCVS\src\Kapsul\MenuBar.cpp"
+"D:\KapsulCVS\src\Kapsul\MltiTree.cpp"
+"D:\KapsulCVS\src\Kapsul\ModeBar.cpp"
+"D:\KapsulCVS\src\Kapsul\MyToolBar.cpp"
+"D:\KapsulCVS\src\Kapsul\NbFrames.cpp"
+"D:\KapsulCVS\src\Kapsul\ObjProps.cpp"
+"D:\KapsulCVS\src\Kapsul\Options.cpp"
+"D:\KapsulCVS\src\Kapsul\OptionsEditing.cpp"
+"D:\KapsulCVS\src\Kapsul\OptionsIncPaths.cpp"
+"D:\KapsulCVS\src\Kapsul\OptionsMapPaths.cpp"
+"D:\KapsulCVS\src\Kapsul\SampleChildFrm.cpp"
+"D:\KapsulCVS\src\Kapsul\SampleDoc.cpp"
+"D:\KapsulCVS\src\Kapsul\SampleView.cpp"
+"D:\KapsulCVS\src\Kapsul\SelectCam.cpp"
+"D:\KapsulCVS\src\Kapsul\SelName.cpp"
+"D:\KapsulCVS\src\Kapsul\SelTypeDoc.cpp"
+"D:\KapsulCVS\src\Kapsul\SkyBoxEd.cpp"
+"D:\KapsulCVS\src\Kapsul\SortStringArray.cpp"
+"D:\KapsulCVS\src\Kapsul\Splash.cpp"
+"D:\KapsulCVS\src\Kapsul\SplitPath.cpp"
+"D:\KapsulCVS\src\Kapsul\Subclass.cpp"
+"D:\KapsulCVS\src\Kapsul\TestProps.cpp"
+"D:\KapsulCVS\src\Kapsul\TipDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\TrCtrlVw.cpp"
+"D:\KapsulCVS\src\Kapsul\TScrollDlg.cpp"
+"D:\KapsulCVS\src\Kapsul\TVTestDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP389.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP38A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Kapsul.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\Kapsul\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP38A.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP38B.tmp" with contents
+[
+Kore.lib opengl32.lib glu32.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Kapsul.pdb" /debug /machine:I386 /out:"../workspace/Kapsul.exe" /pdbtype:sept /ALIGN:4096 
+.\Debug\AboutDlg.obj
+.\Debug\Animate.obj
+.\Debug\AnimateDialogBar.obj
+.\Debug\CCrystalEditView.obj
+.\Debug\CCrystalTextBuffer.obj
+.\Debug\CCrystalTextView.obj
+.\Debug\CCrystalTextView2.obj
+.\Debug\CEditReplaceDlg.obj
+.\Debug\CFindTextDlg.obj
+.\Debug\ChildFrm.obj
+.\Debug\CoolDialogBar.obj
+.\Debug\CoolScroll.obj
+.\Debug\cplusplus.obj
+.\Debug\CSkyView.obj
+.\Debug\DeskDoc.obj
+.\Debug\DesksShowDialogBar.obj
+.\Debug\DirTreeCtrl.obj
+.\Debug\EntiDlg.obj
+.\Debug\EntityName.obj
+.\Debug\Kapsul.obj
+.\Debug\KapsulDoc.obj
+.\Debug\KapsulView.obj
+.\Debug\MainEdit.obj
+.\Debug\MainFrm.obj
+.\Debug\MatBrowser.obj
+.\Debug\MatBrowserDialogBar.obj
+.\Debug\MenuBar.obj
+.\Debug\MltiTree.obj
+.\Debug\ModeBar.obj
+.\Debug\MyToolBar.obj
+.\Debug\NbFrames.obj
+.\Debug\ObjProps.obj
+.\Debug\Options.obj
+.\Debug\OptionsEditing.obj
+.\Debug\OptionsIncPaths.obj
+.\Debug\OptionsMapPaths.obj
+.\Debug\SampleChildFrm.obj
+.\Debug\SampleDoc.obj
+.\Debug\SampleView.obj
+.\Debug\SelectCam.obj
+.\Debug\SelName.obj
+.\Debug\SelTypeDoc.obj
+.\Debug\SkyBoxEd.obj
+.\Debug\SortStringArray.obj
+.\Debug\Splash.obj
+.\Debug\SplitPath.obj
+.\Debug\StdAfx.obj
+.\Debug\Subclass.obj
+.\Debug\TestProps.obj
+.\Debug\TipDlg.obj
+.\Debug\TrCtrlVw.obj
+.\Debug\TScrollDlg.obj
+.\Debug\TVTestDlg.obj
+.\Debug\Kapsul.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP38B.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+d:\kapsulcvs\src\kore\entity.h(71) : warning C4800: 'unsigned int' : forcing value to bool 'true' or 'false' (performance warning)
+d:\kapsulcvs\src\kapsul\nbframes.h(22) : error C2146: syntax error : missing ';' before identifier 'm_Spin'
+d:\kapsulcvs\src\kapsul\nbframes.h(22) : error C2501: 'CNumSpinCtrl' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\nbframes.h(22) : error C2501: 'm_Spin' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\nbframes.h(23) : error C2146: syntax error : missing ';' before identifier 'm_NbFrames'
+d:\kapsulcvs\src\kapsul\nbframes.h(23) : error C2501: 'CNumEdit' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\nbframes.h(23) : error C2501: 'm_NbFrames' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\animate.h(22) : error C2146: syntax error : missing ';' before identifier 'm_FrameSpin'
+d:\kapsulcvs\src\kapsul\animate.h(22) : error C2501: 'CNumSpinCtrl' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\animate.h(22) : error C2501: 'm_FrameSpin' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\animate.h(23) : error C2146: syntax error : missing ';' before identifier 'm_FrameNb'
+d:\kapsulcvs\src\kapsul\animate.h(23) : error C2501: 'CNumEdit' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\animate.h(23) : error C2501: 'm_FrameNb' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(20) : error C2146: syntax error : missing ';' before identifier 'm_ListBoxEx'
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(20) : error C2501: 'CMyListBoxEx' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(20) : error C2501: 'm_ListBoxEx' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(23) : error C2146: syntax error : missing ';' before identifier 'm_ListBoxExBuddy'
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(23) : error C2501: 'CListBoxExBuddy' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsincpaths.h(23) : error C2501: 'm_ListBoxExBuddy' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(25) : error C2146: syntax error : missing ';' before identifier 'm_ListBoxEx'
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(25) : error C2501: 'CMyListBoxEx' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(25) : error C2501: 'm_ListBoxEx' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(28) : error C2146: syntax error : missing ';' before identifier 'm_ListBoxExBuddy'
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(28) : error C2501: 'CListBoxExBuddy' : missing storage-class or type specifiers
+d:\kapsulcvs\src\kapsul\optionsmappaths.h(28) : error C2501: 'm_ListBoxExBuddy' : missing storage-class or type specifiers
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+Kapsul.exe - 24 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<HTML>
+<head>
+<STYLE>
+A:visited {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #8D8D8D; TEXT-DECORATION: none
+}
+A:link {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:active {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+</STYLE>
+<TITLE>Entity System Development</TITLE>
+</head>
+<BODY bgcolor="#000000" text="#FFFFFF" >
+<a name="p0"></a>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD VALIGN="TOP" COLSPAN=2>
+<B><FONT SIZE=4><P>2) user defined primtives: Entity system</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P><a name="pa"></a>a) overall description</B></I></TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD VALIGN="TOP" COLSPAN=2>
+<P>Basically, you have to do that:<BR>
+- you give your entities description is Entity.xml<BR>
+- you add a messages handler in entity.dll<BR>
+- Add your entity class<BR>
+To clarify things, an entity is just a wrapper for Kapsul to encapsulate instances of your class. An entity per instance of your class. Inside Kapsul, an entity is just a string containing properties. That's easy for copy/cut/paste by example because we care only about that string. But in the entity code, you have to translate from string values to runtime class values. Watch KEntity.h implementation.<BR>
+</TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P><a name="pb"></a>b) Describe your entity</B></I></TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD VALIGN="TOP" COLSPAN=2>
+<P>It works the same way as for built-in primitives user properties. Check the previous section and the examples.<BR>
+</TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P><a name="pc"></a>c) Add your message handle</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=2>
+<P>We take the Light entity for example. (Please, take the latest version, This example might contain bugs/leaks of optimisation).
+1st, take Entity.cpp. In the 'Process_Entity' function, The KM_GETBITMAPS is intended to add the entities creation button in the primitive fly bar. Change the structure filling to add/remove entities bitmaps and by the way editable entities.Now take file lightp.cpp.
+The process function name is very important. It a concat of 'Process_' and the name of the entity in entity.xml.<BR>
+<BR>
+Open HTML example : <a href="EntityExample.html">EntityExample.html</a><br>
+Open CPP example : <a href="EntityExample.cpp">EntityExample.cpp</a>
+</TD>
+</TR>
+</tr>
+</table>
+</body>
+</html>

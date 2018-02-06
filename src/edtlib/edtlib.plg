@@ -1,0 +1,89 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: edtlib - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP469.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"release/edtlib.pdb" /machine:I386 /out:"release\edtlib.dll" /implib:"..\output\edtlib.lib" 
+.\release\asp.obj
+.\release\basic.obj
+.\release\batch.obj
+.\release\cplusplus.obj
+.\release\dcl.obj
+.\release\fortran.obj
+.\release\html.obj
+.\release\is.obj
+.\release\java.obj
+.\release\lisp.obj
+.\release\pascal.obj
+.\release\perl.obj
+.\release\php.obj
+.\release\python.obj
+.\release\rexx.obj
+.\release\rsrc.obj
+.\release\sgml.obj
+.\release\sh.obj
+.\release\siod.obj
+.\release\sql.obj
+.\release\tcl.obj
+.\release\tex.obj
+.\release\aboutdlg.obj
+.\release\ccrystaleditview.obj
+.\release\ccrystaltextbuffer.obj
+.\release\ccrystaltextview.obj
+.\release\ccrystaltextview2.obj
+.\release\ceditreplacedlg.obj
+.\release\cfindtextdlg.obj
+.\release\chcondlg.obj
+.\release\crystaleditviewex.obj
+.\release\crystalparser.obj
+.\release\crystaltextblock.obj
+.\release\cs2cs.obj
+.\release\dib.obj
+.\release\dibstat.obj
+.\release\edfaddlg.obj
+.\release\edfopdlg.obj
+.\release\editoroptionspage.obj
+.\release\editpg1.obj
+.\release\editpg2.obj
+.\release\editpg3.obj
+.\release\edtlib.obj
+.\release\fileinfo.obj
+.\release\filepath.obj
+.\release\filesup.obj
+.\release\filevent.obj
+.\release\foldrdlg.obj
+.\release\fontcomb.obj
+.\release\fontpg.obj
+.\release\fpattern.obj
+.\release\gotodlg.obj
+.\release\hexedvw.obj
+.\release\hlink.obj
+.\release\memcombo.obj
+.\release\psheet2.obj
+.\release\regexp.obj
+.\release\registry.obj
+.\release\richevw2.obj
+.\release\splash.obj
+.\release\statbar.obj
+.\release\stdafx.obj
+.\release\tipdlg.obj
+.\release\ttipctl2.obj
+.\release\edtlib.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP469.tmp"
+<h3>Output Window</h3>
+Linking...
+   Creating library ..\output\edtlib.lib and object ..\output\edtlib.exp
+
+
+
+<h3>Results</h3>
+edtlib.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,9 @@
+; Infos.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Infos"
+DESCRIPTION  'Infos Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateSceneInterface
+	DeleteSceneInterface

@@ -1,0 +1,53 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: EntPlg - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CD.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /D "KAPSUL_EXPORTS" /Fp"Debug/EntPlg.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\EntPlg\DumpEntPlg.cpp"
+"D:\KapsulCVS\src\EntPlg\Interface.cpp"
+"D:\KapsulCVS\src\EntPlg\ModEntPlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CD.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CE.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /D "KAPSUL_EXPORTS" /Fp"Debug/EntPlg.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\EntPlg\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CE.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CF.tmp" with contents
+[
+opengl32.lib Kore.lib KGui.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/EntPlg.pdb" /debug /machine:I386 /def:".\Entplg.def" /out:"../workspace/plugins/EntPlg.dll" /implib:"Debug/EntPlg.lib" /pdbtype:sept 
+.\Debug\DumpEntPlg.obj
+.\Debug\Interface.obj
+.\Debug\ModEntPlg.obj
+.\Debug\stdafx.obj
+.\Debug\EntPlgRes.res
+\KapsulCVS\src\workspace\Kore.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1CF.tmp"
+<h3>Output Window</h3>
+Compiling...
+stdafx.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+DumpEntPlg.cpp
+D:\KapsulCVS\src\EntPlg\DumpEntPlg.cpp(301) : warning C4800: 'const char *' : forcing value to bool 'true' or 'false' (performance warning)
+Interface.cpp
+ModEntPlg.cpp
+Generating Code...
+Linking...
+   Creating library Debug/EntPlg.lib and object Debug/EntPlg.exp
+
+
+
+<h3>Results</h3>
+EntPlg.dll - 0 error(s), 1 warning(s)
+</pre>
+</body>
+</html>

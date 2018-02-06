@@ -1,0 +1,33 @@
+body { font-family: verdana, arial, helvetica, sans-serif, courier ; text-decoration: none ; font-size: 12px}
+
+a { font-family: verdana, arial, helvetica, sans-serif, courier; color: #AA3700 ; text-decoration: none; font-size: 12px ; font-weight:400}
+
+input { font-family:courier ; font-size:12px }
+
+.titre { font-family: verdana, arial, helvetica, sans-serif, courier; color: black ; text-decoration: none; font-size: 12px ; font-weight:bold}
+
+.tabtex1g { width: 258px }
+.tabtex1p { width: 178px }
+.tabtex2g { text-decoration: none ; font-size: 12px; font-family: verdana, arial, helvetica, sans-serif, courier; padding-right: 6px; padding-left: 21px }
+.tabtex2p { text-decoration: none ; font-size: 12px; font-family: verdana, arial, helvetica, sans-serif, courier; padding-right: 12px; padding-left: 21px }
+.tabigtex1g { text-decoration: none ; font-size: 12px; font-family: verdana, arial, helvetica, sans-serif, courier; padding-right: 12px; padding-left: 0px }
+
+.lienhauttxt a {color:white ; font-family: verdana, arial, helvetica, sans-serif, courier ; text-decoration: none; font-size: 11px ; font-weight:400}
+.lienhauttxt {color:white ; font-family: verdana, arial, helvetica, sans-serif, courier ; text-decoration: none; font-size: 11px}
+.lienhautbr1 { font-size:2px ; font-height: 10px; font-family: verdana, arial, helvetica, sans-serif, courier}
+.lienhautbr2 { font-size:6px }
+.lienhautbr22 { line-height:6px }
+.lienhautcenter {text-align: center}
+
+.menugauche { color: white; font-size: 10px; font-family: verdana, arial; text-decoration: none; padding-right: 20px; padding-left: 20px }
+.menugauche a{ color: white; font-size: 10px;  font-family: verdana, arial; text-decoration: none ; font-weight:400}
+
+.news { color:white; font-family: verdana, arial, helvetica, sans-serif, courier;  font-size: 11px; text-align:center; margin-left:3px; margin-right:3px}
+.corps { font-size:12px}
+.categories { font-family: verdana, arial, helvetica, sans-serif, courier; color : #803a30 ; font-size:12px ; font-family: verdana,arial ; padding-left:20px ; padding-right: 31px}
+.sites { font-family: verdana, arial, helvetica, sans-serif, courier; color : #803a30 ; font-size:12px ; font-family: verdana,arial ; padding-left:4px ; padding-right: 4px}
+.titretrouves { font-weight: bold ; font-family: verdana, arial, helvetica, sans-serif, courier; color : #803a30 ; font-size:12px ; font-family: verdana,arial}
+.body td {font-family: verdana, arial, helvetica, sans-serif, courier ; text-decoration: none ; font-size: 12px}
+.menubas a {color:white ; font-size :11px ; font-family: verdana ; font-weight:400}
+.blanc10px {color:white ; font-size :10px ; font-family:verdana,arial,helvetica}
+.brown10px {color:#423a30 ; font-size :10px ; font-family:verdana,arial,helvetica}

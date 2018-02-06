@@ -1,0 +1,81 @@
+#************************************************************************
+#       -= SEER - C-Scripting engine v 0.93a =-
+#State      : under implementation
+#Author     : Przemyslaw Podsiadly
+#             email: ppodsiad@elka.pw.edu.pl
+#             WWW:   http://home.elka.pw.edu.pl/~ppodsiad
+#File:makefile
+#Desc:makefile for library, compiler and tester
+#************************************************************************/
+.PHONY: release debug install uninstall clean intro test done baddjgpp
+
+all:release compiler install done
+RM=del
+ALLMASK=\*
+
+Make=make --no-print-directory
+System=Linux=1
+
+ifndef DontRebuild
+Rebuild=Rebuild=1
+else
+Rebuild=
+endif
+
+
+clean:intro yes.txt;@echo "Cleaning objs";\
+$(RM) objs$(ALLMASK) <yes.txt >nul;\
+$(RM) yes.txt
+
+uninstall:intro yes.txt;@echo -n "Cleaning all created files";\
+$(RM) objs$(ALLMASK) <yes.txt >nul;\
+$(RM) bin$(ALLMASK) <yes.txt >nul;\
+$(RM) lib$(ALLMASK) <yes.txt >nul;\
+$(RM) examples\*.cs <yes.txt >nul;\
+$(RM) examples\e*.exe <yes.txt >nul;\
+$(RM) examples\*.o <yes.txt >nul;\
+$(RM) yes.txt ;\
+echo "."
+
+release:;@echo =-------=======Compiling release library...======---------=;\
+$(Make) -fmakefile.all Optimize=1 OBJ_PATH=objs/linux $(Rebuild) $(System)
+
+debug:;@echo =-------=======Compiling debug library...======---------=;\
+$(Make) -fmakefile.all Debug=1 Test=1 OBJ_PATH=objs/linux $(Rebuild) $(System)
+
+test:;@echo =-------=======Compiling test library...======---------=;\
+$(Make) -fmakefile.all Debug=1 Test=1 OBJ_PATH=objs/linux $(Rebuild) $(System)
+#Optimize=1
+
+compiler:;@echo =-------=======Compiling SeeRC...======---------=;\
+$(Make) -fmakefile.all Compiler=1 Optimize=1 SeeRC=1 OBJ_PATH=objs/linux $(Rebuild) $(System)
+
+LIBDEST = /usr/lib/libseer.a
+INCDEST = /usr/include/seer.h
+#DOCDEST = /usr/info/seer.inf someday
+
+install:installing $(LIBDEST) $(INCDEST);@\
+echo Done.
+$(LIBDEST):lib/libseer.a;@cp lib/libseer.a $(LIBDEST)
+$(INCDEST):seer.h;@cp seer.h $(INCDEST)
+
+installing:;@echo Installing SeeR library to $(DJDIR)
+
+intro:;@\
+echo "p----------=====Makefile for SeeR=====---------------q";\
+echo "| all,release,debug,compiler,install,clean,uninstall |";\
+echo "|   default is all(release,compiler and install)     |"
+#echo Makefile for Seer>log
+
+yes.txt:;@\
+echo y >yes.txt;\
+echo t >>yes.txt
+
+done:;@\
+echo "          ALL DONE.";\
+echo "  SeeR library was successfully compiled and installed.";\
+echo " How to use SeeR, see examples in examples directory";\
+echo " and read seer.txt and readme.txt";\
+echo " Shortly:#include <seer.h> and link with libseer.a";\
+echo " Example command line: gcc foobar.c -o foobar.exe -lseer";\
+echo "        Have Fun!"

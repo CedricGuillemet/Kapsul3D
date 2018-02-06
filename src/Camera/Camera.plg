@@ -1,0 +1,55 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Camera - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BD.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /D "KAPSUL_EXPORTS" /Fp"Debug/Camera.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\Camera\Interface.cpp"
+"D:\KapsulCVS\src\Camera\ModCamera.cpp"
+"D:\KapsulCVS\src\Camera\ModDiag.cpp"
+"D:\KapsulCVS\src\Camera\ParamDiag.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BD.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BE.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /D "KAPSUL_EXPORTS" /Fp"Debug/Camera.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\Camera\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BE.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BF.tmp" with contents
+[
+Kore.lib opengl32.lib KGui.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/camera.pdb" /debug /machine:I386 /def:".\Camera.def" /out:"../workspace/plugins/camera.dll" /implib:"Debug/camera.lib" /pdbtype:sept 
+.\Debug\Interface.obj
+.\Debug\ModCamera.obj
+.\Debug\ModDiag.obj
+.\Debug\ParamDiag.obj
+.\Debug\stdafx.obj
+.\Debug\CameraRes.res
+\KapsulCVS\src\workspace\Kore.lib
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1BF.tmp"
+<h3>Output Window</h3>
+Compiling...
+stdafx.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+Interface.cpp
+ModCamera.cpp
+ModDiag.cpp
+ParamDiag.cpp
+Generating Code...
+Linking...
+   Creating library Debug/camera.lib and object Debug/camera.exp
+
+
+
+<h3>Results</h3>
+camera.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

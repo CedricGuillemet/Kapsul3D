@@ -1,0 +1,9 @@
+; Prim3D.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Prim3D"
+DESCRIPTION  'Prim3D Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateSceneInterface
+	DeleteSceneInterface

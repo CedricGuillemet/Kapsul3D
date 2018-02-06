@@ -1,0 +1,94 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+TREE                    ICON    DISCARDABLE     "tree.ico"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+BARK                    PNG     DISCARDABLE     "textures\\bark.PNG"
+LEAF                    PNG     DISCARDABLE     "textures\\leaf.PNG"
+GROUND                  PNG     DISCARDABLE     "textures\\ground.png"
+MONEY                   PNG     DISCARDABLE     "textures\\money.png"
+LABEL_BALANCE           PNG     DISCARDABLE     "textures\\label balance.png"
+LABEL_SPREAD            PNG     DISCARDABLE     "textures\\label spread.png"
+LABEL_LEAF_SIZE         PNG     DISCARDABLE     "textures\\label leaf_size.png"
+LABEL_BRANCH_SIZE       PNG     DISCARDABLE     "textures\\label branch_size.png"
+LABEL_TWIST             PNG     DISCARDABLE     "textures\\label twist.png"
+LABEL_DEPTH             PNG     DISCARDABLE     "textures\\label depth.png"
+LEAF_BACK               PNG     DISCARDABLE     "textures\\leaf_back.PNG"
+MONEY_BACK              PNG     DISCARDABLE     "textures\\money_back.png"
+LABEL_FULLNESS          PNG     DISCARDABLE     "textures\\label fullness.png"
+SKY_DAY                 PNG     DISCARDABLE     "textures\\sky_day.PNG"
+SKY_NIGHT               PNG     DISCARDABLE     "textures\\sky_night.PNG"
+NVIDIA                  PNG     DISCARDABLE     "textures\\NVidiaLogo.png"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

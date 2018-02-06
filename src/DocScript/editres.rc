@@ -1,0 +1,789 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "editcmd.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_TOOLBAR MENU DISCARDABLE 
+BEGIN
+    POPUP "DUMMY"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "Standard &Toolbar",           ID_VIEW_TOOLBAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE
+    END
+END
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        POPUP "&Default encoding"
+        BEGIN
+            MENUITEM "Placeholder",                 ID_ENCODING_1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "S&pelling Configuration...",  ID_TOOLS_SPELLING_SET
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE, GRAYED
+        MENUITEM "&Options...",                 ID_VIEW_OPTIONS_GENERAL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Tip of the Day...",          ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About EditPad...",           ID_APP_ABOUT
+    END
+END
+
+IDR_SAMPLETYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "R&eload",                     ID_FILE_RELOAD
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save A&ll",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Page Set&up...",              ID_FILE_PAGE_SETUP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "Find Previous\tShift+F3",     ID_EDIT_FIND_PREVIOUS
+        MENUITEM "Find Incremental Next\tCtrl+E", 
+                                                ID_EDIT_FIND_INCREMENTAL_FORWARD
+
+        MENUITEM "Find Incremental Previous\tCtrl+Shift+E", 
+                                                ID_EDIT_FIND_INCREMENTAL_BACKWARD
+
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Go to line...\tCtrl+G",      ID_EDIT_GOTO
+        MENUITEM "Go to last c&hange\tCtrl+Shift+G", 
+                                                ID_EDIT_GOTO_LAST_CHANGE
+        MENUITEM SEPARATOR
+        POPUP "Change case"
+        BEGIN
+            MENUITEM "Lower case\tCtrl+L",          ID_EDIT_LOWERCASE
+            MENUITEM "Upper case\tCtrl+U",          ID_EDIT_UPPERCASE
+            MENUITEM "Capitalize\tCtrl+L",          ID_EDIT_CAPITALIZE
+            MENUITEM "Sentencize\tCtrl+J",          ID_EDIT_SENTENCE
+            MENUITEM "Invert case\tCtrl+K",         ID_EDIT_SWAPCASE
+        END
+        MENUITEM "Auto Complete\tCtrl+Space",   ID_EDIT_AUTOCOMPLETE
+        MENUITEM "Auto Expand\tCtrl+Enter",     ID_EDIT_AUTOEXPAND
+        MENUITEM "Match Bracket\tCtrl+[]",      ID_EDIT_MATCHBRACE
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_VIEW_WORDWRAP
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Clear All bookmarks",         ID_EDIT_CLEAR_BOOKMARKS
+            MENUITEM SEPARATOR
+            MENUITEM "Bookmark 0",                  ID_EDIT_TOGGLE_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_TOGGLE_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_TOGGLE_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_TOGGLE_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_TOGGLE_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_TOGGLE_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_TOGGLE_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_TOGGLE_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_TOGGLE_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_TOGGLE_BOOKMARK9
+        END
+        POPUP "Goto Bookmark"
+        BEGIN
+            MENUITEM "Bookmark 0",                  ID_EDIT_GO_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_GO_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_GO_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_GO_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_GO_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_GO_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_GO_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_GO_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_GO_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_GO_BOOKMARK9
+        END
+        POPUP "More Bookmarks"
+        BEGIN
+            MENUITEM "Toggle Bookmark\tCtrl+F2",    ID_EDIT_TOGGLE_BOOKMARK
+            MENUITEM "Next Bookmark\tF2",           ID_EDIT_GOTO_NEXT_BOOKMARK
+
+            MENUITEM "Previous bookmark\tShift+F2", ID_EDIT_GOTO_PREV_BOOKMARK
+
+            MENUITEM "Clear All Bookmarks\tCtrl+Shift+F2", 
+                                                    ID_EDIT_CLEAR_ALL_BOOKMARKS
+
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full screen\tPause",         ID_VIEW_FULL_SCREEN
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "To&ggle source/header\tCtrl+Shift+H", 
+                                                ID_VIEW_TOGGLE_SRC_HDR
+        MENUITEM SEPARATOR
+        POPUP "Source T&ype"
+        BEGIN
+            MENUITEM "&None",                       ID_SOURCE_PLAIN
+            MENUITEM "ASP",                         ID_SOURCE_ASP
+            MENUITEM "Basic (&Visual)",             ID_SOURCE_BASIC
+            MENUITEM "&Batch",                      ID_SOURCE_BATCH
+            MENUITEM "&C/C++",                      ID_SOURCE_C
+            MENUITEM "&DCL (AutoCAD)",              ID_SOURCE_AUTODCL
+            MENUITEM "&Fortran",                    ID_SOURCE_FORTRAN
+            MENUITEM "&HTML",                       ID_SOURCE_HTML
+            MENUITEM "Inst&allShield",              ID_SOURCE_INSTALLSHIELD
+            MENUITEM "&Java",                       ID_SOURCE_JAVA
+            MENUITEM "L&ISP (AutoCAD)",             ID_SOURCE_AUTOLISP
+            MENUITEM "&Pascal",                     ID_SOURCE_PASCAL
+            MENUITEM "P&erl",                       ID_SOURCE_PERL
+            MENUITEM "PHP",                         ID_SOURCE_PHP
+            MENUITEM "P&ython",                     ID_SOURCE_PYTHON
+            MENUITEM "&Resources",                  ID_SOURCE_RSRC
+            MENUITEM "RE&XX",                       ID_SOURCE_REXX
+            MENUITEM "&SGML",                       ID_SOURCE_SGML
+            MENUITEM "S&hell script",               ID_SOURCE_SH
+            MENUITEM "SIO&D",                       ID_SOURCE_SIOD
+            MENUITEM "S&QL",                        ID_SOURCE_SQL
+            MENUITEM "TC&L",                        ID_SOURCE_TCL
+            MENUITEM "&TeX",                        ID_SOURCE_TEX
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "S&election margin",           ID_VIEW_SELMARGIN
+        MENUITEM "&Word wrapping",              ID_VIEW_WORDWRAP
+    END
+    POPUP "&Tools"
+    BEGIN
+        POPUP "&Default encoding"
+        BEGIN
+            MENUITEM "Placeholder",                 ID_ENCODING_1, GRAYED
+        END
+        MENUITEM "C&haracter encoding...",      ID_TOOLS_CHARCODING
+        MENUITEM SEPARATOR
+        MENUITEM "&Spelling...",                ID_TOOLS_SPELLING
+        MENUITEM SEPARATOR
+        MENUITEM "S&pelling Configuration...",  ID_TOOLS_SPELLING_SET
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE, GRAYED
+        MENUITEM "&Options...",                 ID_VIEW_OPTIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "Ne&xt\tCtrl+F6",              ID_WINDOW_NEXT
+        MENUITEM "Pre&vious\tCtrl+Shift+F6",    ID_WINDOW_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Cl&ose\tCtrl+F4",             ID_WINDOW_CLOSE
+        MENUITEM "Close a&ll",                  ID_FILE_CLOSE_ALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Tip of the Day...",          ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About EditPad...",           ID_APP_ABOUT
+    END
+END
+
+IDR_EDITPADRICHTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "R&eload",                     ID_FILE_RELOAD
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save A&ll",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Page Set&up...",              ID_FILE_PAGE_SETUP
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "Find Previous\tShift+F3",     ID_EDIT_FIND_PREVIOUS
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Go to line...\tCtrl+G",      ID_EDIT_GOTO
+        MENUITEM SEPARATOR
+        POPUP "Change case"
+        BEGIN
+            MENUITEM "Lower case\tCtrl+L",          ID_EDIT_LOWERCASE
+            MENUITEM "Upper case\tCtrl+U",          ID_EDIT_UPPERCASE
+            MENUITEM "Capitalize\tCtrl+L",          ID_EDIT_CAPITALIZE
+            MENUITEM "Sentencize\tCtrl+J",          ID_EDIT_SENTENCE
+            MENUITEM "Invert case\tCtrl+K",         ID_EDIT_SWAPCASE
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_VIEW_WORDWRAP
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full screen\tPause",         ID_VIEW_FULL_SCREEN
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Word wrapping",              ID_VIEW_WORDWRAP
+    END
+    POPUP "&Format"
+    BEGIN
+        MENUITEM "&Font",                       ID_FORMAT_FONT
+    END
+    POPUP "&Tools"
+    BEGIN
+        POPUP "&Default encoding"
+        BEGIN
+            MENUITEM "Placeholder",                 ID_ENCODING_1, GRAYED
+        END
+        MENUITEM "C&haracter encoding...",      ID_TOOLS_CHARCODING
+        MENUITEM SEPARATOR
+        MENUITEM "&Spelling...",                ID_TOOLS_SPELLING
+        MENUITEM SEPARATOR
+        MENUITEM "S&pelling Configuration...",  ID_TOOLS_SPELLING_SET
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE, GRAYED
+        MENUITEM "&Options...",                 ID_VIEW_OPTIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "Ne&xt\tCtrl+F6",              ID_WINDOW_NEXT
+        MENUITEM "Pre&vious\tCtrl+Shift+F6",    ID_WINDOW_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Cl&ose\tCtrl+F4",             ID_WINDOW_CLOSE
+        MENUITEM "Close a&ll",                  ID_FILE_CLOSE_ALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Tip of the Day...",          ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About EditPad...",           ID_APP_ABOUT
+    END
+END
+
+IDR_EDITPADBINTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "R&eload",                     ID_FILE_RELOAD
+        MENUITEM "&Close",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM "Save A&ll",                   ID_FILE_SAVE_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Full screen\tPause",         ID_VIEW_FULL_SCREEN
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+    END
+    POPUP "&Format"
+    BEGIN
+        MENUITEM "&Address",                    ID_FORMAT_SHOW_ADDRESS
+        MENUITEM "&Hex code",                   ID_FORMAT_SHOW_HEX
+        MENUITEM "As&cii",                      ID_FORMAT_SHOW_ASCII
+        MENUITEM SEPARATOR
+        MENUITEM "&Wide address",               ID_FORMAT_WIDE_ADDRESS
+        POPUP "&Bytes per row"
+        BEGIN
+            MENUITEM "&1",                          ID_FORMAT_BPR_1
+            MENUITEM "&2",                          ID_FORMAT_BPR_2
+            MENUITEM "&3",                          ID_FORMAT_BPR_3
+            MENUITEM "&4",                          ID_FORMAT_BPR_4
+            MENUITEM "&5",                          ID_FORMAT_BPR_5
+            MENUITEM "&6",                          ID_FORMAT_BPR_6
+            MENUITEM "&7",                          ID_FORMAT_BPR_7
+            MENUITEM "&8",                          ID_FORMAT_BPR_8
+            MENUITEM "&9",                          ID_FORMAT_BPR_9
+            MENUITEM "&10",                         ID_FORMAT_BPR_10
+            MENUITEM "&11",                         ID_FORMAT_BPR_11
+            MENUITEM "&12",                         ID_FORMAT_BPR_12
+            MENUITEM "&13",                         ID_FORMAT_BPR_13
+            MENUITEM "&14",                         ID_FORMAT_BPR_14
+            MENUITEM "&15",                         ID_FORMAT_BPR_15
+            MENUITEM "&16",                         ID_FORMAT_BPR_16
+        END
+    END
+    POPUP "&Tools"
+    BEGIN
+        POPUP "&Default encoding"
+        BEGIN
+            MENUITEM "Placeholder",                 ID_ENCODING_1, GRAYED
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "S&pelling Configuration...",  ID_TOOLS_SPELLING_SET
+        MENUITEM "&Customize...",               ID_VIEW_CUSTOMIZE, GRAYED
+        MENUITEM "&Options...",                 ID_VIEW_OPTIONS
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "Ne&xt\tCtrl+F6",              ID_WINDOW_NEXT
+        MENUITEM "Pre&vious\tCtrl+Shift+F6",    ID_WINDOW_PREV
+        MENUITEM SEPARATOR
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "Tile &Horizontally",          ID_WINDOW_TILE_HORZ
+        MENUITEM "&Tile Vertically",            ID_WINDOW_TILE_VERT
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Cl&ose\tCtrl+F4",             ID_WINDOW_CLOSE
+        MENUITEM "Close a&ll",                  ID_FILE_CLOSE_ALL
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics\tF1",            ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&Tip of the Day...",          ID_HELP_TIPOFTHEDAY
+        MENUITEM SEPARATOR
+        MENUITEM "&About EditPad...",           ID_APP_ABOUT
+    END
+END
+
+IDR_CONTEXT_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "Find Previous\tShift+F3",     ID_EDIT_FIND_PREVIOUS
+        MENUITEM "Find Incremental Next\tCtrl+E", 
+                                                ID_EDIT_FIND_INCREMENTAL_FORWARD
+
+        MENUITEM "Find Incremental Previous\tCtrl+Shift+E", 
+                                                ID_EDIT_FIND_INCREMENTAL_BACKWARD
+
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "&Go to line...\tCtrl+G",      ID_EDIT_GOTO
+        MENUITEM "Go to last c&hange\tCtrl+Shift+G", 
+                                                ID_EDIT_GOTO_LAST_CHANGE
+        MENUITEM SEPARATOR
+        POPUP "Change case"
+        BEGIN
+            MENUITEM "Lower case\tCtrl+L",          ID_EDIT_LOWERCASE
+            MENUITEM "Upper case\tCtrl+U",          ID_EDIT_UPPERCASE
+            MENUITEM "Capitalize\tCtrl+L",          ID_EDIT_CAPITALIZE
+            MENUITEM "Sentencize\tCtrl+J",          ID_EDIT_SENTENCE
+            MENUITEM "Invert case\tCtrl+K",         ID_EDIT_SWAPCASE
+        END
+        MENUITEM "Auto Complete\tCtrl+Space",   ID_EDIT_AUTOCOMPLETE
+        MENUITEM "Match Bracket\tCtrl+[]",      ID_EDIT_MATCHBRACE
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Clear All bookmarks",         ID_EDIT_CLEAR_BOOKMARKS
+            MENUITEM SEPARATOR
+            MENUITEM "Bookmark 0",                  ID_EDIT_TOGGLE_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_TOGGLE_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_TOGGLE_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_TOGGLE_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_TOGGLE_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_TOGGLE_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_TOGGLE_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_TOGGLE_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_TOGGLE_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_TOGGLE_BOOKMARK9
+        END
+        POPUP "Goto Bookmark"
+        BEGIN
+            MENUITEM "Bookmark 0",                  ID_EDIT_GO_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_GO_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_GO_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_GO_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_GO_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_GO_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_GO_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_GO_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_GO_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_GO_BOOKMARK9
+        END
+        POPUP "More Bookmarks"
+        BEGIN
+            MENUITEM "Toggle Bookmark\tCtrl+F2",    ID_EDIT_TOGGLE_BOOKMARK
+            MENUITEM "Next Bookmark\tF2",           ID_EDIT_GOTO_NEXT_BOOKMARK
+
+            MENUITEM "Previous bookmark\tShift+F2", ID_EDIT_GOTO_PREV_BOOKMARK
+
+            MENUITEM "Clear All Bookmarks\tCtrl+Shift+F2", 
+                                                    ID_EDIT_CLEAR_ALL_BOOKMARKS
+
+        END
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_FIND DIALOG FIXED IMPURE  30, 73, 236, 62
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,4,8,42,8
+    EDITTEXT        IDC_EDIT_TEXT,47,7,128,12,ES_AUTOHSCROLL | WS_GROUP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,4,26,100,12
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,4,42,64,12
+    GROUPBOX        "Direction",IDC_STATIC,107,26,68,28,WS_GROUP
+    CONTROL         "&Up",IDC_EDIT_DIRECTION_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,111,38,25,12
+    CONTROL         "&Down",IDC_EDIT_DIRECTION_DOWN,"Button",
+                    BS_AUTORADIOBUTTON,138,38,35,12
+    DEFPUSHBUTTON   "&Find Next",IDOK,182,5,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,182,23,50,14
+END
+
+IDD_EDIT_REPLACE DIALOG FIXED IMPURE  36, 44, 230, 88
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,4,9,48,8
+    EDITTEXT        IDC_EDIT_TEXT,54,7,114,12,ES_AUTOHSCROLL | WS_GROUP
+    LTEXT           "Re&place with:",IDC_STATIC,4,26,48,8
+    EDITTEXT        IDC_EDIT_REPLACE_WITH,54,24,114,12,ES_AUTOHSCROLL | 
+                    WS_GROUP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,46,91,12
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,62,59,12
+    GROUPBOX        "Replace in",IDC_STATIC,97,43,71,37,WS_GROUP
+    CONTROL         "&Selection",IDC_EDIT_SCOPE_SELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,102,54,59,10
+    CONTROL         "Wh&ole file",IDC_EDIT_SCOPE_WHOLE_FILE,"Button",
+                    BS_AUTORADIOBUTTON,102,66,58,10
+    DEFPUSHBUTTON   "&Find Next",IDC_EDIT_SKIP,174,4,50,14,WS_GROUP
+    PUSHBUTTON      "&Replace",IDC_EDIT_REPLACE,174,21,50,14
+    PUSHBUTTON      "Replace &All",IDC_EDIT_REPLACE_ALL,174,38,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,55,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MARGIN_ICONS        BITMAP  DISCARDABLE     "mg_icons.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDR_MARGIN_CURSOR       CURSOR  DISCARDABLE     "mg_cur.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_DEFAULT_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "0",            ID_EDIT_GO_BOOKMARK0,   VIRTKEY, ALT, NOINVERT
+    "0",            ID_EDIT_TOGGLE_BOOKMARK0, VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_EDIT_GO_BOOKMARK1,   VIRTKEY, ALT, NOINVERT
+    "1",            ID_EDIT_TOGGLE_BOOKMARK1, VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_EDIT_GO_BOOKMARK2,   VIRTKEY, ALT, NOINVERT
+    "2",            ID_EDIT_TOGGLE_BOOKMARK2, VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_EDIT_GO_BOOKMARK3,   VIRTKEY, ALT, NOINVERT
+    "3",            ID_EDIT_TOGGLE_BOOKMARK3, VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_EDIT_GO_BOOKMARK4,   VIRTKEY, ALT, NOINVERT
+    "4",            ID_EDIT_TOGGLE_BOOKMARK4, VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_EDIT_GO_BOOKMARK5,   VIRTKEY, ALT, NOINVERT
+    "5",            ID_EDIT_TOGGLE_BOOKMARK5, VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_EDIT_GO_BOOKMARK6,   VIRTKEY, ALT, NOINVERT
+    "6",            ID_EDIT_TOGGLE_BOOKMARK6, VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_EDIT_GO_BOOKMARK7,   VIRTKEY, ALT, NOINVERT
+    "7",            ID_EDIT_TOGGLE_BOOKMARK7, VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_EDIT_GO_BOOKMARK8,   VIRTKEY, ALT, NOINVERT
+    "8",            ID_EDIT_TOGGLE_BOOKMARK8, VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_EDIT_GO_BOOKMARK9,   VIRTKEY, ALT, NOINVERT
+    "9",            ID_EDIT_TOGGLE_BOOKMARK9, VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_BACK,    VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_WORD_BACK, VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_EDIT_LINE_DOWN,      VIRTKEY, NOINVERT
+    VK_DOWN,        ID_EDIT_SCROLL_DOWN,    VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_EDIT_EXT_LINE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_LINE_END,       VIRTKEY, NOINVERT
+    VK_END,         ID_EDIT_TEXT_END,       VIRTKEY, CONTROL, NOINVERT
+    VK_END,         ID_EDIT_EXT_LINE_END,   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_EXT_TEXT_END,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_FIND_PREVIOUS,  VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_HOME,           VIRTKEY, NOINVERT
+    VK_HOME,        ID_EDIT_TEXT_BEGIN,     VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_HOME,       VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_TEXT_BEGIN, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_INSERT,      ID_EDIT_SWITCH_OVRMODE, VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_CHAR_LEFT,      VIRTKEY, NOINVERT
+    VK_LEFT,        ID_EDIT_WORD_LEFT,      VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_CHAR_LEFT,  VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_WORD_LEFT,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_NEXT,        ID_EDIT_PAGE_DOWN,      VIRTKEY, NOINVERT
+    VK_NEXT,        ID_EDIT_EXT_PAGE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_PRIOR,       ID_EDIT_PAGE_UP,        VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_EDIT_EXT_PAGE_UP,    VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       ID_EDIT_CHAR_RIGHT,     VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_EDIT_WORD_RIGHT,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_CHAR_RIGHT, VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_WORD_RIGHT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_TAB,         ID_EDIT_TAB,            VIRTKEY, NOINVERT
+    VK_TAB,         ID_EDIT_UNTAB,          VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_EDIT_LINE_UP,        VIRTKEY, NOINVERT
+    VK_UP,          ID_EDIT_SCROLL_UP,      VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          ID_EDIT_EXT_LINE_UP,    VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""editcmd.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDIT_TEXT_NOT_FOUND "Cannot find string""%s"""
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENU_UNDO_FORMAT    "&Undo %s\tCtrl+Z"
+    IDS_MENU_REDO_FORMAT    "&Redo %s\tCtrl+Y"
+    IDS_MENU_UNDO_DEFAULT   "&Undo\tCtrl+Z"
+    IDS_MENU_REDO_DEFAULT   "&Redo\tCtrl+Z"
+    IDS_EDITOP_UNKNOWN      "Unknown"
+    IDS_EDITOP_PASTE        "Paste"
+    IDS_EDITOP_DELSELECTION "Delete Selection"
+    IDS_EDITOP_CUT          "Cut"
+    IDS_EDITOP_DELETE       "Delete"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITOP_TYPING       "Typing"
+    IDS_EDITOP_BACKSPACE    "Backspace"
+    IDS_EDITOP_INDENT       "Indent"
+    IDS_EDITOP_DRAGDROP     "Drag And Drop"
+    IDS_EDITOP_REPLACE      "Replace"
+    IDS_EDITOP_AUTOINDENT   "Auto Indent"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

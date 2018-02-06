@@ -1,0 +1,171 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODDIAG DIALOG DISCARDABLE  0, 0, 102, 151
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_MAPPING DIALOGEX 0, 0, 102, 78
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "U",IDC_LIBU,8,10,8,8
+    LTEXT           "V",IDC_LIBV,8,44,8,8
+    RTEXT           "",IDC_TEXTU,44,9,50,13,0,WS_EX_STATICEDGE
+    RTEXT           "",IDC_TEXTV,44,41,50,13,0,WS_EX_STATICEDGE
+    CONTROL         "Slider1",IDC_SLIDU,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,0,25,100,15
+    CONTROL         "Slider1",IDC_SLIDV,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,0,57,100,15
+END
+
+IDD_LATHE DIALOGEX 0, 0, 102, 57
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Shape",IDC_SHAPE,4,4,32,12
+    LTEXT           "",IDC_SHAPENAME,40,4,57,12,0,WS_EX_STATICEDGE
+    CONTROL         "Slider1",IDC_LATHEVAL,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,0,20,100,15
+    PUSHBUTTON      "Generate",IDC_LATHEIT,5,39,50,14
+    LTEXT           "",IDC_LATHESCALE,58,39,39,14,0,WS_EX_STATICEDGE
+END
+
+IDD_PATH DIALOGEX 0, 0, 102, 135
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Shape",IDC_SHAPE,4,4,32,12
+    PUSHBUTTON      "Path",IDC_PATH,4,20,32,12
+    LTEXT           "",IDC_SHAPENAME,40,4,57,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_PATHNAME,40,20,57,12,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Scale",IDC_SCALE,6,39,44,12
+    PUSHBUTTON      "Rotate",IDC_ROTATE,50,39,44,12
+    PUSHBUTTON      "Generate",IDC_GENERATE,50,52,44,12
+    PUSHBUTTON      "Move Shp",IDC_MOVESHAPE,5,52,44,12
+    CONTROL         "Splined path",IDC_SPLINEDPATH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,70,55,10
+    LTEXT           "Steps",IDC_STATIC,2,84,19,8
+    EDITTEXT        IDC_EDIT1,24,83,56,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,83,83,
+                    11,14
+    CONTROL         "Splined shape",IDC_SPLINEDSHAPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,100,61,10
+    LTEXT           "Steps",IDC_STATIC,2,116,19,8
+    EDITTEXT        IDC_EDIT2,24,114,56,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN5,"msctls_updown32",UDS_ARROWKEYS,83,114,
+                    11,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP              BITMAP  DISCARDABLE     "res\\bitmap.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MODDIAG, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 138
+    END
+
+    IDD_MAPPING, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 58
+    END
+
+    IDD_LATHE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,91 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: DocImages - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Debug/DocImagesRes.res" /d "_DEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\DocImages\DocImagesRes.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP5E.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/DocImages.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\DocImages\ChildFrm.cpp"
+"D:\KapsulCVS\src\DocImages\CImageDemoDoc.cpp"
+"D:\KapsulCVS\src\DocImages\CImageDemoView.cpp"
+"D:\KapsulCVS\src\DocImages\ColorChooser.cpp"
+"D:\KapsulCVS\src\DocImages\ContrasteDlg.cpp"
+"D:\KapsulCVS\src\DocImages\CorrectionCouleursDlg.cpp"
+"D:\KapsulCVS\src\DocImages\CreateFilterDlg.cpp"
+"D:\KapsulCVS\src\DocImages\GTColorSelectorWnd.cpp"
+"D:\KapsulCVS\src\DocImages\GTColorSliderWnd.cpp"
+"D:\KapsulCVS\src\DocImages\GTColorWellWnd.cpp"
+"D:\KapsulCVS\src\DocImages\GTDrawHelper.cpp"
+"D:\KapsulCVS\src\DocImages\Hooking.cpp"
+"D:\KapsulCVS\src\DocImages\PaletteDialog.cpp"
+"D:\KapsulCVS\src\DocImages\PaletteWnd.cpp"
+"D:\KapsulCVS\src\DocImages\SnapDialog.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP5E.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP5F.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/DocImages.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\DocImages\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP5F.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP60.tmp" with contents
+[
+opengl32.lib Kore.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/DocImages.pdb" /debug /machine:I386 /out:"../workspace/plugins/DocImages.dll" /implib:"Debug/DocImages.lib" /pdbtype:sept 
+.\Debug\ChildFrm.obj
+.\Debug\CImageDemoDoc.obj
+.\Debug\CImageDemoView.obj
+.\Debug\ColorChooser.obj
+.\Debug\ContrasteDlg.obj
+.\Debug\CorrectionCouleursDlg.obj
+.\Debug\CreateFilterDlg.obj
+.\Debug\GTColorSelectorWnd.obj
+.\Debug\GTColorSliderWnd.obj
+.\Debug\GTColorWellWnd.obj
+.\Debug\GTDrawHelper.obj
+.\Debug\Hooking.obj
+.\Debug\PaletteDialog.obj
+.\Debug\PaletteWnd.obj
+.\Debug\SnapDialog.obj
+.\Debug\stdafx.obj
+.\Debug\DocImagesRes.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP60.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+d:\kapsulcvs\src\kore\entity.h(71) : warning C4800: 'unsigned int' : forcing value to bool 'true' or 'false' (performance warning)
+Compiling...
+ChildFrm.cpp
+CImageDemoDoc.cpp
+CImageDemoView.cpp
+D:\KapsulCVS\src\DocImages\CImageDemoView.cpp(160) : warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+ColorChooser.cpp
+ContrasteDlg.cpp
+CorrectionCouleursDlg.cpp
+CreateFilterDlg.cpp
+GTColorSelectorWnd.cpp
+GTColorSliderWnd.cpp
+GTColorWellWnd.cpp
+GTDrawHelper.cpp
+Hooking.cpp
+PaletteDialog.cpp
+PaletteWnd.cpp
+SnapDialog.cpp
+Generating Code...
+Linking...
+LINK : fatal error LNK1104: cannot open file "Kore.lib"
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+DocImages.dll - 1 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

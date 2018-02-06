@@ -1,0 +1,164 @@
+#************************************************************************
+#       -= SEER - C-Scripting engine v 0.93a =-
+#State      : under implementation
+#Author     : Przemyslaw Podsiadly
+#             email: ppodsiad@elka.pw.edu.pl
+#             WWW:   http://home.elka.pw.edu.pl/~ppodsiad
+#File:makefile.in
+#Desc:does the dirty work - what makefile tells him
+#************************************************************************
+.PHONY:delobj error
+#defines:
+#****Compilation options:
+#Optimize=1
+#PGCC=1
+#Compiler=1
+#Debug=1
+#Profile=1
+#Rebuild=1
+#SeeRC=1   make seerc.exe
+#Test=1    make test.exe
+
+ifdef Rebuild
+DoBefore=delobj
+#delobj:;@echo Deleting object files.
+else
+DoBefore=
+endif
+
+ifdef Linux
+Machine=-m486
+else
+Machine=-mpentium
+endif
+
+#****output filename:
+
+#****library objs
+#OBJ_PATH=objs
+ifndef OBJ_PATH
+error:;@echo OBJ_PATH not set. Check your makefile!.
+endif
+OBJECTS=vars.o compiler.o expr.o declare.o initial.o parser.o preproc.o dict.o consts.o vcpucode.o vcpudeco.o \
+        instance.o callasm.o pmem.o script.o protect.o headers.o
+OBJs = $(addprefix $(OBJ_PATH)/, $(OBJECTS))
+
+#****program objs
+ifdef Compiler
+OBJp=seerc.o
+ifdef DOS
+EXE=bin/seerc.exe
+else
+EXE=bin/seerc
+endif
+else
+OBJp=test.o
+ifdef DOS
+EXE=test.exe
+else
+EXE=test
+endif
+endif
+
+ifdef Debug
+LIBc=lib/libseerd.a
+else
+LIBc=lib/libseer.a
+endif
+ifdef Compiler
+LIBc=lib/libseerc.a
+endif
+
+LIBs=-lm
+#-lalleg
+HDRs=seer.h src/internal.h src/code.h
+COMPILE_C_HEADERS=
+
+#****Compilation parameters
+ifdef Profile
+PRO=-pg
+else
+PRO=
+endif
+Optim=-O6
+ifdef Optimize
+  ifdef PGCC
+  FLAGS = -Wall -s $(Machine) -O6 -ffast-math -fomit-frame-pointer
+  SAFEFLAG= -Wall -s $(Machine) -O -ffast-math -fomit-frame-pointer
+  else
+  FLAGS=-Wall -s $(Machine) $(Optim) -ffast-math -fomit-frame-pointer
+  SAFEFLAGS=-Wall -s $(Machine) -O -ffast-math
+  endif
+LINK=-Wall -s
+else
+
+  ifdef Debug
+  FLAGS=-Wall -g $(Machine)
+  SAFEFLAGS=-Wall -g $(Machine)
+  LINK=-Wall -g $(Machine)
+  else
+   ifdef Profile
+   FLAGS=-Wall $(Machine)
+   SAFEFLAGS=-Wall $(Machine)
+   LINK=-Wall $(Machine)
+   else
+   FLAGS=-Wall -s $(Machine)
+   SAFEFLAGS=-Wall -s $(Machine)
+   LINK=-Wall -s $(Machine)
+   endif
+  endif
+
+endif
+
+ifdef Compiler
+MACROS=-DDEBUG
+else
+ifdef Debug
+MACROS=-DDEBUG
+else
+MACROS=
+endif
+endif
+
+#****compiler and linker:
+AR=ar rs
+CC=gcc
+
+ifdef SeeRC
+all:$(LIBc) $(EXE)
+else
+ifdef Test
+all:$(LIBc) $(EXE)
+else
+all:$(LIBc)
+endif
+endif
+
+#****************************************************************
+#****link program:
+$(EXE):$(LIBc) msg2 $(OBJ_PATH)/$(OBJp) $(HDRs);$(CC) $(PRO) $(LINK) -o $(EXE) $(OBJ_PATH)/$(OBJp) $(LIBc) $(LIBs)
+
+#****link library:
+$(LIBc):$(DoBefore) $(OBJs) $(HDRs);$(AR) $(LIBc) $(OBJs)
+
+
+#msg :;@echo Building SeeR scripting library
+msg2 :$(DoBefore);@echo Building SeeR $(EXE)
+
+#****compile
+#objs/.o:compiler.c $(HDRs) $(COMPILE_C_HEADERS);$(CC) $(FLAGS) $(PRO) $(MACROS) -c -o $@ compiler.c
+
+$(OBJ_PATH)/callasm.o:src/callasm.c $(HDRs);$(CC) $(SAFEFLAGS) -c $(MACROS) $(PRO) -I. -o $@ $<
+
+$(OBJ_PATH)/%.o:src/%.c $(HDRs);$(CC) $(FLAGS) $(MACROS) $(PRO) -I. -c -o $@ $<
+
+$(OBJ_PATH)/seerc.o:seerc/seerc.c $(HDRs);$(CC) $(FLAGS) $(PRO)  -I. -c -o $@ $<
+$(OBJ_PATH)/test.o:test.c $(HDRs);$(CC) -s -Wall $(Machine) $(PRO)  -I. -c -o $@ $<
+
+ifdef DOS
+delobj:;@del $(subst /,\,$(OBJ_PATH))\*.o
+else
+delobj:;@if [ "`ls $(OBJ_PATH)/*.o 2>/dev/nul`" != "" ]; then rm $(OBJ_PATH)/*.o; fi
+endif
+
+#;echo -n "Re"

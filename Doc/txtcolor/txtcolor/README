@@ -1,0 +1,46 @@
+-----------------------------------------------------------------------------
+
+                                 TxtColor
+
+                               Version 1.0
+
+-----------------------------------------------------------------------------
+
+http://www.alias25.com/
+
+-----------------------------------------------------------------------------
+                                  LICENSE
+-----------------------------------------------------------------------------
+ This code/program is under the GNU GPL2 License, check out the "COPYING"
+ file.
+
+-----------------------------------------------------------------------------
+ Program description.
+-----------------------------------------------------------------------------
+ TxtColor is a little program which syntax highlight a simple text file
+ (which can be a C, C++, or other language source code) and output the result
+ in a html file.
+
+ syntax:
+    txtcolor text_file_to_convert.ext text_file_out.html (tab_size)
+    
+ supported file types:
+    c, cxx, cc, cpp, h, hpp => C/C++ source files
+	other => simple text files
+
+ notes:
+  - The file type is detected with the filename extension.
+  - tab_size is the number of space to insert when a tab char is encoutered.
+    -> 1 by default.
+    
+-----------------------------------------------------------------------------
+ How make the program ?
+----------------------------------------------------------------------------- 
+ Just make an executable from the C source file txtcolor.c with a ANSI C
+ compiler (GCC, Visual C++, ...).
+
+-----------------------------------------------------------------------------
+January 19, 2001
+-----------------------------------------------------------------------------
+Written by:  Pierre Renaux (prenaux@alias25.com)
+-----------------------------------------------------------------------------

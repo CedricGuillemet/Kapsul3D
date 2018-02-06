@@ -1,0 +1,10 @@
+; Entity.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Entity"
+DESCRIPTION  'Entity Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateEntityInterface
+	DeleteEntityInterface
+	FillEntityPrimitives

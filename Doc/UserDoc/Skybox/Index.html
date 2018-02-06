@@ -1,0 +1,168 @@
+<HTML>
+<HEAD>
+<STYLE>
+A:visited {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #8D8D8D; TEXT-DECORATION: none
+}
+A:link {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:active {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+</STYLE>
+<TITLE>Skybox Documentation</TITLE>
+</HEAD>
+<BODY TEXT="#ffffff" LINK="#0000ff" VLINK="#800080" BGCOLOR="#000000">
+
+<P><!-- saved from url=(0022)http://internet.e-mail --></P>
+<B><FONT SIZE=5><P>Skybox</B></FONT>&nbsp;</P>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=685>
+<TR><TD WIDTH="47%" VALIGN="TOP" HEIGHT=205>
+<P><IMG SRC="menu.gif" WIDTH=303 HEIGHT=144></P>
+<FONT FACE="Arial" SIZE=1><P>Create/modify a skybox from the 'tools' menus. Select 'Skybox Editor'</FONT></TD>
+<TD WIDTH="53%" VALIGN="TOP" HEIGHT=205>
+<P>Skybox can help you design a map by giving a real immersion and feeling. In Kapsul, the skybox works that way: </P>
+
+<UL>
+<LI>create a skybox in the skybox editor</LI>
+<LI>Load it in a camera view</LI></UL>
+
+<P>The skybox is a first try to make a real atmosphere in the scene. Next challenge will be support for clouds, fogs, sun(s),…</TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P><A NAME="pa"></A>a) Skybox overview</B></I></TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=722>
+<TR><TD WIDTH="15%" VALIGN="TOP" HEIGHT=114><P></P></TD>
+<TD WIDTH="16%" VALIGN="TOP" HEIGHT=114><P></P></TD>
+<TD WIDTH="16%" VALIGN="TOP" HEIGHT=114>
+<P><IMG SRC="tropdayup.jpg" WIDTH=101 HEIGHT=101></TD>
+<TD WIDTH="14%" VALIGN="TOP" HEIGHT=114><P></P></TD>
+<TD WIDTH="39%" VALIGN="TOP" HEIGHT=114>
+<P>A skybox is composed of 6 images making a cube around the world. The matrix is a little different from the Camera matrix. It reflects only the rotation, so you can turn in the world but you can't touch the box.</TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">
+<P><IMG SRC="tropdaybk.jpg" WIDTH=100 HEIGHT=100></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P><IMG SRC="tropdaylf.jpg" WIDTH=100 HEIGHT=100></TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P><IMG SRC="tropdaybk.jpg" WIDTH=100 HEIGHT=100></TD>
+<TD WIDTH="14%" VALIGN="TOP">
+<P><IMG SRC="tropdayrt.jpg" WIDTH=100 HEIGHT=100></TD>
+<TD WIDTH="39%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+<TR><TD WIDTH="15%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="16%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="16%" VALIGN="TOP">
+<P><IMG SRC="tropdaydn.jpg" WIDTH=100 HEIGHT=100></TD>
+<TD WIDTH="14%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="39%" VALIGN="TOP">&nbsp;</TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P>b) Building a Skybox</B></I></TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=722>
+<TR><TD WIDTH="67%" VALIGN="TOP">
+<P><IMG SRC="full1.jpg" WIDTH=400 HEIGHT=446></TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P>The window is composed of an autopreview, the buttons to load bitmaps and a skybox file management. I won't speak of the second layer or the clouds. It's premiliary development. At this time, the skybox is empty. You can start a new one or load an already existing skybox</TD>
+</TR>
+<TR><TD WIDTH="67%" VALIGN="TOP">
+<P><IMG SRC="open.jpg" WIDTH=480 HEIGHT=468></TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P>When you click on one of the 'none' or on one of the checkbox, it prompts you to load an image file.</P>
+</TD>
+</TR>
+<TR><TD WIDTH="67%" VALIGN="TOP">
+<P><IMG SRC="top.jpg" WIDTH=400 HEIGHT=449></TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P>Once the file is loaded, it's displayed in the autopreview.</TD>
+</TR>
+<TR><TD WIDTH="67%" VALIGN="TOP">
+<P><IMG SRC="top-left.jpg" WIDTH=400 HEIGHT=449></TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P>Make the same way for the other. </TD>
+</TR>
+<TR><TD WIDTH="67%" VALIGN="TOP">
+<P><IMG SRC="finished.jpg" WIDTH=400 HEIGHT=448></TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P>Once your skybox is ended, you can click on the save button. You don't have to set all the 6 image to save it. You have to save it to use it in the camera views.</TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P>c) Using the Skybox in the camera views</B></I></TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=727>
+<TR><TD WIDTH="48%" VALIGN="TOP">
+<P><IMG SRC="LoadSkybox.gif" WIDTH=340 HEIGHT=576></TD>
+<TD WIDTH="52%" VALIGN="TOP">
+<P>Select a camera view, go the 'View' menu, 'Skybox'submenu and click Load. You can't set a Skybox in Ortho views. To remove a Skybox, click on the 'none' menu item.</TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=798>
+<TR><TD WIDTH="72%" VALIGN="TOP">
+<P><IMG SRC="Skybox-finished.jpg" WIDTH=550 HEIGHT=466></TD>
+<TD WIDTH="28%" VALIGN="TOP">
+<P>It works like a 3D background: All the geometry is displayed in front of it.</TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">
+<P>&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP">
+<B><I><P>d) Skybox File format</B></I></TD>
+</TR>
+</TABLE>
+
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=633>
+<TR><TD WIDTH="22%" VALIGN="TOP" HEIGHT=224>
+<P>10-tropdaylf.jpg</P>
+<P>11-tropdayrt.jpg</P>
+<P>12-tropdayup.jpg</P>
+<P>13-tropdaydn.jpg</P>
+<P>14-tropdaybk.jpg</P>
+<P>15-tropdayft.jpg</P>
+<P>&nbsp;</P>
+<FONT SIZE=1><P>tropday.skk dump</FONT></TD>
+<TD WIDTH="78%" VALIGN="TOP" HEIGHT=224>
+<P>Each line corresponds to a cube face. The First chunk is an indice describing the layer and position.</TD>
+</TR>
+</TABLE>
+
+</BODY>
+</HTML>

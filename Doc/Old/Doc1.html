@@ -1,0 +1,660 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+
+
+<head>
+<title></title>
+</head>
+
+<body background="../ima/cadre_mid_mid.gif">
+
+<p><font color="#000000"><b><font size="5">Entity system</font></b>&nbsp;<br>
+<br>
+Entity system is a powerfull pipe. It can be used to add primitives inside Kapsul that can be directly edited. Your built primitives will support selection,copy/cut/paste,… like any built-in primitive. Sometimes, you will just want to add your own properties to already existing primitive (ex : add a ‘sound on walk’ property for a mesh). This document starts dealing with custom properties first and describe the entity system after.<br>
+<br>
+In Kapsul, An entity is an object only described by its properties and their corresponding values. A mesh cannot be an editable entity because it is composed of vertex, faces, edges,… that cannot be edited
+directly.<br>
+<br>
+<br>
+<b><font size="4">
+1 ) Custom properties for built-in primitives</font></b><br>
+<br>
+<b><font size="3"><i>
+a) Entity.xml</i></font></b><br>
+<br>
+All properties are described inside the entity.xml file. That file ins't used for properties storing. Here is an part of it. That file is used for the Entity system too.<br>
+<br>
+&lt;Entity><br>
+        &lt;desc value="Mesh" /><br>
+	&lt;Group value="Mesh USer Defined 1"><br>
+            &lt;Groupvalues name="Integer1" type="integer" default="42"/><br>
+            &lt;Groupvalues name="String1" type="string" /><br>
+        &lt;/Group><br>
+<br>
+	&lt;Group value="Mesh USer Defined 2"><br>
+            &lt;Groupvalues name="Slider1" type="slider" value0="10" value1="50" default="30"/><br>
+            &lt;Groupvalues name="color1" type="color" /><br>
+        &lt;/Group><br>
+&lt;/Entity><br>
+<br>
+That xml code describes the additionnal properties for all meshes. It’s encapsulate in the &lt;Entity> tag. The second tag &lt;desc value= « Mesh » /> indicate what the description is for. The other values for that tag are :<br>
+- Shape<br>
+- Camera<br>
+- Skeleton<br>
+- Patch<br>
+<br>
+<font size="3"><b><i>
+b) Listing properties</i></b></font><br>
+<br>
+Properties are grouped in the &lt;Group> tag. The 'value' attribute inside it set the group name.<br>
+The properties themselves are given in the &lt;groupvalues> tag. Here is how it is composed:<br>
+<br>
+&lt;Groupvalues name="name_of_property" type="property_type" [ value0="X" [ value1="Y" [value2="Z" [...]]] [default="XX"] /><br>
+<br>
+What is inside '[]' is not necessary.<br>
+The name of property must not have space chars.<br>
+The type attributes give the property type and by the way, the control that will be placed in the object inspector.<br>
+The complete list of type is:<br>
+- integer<br>
+- float<br>
+- color (stored in format 0x00RRGGBB hexadecimal value)<br>
+- string<br>
+- slider<br>
+- combo (store selected string)<br>
+<br>
+the default attribute set the default value for that property at primitive creation.<br>
+The valueX attributes are used depending upon the type.<br>
+For The combo box, the valueX gives all the combo box string.<br>
+For the slider, value0 gives the minimum value and value1 set the maximum.<br>
+<br>
+<font size="3"><b><i>
+c) How properties are used in kapsul</i></b></font><br>
+<br>
+Now let's look at what that description give in Kapsul. I build a simple sphere, right click on it and select the property menu item.<br>
+**Object-properties.gif**<br>
+<br>
+Once clicked, the object inspector appears in the build bar displaying object properties.<br>
+**Obj-props.gif**<br>
+<br>
+Note that the 'defaults' props group contains built-in properties. You can modify them but cannot remove them from the object inspector. This default list can change between two versions.<br>
+<br>
+You can see what the color control gives and how the default values appears.&nbsp;<br>
+<br>
+<br>
+<font size="3"><b><i>
+d) Saving and loading properties&nbsp;</i></b></font><br>
+<br>
+Now, take a look at the IOTXT plugin. here is a snippet:<br>
+<br>
+Loading properties works like this:<br>
+<br>
+daMesh->m_Table.ReadFromDisk(fp,daMesh,PLUGIN_MESH);<br>
+<br>
+where daMesh is a pointer to a mesh object, m_table is the properties container. fp is a FILE *. The last parameter gives the type of primitive because the mtehod is not part of the Mesh class but of a CKHashTable class. The ReadFromDisk method simplify the loading/saving in kapsul. It produce/read properties formatted that manner:<br>
+<br>
+{<br>
+Name="Mesh000"<br>
+Color="0x2AA5"<br>
+AutoUV="1"<br>
+PrefabName=""<br>
+[...]<br>
+}<br>
+<br>
+In your File plugin, you can bypassing the ReadFromDisk/SaveFromDisk by looking at the CKHaskTable class. SaveFromDisk works the same manner and has the same parameters.<br>
+<br>
+<font size="3"><b><i>
+e) End note:</i></b></font><br>
+Such kind of customisability can help you a lot while setting mesh/shape parameters for your in-game envirronement. Allowing artists more flexibily. Moreover, you can add properties in entity.xml without losing ascendant compatibily.<br>
+<br>
+<font size="4"><b>
+2) user defined primtives: Entity system</b></font><br>
+<br>
+<font size="3"><b><i>
+a) overall description</i></b></font><br>
+<br>
+Basically, you have to do that:<br>
+- you give your entities description is Entity.xml<br>
+- you add a messages handler in entity.dll<br>
+- Add your entity class<br>
+To clarify things, an entity is just a wrapper for Kapsul to encapsulate instances of your class. An entity per instance of your class. Inside Kapsul, an entity is just a string containing properties. That's easy for copy/cut/paste by example because we care only about that string. But in the entity code, you have to translate from string values to runtime class values. Watch KEntity.h implementation.<br>
+<br>
+<font size="3"><b><i>
+b) Describe your entity</i></b></font><br>
+<br>
+It works the same way as for built-in primitives user properties. Check the previous section and the examples.<br>
+<br>
+<font size="3"><b><i>
+c) Add your message handle</i></b></font>.<br>
+<br>
+We take the Light entity for example. (Please, take the latest version, This example might contain bugs/leaks of optimisation)<br>
+<br>
+1st, take Entity.cpp. In the 'Process_Entity' function, The KM_GETBITMAPS is intended to add the entities creation button in the primitive fly bar. Change the structure filling to add/remove entities bitmaps and by the way editable entities.<br>
+<br>
+Now take file lightp.cpp.<br>
+<br>
+The process function name is very important. It a concat of 'Process_' and the name of the entity in entity.xml.<br>
+<br>
+In entities.xml:<br>
+<br>
+    &lt;Entity><br>
+<br>
+        &lt;desc value="Light" /><br>
+<br>
+        &lt;Group value="Identity"><br>
+            &lt;Groupvalues name="Name" type="string" /><br>
+            &lt;Groupvalues name="PositionX" type="float"/><br>
+<br>
+So, for the light, it is 'Process_' + 'Light'.<br>
+<br>
+Let's go now with all the declaration<br>
+<br>
+/*&nbsp;<br>
+Includes<br>
+*/<br>
+#include "stdafx.h"<br>
+#include "Kapsul3D.h"<br>
+#include "Entities\Light.h"<br>
+<br>
+CKEntity *LCurEntity;<br>
+CLight  *CurLight;<br>
+bool LIsCreating=false;<br>
+int LSyncCreate;<br>
+CString lxmlDatas,ltmpxml;<br>
+CKDrawScene *LGDrawScene;<br>
+MYPOINT Lspt,Lspt2,Lsdeb;<br>
+CKSelectionInfos *LCurSel;<br>
+bool LdaAddIt;<br>
+CKMinMaxEnt Lm_MinMax;<br>
+int CreateSeg=0;<br>
+double tmpradius;<br>
+extern MYPOINT sdeb;<br>
+MYPOINT sfin;<br>
+bool HasBeenSel=false;<br>
+extern bool daAddIt;<br>
+bool daAddIt1,daAddIt2;<br>
+CKScene *GScene;<br>
+<br>
+/*<br>
+Forward declaration<br>
+*/<br>
+void LMouseDown(int X,int Y,Vertex *Pos);<br>
+void LMouseUp(int X,int Y,Vertex *Pos);<br>
+void MouseMove(int X,int Y,Vertex *Pos);<br>
+void RMouseDown(int X,int Y,Vertex *Pos);<br>
+void RMouseUp(int X,int Y,Vertex *Pos);<br>
+<br>
+<br>
+UINT __declspec(dllexport) Process_Light(unsigned long Msg,unsigned long wParam,unsigned long lParam)<br>
+{<br>
+	UINT value=0;<br>
+	switch(Msg)<br>
+	{<br>
+/*<br>
+This message is sent to tell you what is the entity you have to work on. This message arrives very often (before drawing, to retrieve its values,before KM_GETSINGLE,KM_SELECTSINGLE,...). The entity sent in parameters is called the current entity.<br>
+It works the same way for every entity.<br>
+Check CompilData member of the entity instance (wParam is a pointer to the entity instance).<br>
+If that member is NULL, you create your object instance and set the pointer in CompilData.<br>
+If not, your instance is already in 'CompilData' so set the 'working-on' pointer.<br>
+*/<br>
+	case KM_SETENTITY:<br>
+		if (((CKEntity*)wParam)->CompilData==NULL)<br>
+		{<br>
+			((CKEntity*)wParam)->CompilData=new CLight;<br>
+			LSyncCreate=0;<br>
+			LIsCreating=true;<br>
+		}<br>
+<br>
+		CurLight=(CLight*)((CKEntity*)wParam)->CompilData;<br>
+		LCurEntity=(CKEntity*)wParam;<br>
+<br>
+		break;<br>
+/*<br>
+	KM_FREEENTITY is called to free your class. Simply delete your instance is CompilData is not NULL.<br>
+*/<br>
+	case KM_FREEENTITY:<br>
+		if ( ((CKEntity*)wParam)->CompilData!=NULL) delete (CLight*)((CKEntity*)wParam)->CompilData;<br>
+		break;<br>
+/*<br>
+	Called to draw your stuff. An entity belongs to 1 and only 1 Scene. To retrieve the scene info (rendering parameters,...) Get the Scene pointer<br>
+	Thru the entity	and call your draw member from your class.<br>
+*/<br>
+	case KM_DRAW:<br>
+		GScene=LCurEntity->m_Scene;<br>
+		CurLight->Draw(*LCurEntity->m_Scene->ViewSize,lParam,0);<br>
+		break;<br>
+/*<br>
+	KM_ISCREATING report kapsul when you are building an entity. The light entity needs 2 mouse click to achieve construction.<br>
+	So , at the first click, we set the CreateSeg value to TRUE.<br>
+	When we receive mouse move message, if we are creating (CreateSeg is TRUE), we update our entity based on mouse position<br>
+	At the second click, we set CreateSeg to FALSE.<br>
+	That CreateSeg value helps us synchronize the built and we must return it to Kapsul otherwise, Kapsul won't know if we are building or not.<br>
+	By example, you can change the active view when an entity is being built.<br>
+*/<br>
+	case KM_ISCREATING:<br>
+		value=CreateSeg;<br>
+		break;<br>
+<br>
+/*<br>
+	Mouse message. see below<br>
+<br>
+/*/<br>
+    case KM_LMOUSEDOWN:<br>
+        LMouseDown(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));<br>
+        break;<br>
+    case KM_RMOUSEDOWN:<br>
+        RMouseDown(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));<br>
+        break;<br>
+    case KM_LMOUSEUP:<br>
+        LMouseUp(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));<br>
+        break;<br>
+    case KM_RMOUSEUP:<br>
+        RMouseUp(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));<br>
+        break;<br>
+    case KM_MOUSEMOVE:<br>
+        MouseMove(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));<br>
+        break;<br>
+/*<br>
+	KM_GETXML and KM_SETXML	are very important. They translate respectively from class member values to string and from string to class member values.<br>
+	The table where the properties are stored is wParam. You have to cast it.<br>
+*/<br>
+	case KM_GETXML:<br>
+		{<br>
+			CKHashTable *table=(CKHashTable *)wParam;<br>
+<br>
+			table->SetEntry("Name",CurLight->Name);<br>
+			table->SetEntry("PositionX",CurLight->Source.vx);<br>
+			table->SetEntry("PositionY",CurLight->Source.vy);<br>
+			table->SetEntry("PositionZ",CurLight->Source.vz);<br>
+			table->SetEntry("Color",(DWORD)(CurLight->r*65536+CurLight->g*256+CurLight->b));<br>
+<br>
+			switch(CurLight->Type)<br>
+			{<br>
+			case 0:<br>
+				table->SetEntry("Type","Omni");<br>
+				break;<br>
+			case 1:<br>
+				table->SetEntry("Type","Spot");<br>
+				break;<br>
+			case 2:<br>
+				table->SetEntry("Type","Neon");<br>
+				break;<br>
+			}<br>
+<br>
+			switch(CurLight->SpotType)<br>
+			{<br>
+			case 0:<br>
+				table->SetEntry("SpotType","Rectangular");<br>
+				break;<br>
+			case 1:<br>
+				table->SetEntry("SpotType","Circular");<br>
+				break;<br>
+			}<br>
+<br>
+			table->SetEntry("TargetX",CurLight->Target.vx );<br>
+			table->SetEntry("TargetY",CurLight->Target.vy );<br>
+			table->SetEntry("TargetZ",CurLight->Target.vz );<br>
+<br>
+			table->SetEntry("Radius",CurLight->Radius);<br>
+<br>
+		}<br>
+		break;<br>
+/*<br>
+	Add DrawViews() call at the end of the method to update your the MDI views. Don't call your rendering code directly.<br>
+*/<br>
+	case KM_SETXML:<br>
+		{<br>
+			CKHashTable *table=(CKHashTable *)wParam;<br>
+<br>
+			CurLight->Name=table->GetString("Name");<br>
+<br>
+			CurLight->Source.vx=table->GetFloat("PositionX");<br>
+			CurLight->Source.vy=table->GetFloat("PositionY");<br>
+			CurLight->Source.vz=table->GetFloat("PositionZ");<br>
+			DWORD tmpcolor=table->GetDWord("Color");<br>
+			CurLight->r=((float)((tmpcolor&amp;0xff0000)>>16));<br>
+			CurLight->g=((float)((tmpcolor&amp;0xff00)>>8));<br>
+			CurLight->b=((float)(tmpcolor&amp;0xff));<br>
+<br>
+			CString tmptype=table->GetString("Type");<br>
+<br>
+			if (tmptype=="Omni")<br>
+				CurLight->Type = 0;<br>
+			else<br>
+				if (tmptype=="Spot")<br>
+					CurLight->Type = 1;<br>
+				else<br>
+					CurLight->Type = 2;<br>
+<br>
+			tmptype=table->GetString("SpotType");<br>
+<br>
+<br>
+			if (tmptype=="Rectangular")&nbsp;<br>
+				CurLight->SpotType = 0;<br>
+			else<br>
+				CurLight->SpotType = 1;<br>
+<br>
+			CurLight->Target.vx=table->GetFloat("TargetX");<br>
+			CurLight->Target.vy=table->GetFloat("TargetY");<br>
+			CurLight->Target.vz=table->GetFloat("TargetZ");<br>
+			CurLight->Radius=table->GetFloat("Radius");<br>
+<br>
+			DrawViews();<br>
+<br>
+		}<br>
+		break;<br>
+/*<br>
+	Return 1 to this message if your current entity is near the mouse click(mouse position is MAKELONG(X,Y) and set in wParam.<br>
+	Use the same code to retrieve screen coordinates(projection) from the entity and compare it to the mouse position (called Pythagore function to&nbsp;<br>
+	get distance between).<br>
+	return 0 if the entity is too far.<br>
+*/<br>
+	case KM_GETSINGLE:<br>
+		// Get a X/Y coordinates and you must return an entity if you have 1 close to it.<br>
+		// we seek &amp; project for the current entity<br>
+	    	LGDrawScene=(CKDrawScene*)lParam;<br>
+		Lspt=LCurEntity->m_Scene->cSel->Get2D(LGDrawScene->GetIsoCoord(LOWORD(wParam),HIWORD(wParam),LCurEntity->m_Scene->Active));<br>
+<br>
+        	Lspt2=LCurEntity->m_Scene->cSel->Get2D(CurLight->Source);<br>
+<br>
+        	if (Pythagore(Lspt2.x-Lspt.x,Lspt2.y-Lspt.y)&lt;7)<br>
+        	{<br>
+            		value=1;<br>
+        	}<br>
+		else<br>
+		{<br>
+			value=0;<br>
+		}<br>
+<br>
+		break;<br>
+/*<br>
+	this message is called to Select/Unselect the current entity. wParam is TRUE for selecting and FALSE for unselecting.<br>
+	That function always return 1.<br>
+	If you have to select the current entity, push all the entity vertex in the vertex modification buffer with the&nbsp;<br>
+	AddBufVert function. The 1st parameter is the pointer to the vertex. The 2nd is the pointer to the entity (not the CompilData member).3rd parameter is 0.<br>
+	Don't Forget to set the Selected member of the Vertex to wParam. Tag the Selected member of the current entity too.<br>
+<br>
+<br>
+*/<br>
+	case KM_SELECTSINGLE:<br>
+        	value=1;<br>
+<br>
+		if ((bool)wParam)&nbsp;<br>
+		{<br>
+			if (CurLight->Type==0)<br>
+			{<br>
+				LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Source,LCurEntity,0);&nbsp;<br>
+			}<br>
+			else<br>
+			{<br>
+				LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Source,LCurEntity,0);&nbsp;<br>
+				LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Target,LCurEntity,0);&nbsp;<br>
+			}<br>
+		}<br>
+<br>
+		CurLight->Source.Selected=(bool)wParam;<br>
+		CurLight->Target.Selected=(bool)wParam;<br>
+		LCurEntity->Selected=(bool)wParam;<br>
+		break;<br>
+/*<br>
+	That message is simple: tag to false the selected member of Entity and of class.<br>
+*/<br>
+	case KM_UNSELECT:<br>
+		CurLight->Selected=false;<br>
+		LCurEntity->Selected=false;<br>
+		break;<br>
+<br>
+/*<br>
+	this message is sent when the user perfom a selection in the document. The selections can be select by rectangle/circle/fence/single. All the selection parameters are stored in the wParam value. Cast it to a CKSelectionInfos *. That structure contains the type of selection, the Min/Max position for a rectangle selection, the center and radius for a circle selection. Please note that a selection can also be used to remove items from selection (selection with CTRL down. Watch the selection user manual).&nbsp;<br>
+<br>
+<br>
+*/<br>
+	case KM_SELECTION:<br>
+		LCurSel=(CKSelectionInfos *)wParam;<br>
+<br>
+		sdeb=LCurEntity->m_Scene->cSel->Get2D(CurLight->Source);<br>
+        sfin=LCurEntity->m_Scene->cSel->Get2D(CurLight->Target);<br>
+<br>
+		daAddIt1=false;<br>
+		daAddIt2=false;<br>
+<br>
+        if (CurLight->Type==0)<br>
+        {<br>
+            // omni<br>
+			switch(LCurSel->TypeSel)<br>
+			{<br>
+				case SELECT_SINGLE:<br>
+					daAddIt1=(Pythagore((sdeb.x-LCurSel->spt2.x),(sdeb.y-LCurSel->spt2.y))&lt;3);<br>
+					break;<br>
+				case SELECT_CIRCLE:<br>
+					daAddIt1=(Pythagore((sdeb.x-LCurSel->spt.x),(sdeb.y-LCurSel->spt.y))&lt;LCurSel->Length);<br>
+					break;<br>
+				case SELECT_QUAD:<br>
+					daAddIt1=( (((sdeb.x>=LCurSel->spt.x)&amp;&amp;(sdeb.x&lt;=LCurSel->spt2.x))||((sdeb.x&lt;=LCurSel->spt.x)&amp;&amp;(sdeb.x>=LCurSel->spt2.x)))&amp;&amp;<br>
+						(((sdeb.y>=LCurSel->spt.y)&amp;&amp;(sdeb.y&lt;=LCurSel->spt2.y))||((sdeb.y&lt;=LCurSel->spt.y)&amp;&amp;(sdeb.y>=LCurSel->spt2.y))) );<br>
+					break;<br>
+				case SELECT_FENCE:<br>
+					daAddIt1=LCurSel->daSh->IsVertInShape(CurLight->Source,LCurSel->View);<br>
+					break;<br>
+			}<br>
+        }<br>
+        else<br>
+        {<br>
+            // spot<br>
+			switch(LCurSel->TypeSel)<br>
+			{<br>
+				case SELECT_SINGLE:<br>
+					if (LCurSel->WholeSelect==SELECT_WHOLE)&nbsp;<br>
+					{<br>
+						daAddIt1=(SegDistance(sdeb,sfin,LCurSel->spt2)&lt;3);<br>
+						daAddIt2=daAddIt1;<br>
+					}<br>
+					if (LCurSel->WholeSelect==SELECT_VERTEX)&nbsp;<br>
+					{<br>
+						daAddIt1=(Pythagore((sdeb.x-LCurSel->spt2.x),(sdeb.y-LCurSel->spt2.y))&lt;3);<br>
+						daAddIt2=(Pythagore((sfin.x-LCurSel->spt2.x),(sfin.y-LCurSel->spt2.y))&lt;3);<br>
+					}<br>
+					break;<br>
+				case SELECT_CIRCLE:<br>
+					daAddIt1=(Pythagore((sdeb.x-LCurSel->spt.x),(sdeb.y-LCurSel->spt.y))&lt;LCurSel->Length);<br>
+					daAddIt2=(Pythagore((sfin.x-LCurSel->spt.x),(sfin.y-LCurSel->spt.y))&lt;LCurSel->Length);<br>
+					break;<br>
+				case SELECT_QUAD:<br>
+					daAddIt1=( (((sdeb.x>=LCurSel->spt.x)&amp;&amp;(sdeb.x&lt;=LCurSel->spt2.x))||((sdeb.x&lt;=LCurSel->spt.x)&amp;&amp;(sdeb.x>=LCurSel->spt2.x)))&amp;&amp;<br>
+						(((sdeb.y>=LCurSel->spt.y)&amp;&amp;(sdeb.y&lt;=LCurSel->spt2.y))||((sdeb.y&lt;=LCurSel->spt.y)&amp;&amp;(sdeb.y>=LCurSel->spt2.y))) );<br>
+					daAddIt2=( (((sfin.x>=LCurSel->spt.x)&amp;&amp;(sfin.x&lt;=LCurSel->spt2.x))||((sfin.x&lt;=LCurSel->spt.x)&amp;&amp;(sfin.x>=LCurSel->spt2.x)))&amp;&amp;<br>
+						(((sfin.y>=LCurSel->spt.y)&amp;&amp;(sfin.y&lt;=LCurSel->spt2.y))||((sfin.y&lt;=LCurSel->spt.y)&amp;&amp;(sfin.y>=LCurSel->spt2.y))) );<br>
+					break;<br>
+				case SELECT_FENCE:<br>
+					daAddIt1=LCurSel->daSh->IsVertInShape(CurLight->Source,LCurSel->View);<br>
+					daAddIt2=LCurSel->daSh->IsVertInShape(CurLight->Target,LCurSel->View);<br>
+					break;<br>
+			}<br>
+        }<br>
+<br>
+		if (LCurSel->WholeSelect==SELECT_WHOLE)&nbsp;<br>
+		{<br>
+			if (CurLight->Type==0)<br>
+			{<br>
+				if (daAddIt1)<br>
+				{<br>
+					if ((!CurLight->Source.Selected)&amp;&amp;(LCurSel->AddIt))&nbsp;<br>
+						LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Source,LCurEntity,0);&nbsp;<br>
+					CurLight->Source.Selected=LCurSel->AddIt;<br>
+				}&nbsp;<br>
+<br>
+				CurLight->Selected=daAddIt1;<br>
+				LCurEntity->Selected=daAddIt1;<br>
+<br>
+			}<br>
+			else<br>
+			{<br>
+				if (LCurSel->Crossing) daAddIt=daAddIt1 || daAddIt2;<br>
+					else daAddIt=daAddIt1 &amp;&amp; daAddIt2;<br>
+<br>
+				// Add it if OK!<br>
+				if (daAddIt)<br>
+				{<br>
+					if ((!CurLight->Source.Selected)&amp;&amp;(LCurSel->AddIt))&nbsp;<br>
+						LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Source,LCurEntity,0);&nbsp;<br>
+					CurLight->Source.Selected=LCurSel->AddIt;<br>
+<br>
+					if ((!CurLight->Target.Selected)&amp;&amp;(LCurSel->AddIt))&nbsp;<br>
+						LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Target,LCurEntity,0);&nbsp;<br>
+					CurLight->Target.Selected=LCurSel->AddIt;<br>
+<br>
+					CurLight->Selected=LCurSel->AddIt;<br>
+					LCurEntity->Selected=LCurSel->AddIt;<br>
+<br>
+				}<br>
+			}<br>
+		}<br>
+		else<br>
+		{<br>
+			if (daAddIt1)<br>
+			{<br>
+				if ((!CurLight->Source.Selected)&amp;&amp;(LCurSel->AddIt))&nbsp;<br>
+					LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Source,LCurEntity,0);&nbsp;<br>
+				CurLight->Source.Selected=LCurSel->AddIt;<br>
+			}<br>
+<br>
+			if (daAddIt2)&nbsp;<br>
+			{<br>
+				if ((!CurLight->Target.Selected)&amp;&amp;(LCurSel->AddIt))&nbsp;<br>
+					LCurEntity->m_Scene->AddBufVert(&amp;CurLight->Target,LCurEntity,0);&nbsp;<br>
+				CurLight->Target.Selected=LCurSel->AddIt;<br>
+			}<br>
+		}<br>
+		break;<br>
+/*<br>
+	when receiving this message, fill a CKMinMaxEnt structure and return a pointer to it. So, you need to declare that structure in a global manner.<br>
+	That structure is used to build a bounding box for frustum culling. It's very important to fill it carrefully or your stuff won't be visible correctly.&nbsp;<br>
+*/<br>
+	case KM_GETMINMAX:<br>
+		Lm_MinMax.Min=CurLight->GetMinOf()-Vertex(CurLight->Radius,CurLight->Radius,CurLight->Radius);<br>
+		Lm_MinMax.Max=CurLight->GetMaxOf()+Vertex(CurLight->Radius,CurLight->Radius,CurLight->Radius);<br>
+		value=(int)&amp;Lm_MinMax;<br>
+		break;&nbsp;<br>
+<br>
+	default:<br>
+		break;<br>
+	}<br>
+<br>
+	return value;<br>
+}<br>
+<br>
+/*<br>
+	Watch CreateSeg info above.&nbsp;<br>
+*/<br>
+<br>
+void LMouseDown(int X,int Y,Vertex *Pos)<br>
+{<br>
+    if (CreateSeg==0)<br>
+    {<br>
+        CurLight->Source=*Pos;<br>
+        CurLight->Target=Vertex(0,0,0);<br>
+	CurLight->Radius=1;<br>
+        CreateSeg=1;<br>
+    }<br>
+	else<br>
+	{<br>
+		if ((CreateSeg==1)&amp;&amp;(CurLight->Type==0))<br>
+		{<br>
+			CreateSeg=0;<br>
+			LIsCreating=0;<br>
+		}<br>
+		else<br>
+		{<br>
+			if (CreateSeg==2)<br>
+			{<br>
+				CreateSeg=0;<br>
+				LIsCreating=0;<br>
+			}<br>
+			else<br>
+				CreateSeg=2;<br>
+<br>
+		}<br>
+	}<br>
+<br>
+}<br>
+<br>
+void LMouseUp(int X,int Y,Vertex *Pos)<br>
+{<br>
+<br>
+}<br>
+<br>
+/*<br>
+	If CreateSeg!=0, we are creating a light. Depending on Type of light (omni,spot,neon), we update the radius/target position of light.<br>
+	We use LStatus and RStatus to display string in the status bar.<br>
+<br>
+*/<br>
+<br>
+void MouseMove(int X,int Y,Vertex *Pos)<br>
+{<br>
+    if (CreateSeg!=0)<br>
+    {<br>
+		switch (CurLight->Type)<br>
+		{<br>
+		case 0:<br>
+			CurLight->Radius=Pythagore3D(CurLight->Source,(*Pos));<br>
+			RStatus("Omni light radius : %d",(int)(CurLight->Radius));<br>
+			LStatus("Click to end omni light creation.");<br>
+			break;<br>
+		case 1:<br>
+			if (CreateSeg==1)<br>
+			{<br>
+				CurLight->Target=*Pos;<br>
+				CurLight->Radius=1;<br>
+				LStatus("Click to set spot light target.");<br>
+			}<br>
+			else<br>
+			{<br>
+				CurLight->Radius=Pythagore3D(CurLight->Target,(*Pos));<br>
+				CurLight->Radius/=2;<br>
+				RStatus("Spot light radius : %5.2f",CurLight->Radius);<br>
+				LStatus("Click to end spot light creation.");<br>
+			}<br>
+			break;<br>
+		case 2:<br>
+			if (CreateSeg==1)<br>
+			{<br>
+				CurLight->Target=*Pos;<br>
+				CurLight->Radius=1;<br>
+				LStatus("Click to set neon light end.");<br>
+			}<br>
+			else<br>
+			{<br>
+				CurLight->Radius=Pythagore3D(CurLight->Target,(*Pos));<br>
+				RStatus("Neon light radius : %5.2",CurLight->Radius);<br>
+				LStatus("Click to end neon light creation.");<br>
+			}<br>
+			break;<br>
+		}<br>
+		tmpradius=CurLight->Radius;<br>
+		DrawViews();<br>
+	}<br>
+	else<br>
+	{<br>
+		LStatus("Click to set light source.");<br>
+	}<br>
+<br>
+}<br>
+<br>
+void RMouseDown(int X,int Y,Vertex *Pos)<br>
+{<br>
+}<br>
+<br>
+/*<br>
+	when user is right clicking, Stop the current build process. CreateSeg=0.<br>
+*/<br>
+<br>
+void RMouseUp(int X,int Y,Vertex *Pos)<br>
+{<br>
+    if (CurLight!=NULL)<br>
+    {<br>
+        CurLight=NULL;<br>
+	CreateSeg=0;<br>
+	LIsCreating=0;<br>
+    }<br>
+<br>
+}<br>
+</font>
+</p>

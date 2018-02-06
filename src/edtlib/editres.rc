@@ -1,0 +1,834 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "editcmd.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "editcmd.h"
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Czech resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CSY)
+#ifdef _WIN32
+LANGUAGE LANG_CZECH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "editcmd.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""editcmd.h""\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Czech resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUP_HLINK MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Open",                       ID_POPUP_OPEN
+        MENUITEM "&Edit",                       ID_POPUP_EDIT
+        MENUITEM "&Print",                      ID_POPUP_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Shor&tcut",              ID_POPUP_COPYSHORTCUT
+        MENUITEM "Add to &Favorites",           ID_POPUP_ADDTOFAVORITES
+        MENUITEM "Add to &Desktop",             ID_POPUP_ADDTODESKTOP
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties",                 ID_POPUP_PROPERTIES
+    END
+END
+
+IDR_POPUP_HEX_EDIT MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_FIND DIALOG FIXED IMPURE  30, 73, 237, 76
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,5,5,42,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_TEXT,55,5,115,30,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,25,90,10
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,40,90,10
+    CONTROL         "R&egular Expression",IDC_EDIT_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,55,90,10
+    GROUPBOX        "Direction",IDC_STATIC,100,25,70,45,WS_GROUP
+    CONTROL         "&Up",IDC_EDIT_DIRECTION_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,111,40,54,10
+    CONTROL         "&Down",IDC_EDIT_DIRECTION_DOWN,"Button",
+                    BS_AUTORADIOBUTTON,110,55,55,10
+    DEFPUSHBUTTON   "&Find Next",IDOK,180,5,50,15,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,180,25,50,15
+END
+
+IDD_EDIT_REPLACE DIALOG FIXED IMPURE  36, 44, 237, 90
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,5,5,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_TEXT,55,5,115,30,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Re&place with:",IDC_STATIC,5,20,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_REPLACE_WITH,55,20,115,30,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,40,90,10
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,55,90,10
+    CONTROL         "R&egular Expression",IDC_EDIT_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,70,90,10
+    GROUPBOX        "Replace in",IDC_STATIC,100,40,70,45,WS_GROUP
+    CONTROL         "&Selection",IDC_EDIT_SCOPE_SELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,105,55,60,10
+    CONTROL         "Wh&ole file",IDC_EDIT_SCOPE_WHOLE_FILE,"Button",
+                    BS_AUTORADIOBUTTON,105,70,60,10
+    DEFPUSHBUTTON   "&Find Next",IDC_EDIT_SKIP,180,5,50,15,WS_GROUP
+    PUSHBUTTON      "&Replace",IDC_EDIT_REPLACE,180,25,50,15
+    PUSHBUTTON      "Replace &All",IDC_EDIT_REPLACE_ALL,180,45,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,180,65,50,15
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 207, 231
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About EditPad"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,5,50,15,WS_GROUP
+    LTEXT           "EditPad Version 1.8",IDC_STATIC,50,10,95,8,SS_NOPREFIX
+    ICON            IDI_EDITPAD,IDC_STATIC,10,15,20,20,0,WS_EX_DLGMODALFRAME | 
+                    WS_EX_CLIENTEDGE
+    LTEXT           "Copyright (C) 1999 Ferdinand Prantl",IDC_STATIC,50,25,
+                    155,10
+    LTEXT           "Portions (C) 1999 Andrei Stcherbatchenko, Sven Wiegand, Stas Levin, Cristi Posea, Selom Ofori",
+                    IDC_STATIC,50,35,155,20
+    LTEXT           "Author:",IDC_STATIC,5,60,40,8
+    LTEXT           "Ferdinand Prantl\nhttp://www.ff.cuni.cz/~prantl\nwww: http://www.ff.cuni.cz/~prantl, e-mail: mailto:prantl@ff.cuni.cz",
+                    IDC_ME,50,60,55,8
+    LTEXT           "Contributors:",IDC_STATIC,5,75,40,8
+    LTEXT           "Andrei Stcherbatchenko\nmailto:windfall@gmx.de",
+                    IDC_ANDREI,50,75,80,8
+    LTEXT           ",",IDC_STATIC,130,75,8,8
+    LTEXT           "Sven Wiegand\nmailto:sven.wiegand@gmx.de",IDC_SVEN,135,
+                    75,50,8
+    LTEXT           ",",IDC_STATIC,185,75,8,8
+    LTEXT           "Stas Levin\nmailto:stas@inet.co.il",IDC_STAS,50,85,35,8
+    LTEXT           ",",IDC_STATIC,85,85,8,8
+    LTEXT           "Marko Macek\nhttp://www.kiss.uni-lj.si/~k4fr0235/fte\nwww: http://www.kiss.uni-lj.si/~k4fr0235/fte/, e-mail: mailto:Marko.Macek@gmx.net or mailto:mark@hermes.si",
+                    IDC_MARKO,90,85,45,8
+    LTEXT           ",",IDC_STATIC,135,85,8,8
+    LTEXT           "Adolf Szabo\nmailto:szabo_a@elender.hu",IDC_ADOLF,140,
+                    85,40,8
+    LTEXT           ",",IDC_STATIC,180,85,8,8
+    LTEXT           "Franky Braem\nmailto:braem@abb.be",IDC_FRANKY,50,95,45,
+                    8
+    LTEXT           ",",IDC_STATIC,95,95,8,8
+    LTEXT           "Cristi Posea\nmailto:cristi@gds.ro",IDC_CRISTI,100,95,
+                    40,8
+    LTEXT           ",",IDC_STATIC,140,95,8,8
+    LTEXT           "Selom Ofori\nmailto:sofori@chat.carleton.ca",IDC_SELOM,
+                    145,95,40,8
+    LTEXT           "and guys at",IDC_STATIC,50,105,40,8
+    LTEXT           "MFC Codeguru\nhttp://www.codeguru.com\nwww: http://www.codeguru.com, e-mail: mailto:info@codeguru.com",
+                    IDC_MFCCODEGURU,90,105,50,8
+    LTEXT           "- thanks them a lot",IDC_STATIC,140,105,60,8
+    LTEXT           "Testers:",IDC_STATIC,5,120,40,8
+    LTEXT           "Hans Eckardt\nmailto:Hans.Eckardt@t-online.de",IDC_HANS,
+                    50,120,45,8
+    LTEXT           ",",IDC_STATIC,95,120,8,8
+    LTEXT           "Michael A. Barnhart\nmailto:mabtech@flash.net",
+                    IDC_MICHAEL,100,120,65,8
+    LTEXT           ",",IDC_STATIC,165,120,8,8
+    LTEXT           "Roberto Lublinerman\nmailto:rel@artech.com.uy",
+                    IDC_ROBERTO,50,130,70,8
+    LTEXT           ",",IDC_STATIC,120,130,8,8
+    LTEXT           "Josh Clark\nmailto:Josh.Clark@motorola.com",IDC_JOSH,
+                    125,130,35,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,5,155,195,1
+    LTEXT           "Permission to use, copy, modify, and distribute this software",
+                    IDC_STATIC,10,160,188,8
+    LTEXT           "for any purpose and without fee is hereby granted, provided that",
+                    IDC_STATIC,10,168,188,8
+    LTEXT           "the copyright notice appears in all copies.",IDC_STATIC,
+                    10,176,188,8
+    LTEXT           "This software is distributed ""as is"".  No warranty of any",
+                    IDC_STATIC,10,184,188,8
+    LTEXT           "kind is expressed or implied.  You use it at your own risk.",
+                    IDC_STATIC,10,192,188,8
+    LTEXT           "The author will not be liable for data loss, damages, loss",
+                    IDC_STATIC,10,200,188,8
+    LTEXT           "of profits or any other kind of loss while using or misusing",
+                    IDC_STATIC,10,208,188,8
+    LTEXT           "this software.",IDC_STATIC,10,216,188,8
+    LTEXT           ",",IDC_STATIC,160,130,8,8
+    LTEXT           "Jan Binter\nmailto:binter@cadstudio.cz",IDC_JAN,50,140,
+                    35,8
+    LTEXT           ",",IDC_STATIC,85,140,8,8
+    LTEXT           "Paul Selormey\nmailto:paul@emlab.tutics.tut.ac.jp",
+                    IDC_PAUL,90,140,45,8
+    LTEXT           ",",IDC_STATIC,135,140,8,8
+    LTEXT           "Witold Waldman\nmailto:ww@netwide.com.au",IDC_WITOLD,
+                    140,140,55,8
+END
+
+IDD_HLINK_PROPERTIES DIALOGEX 0, 0, 207, 169
+STYLE DS_CONTEXTHELP | WS_CHILD | WS_VISIBLE | WS_CAPTION
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "General"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    ICON            IDI_HLINK_URL,IDC_STATIC,7,7,20,20
+    EDITTEXT        IDC_NAME,44,14,156,25,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,44,193,1
+    LTEXT           "Address (URL):",IDC_URL_PROMPT,7,60,28,24
+    EDITTEXT        IDC_URL,44,63,156,14,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+END
+
+IDD_EDITOR_PAGE DIALOG DISCARDABLE  0, 0, 232, 226
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Editor"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Source type",IDC_STATIC,5,5,220,105
+    CONTROL         "None",IDC_NONE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    15,65,10
+    CONTROL         "ASP",IDC_ASP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    25,65,10
+    CONTROL         "Basic (Visual)",IDC_BASIC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,35,65,10
+    CONTROL         "Batch",IDC_BATCH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    10,45,65,10
+    CONTROL         "C/C++",IDC_C,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    55,65,10
+    CONTROL         "DCL (AutoCAD)",IDC_AUTODCL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,65,65,10
+    CONTROL         "Fortran",IDC_FORTRAN,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,10,75,65,10
+    CONTROL         "HTML",IDC_HTML,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,
+                    85,65,10
+    CONTROL         "InstallShield",IDC_INSTALLSHIELD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,95,65,10
+    CONTROL         "Java",IDC_JAVA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    15,65,10
+    CONTROL         "LISP (AutoCAD)",IDC_AUTOLISP,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,80,25,65,10
+    CONTROL         "Pascal",IDC_PASCAL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,80,36,65,10
+    CONTROL         "Perl",IDC_PERL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    46,65,10
+    CONTROL         "PHP",IDC_PHP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    55,65,10
+    CONTROL         "Python",IDC_PYTHON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,80,65,65,10
+    CONTROL         "Resources",IDC_RSRC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,80,75,65,10
+    CONTROL         "REXX",IDC_REXX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    86,65,10
+    CONTROL         "SGML",IDC_SGML,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,
+                    97,65,10
+    CONTROL         "Shell script",IDC_SH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,150,15,65,10
+    CONTROL         "SIOD",IDC_SIOD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    150,25,65,10
+    CONTROL         "SQL",IDC_SQL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,
+                    35,65,10
+    CONTROL         "TCL",IDC_TCL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,
+                    46,65,10
+    CONTROL         "TeX",IDC_TEX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,150,
+                    57,65,10
+    PUSHBUTTON      "Select all",IDC_SELECT_ALL,150,75,50,15
+    PUSHBUTTON      "Unselect all",IDC_UNSELECT_ALL,150,91,50,15
+    CONTROL         "",IDC_EDITPAGE1,"Static",SS_GRAYFRAME,5,115,220,105
+END
+
+IDD_EDIT_GOTO DIALOG FIXED IMPURE  30, 73, 167, 47
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go to line"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Line number:",-1,5,5,42,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_NUMBER,55,5,45,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,110,5,50,15,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,110,25,50,15
+END
+
+IDD_EDITOR_PAGE1 DIALOG DISCARDABLE  0, 0, 217, 86
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Indentation"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Tabs",IDC_STATIC,5,5,85,75
+    CONTROL         "Insert &tabs",IDC_INSERT_TABS,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,15,20,70,10
+    CONTROL         "Insert &spaces",IDC_INSERT_SPACES,"Button",
+                    BS_AUTORADIOBUTTON,15,35,70,10
+    LTEXT           "S&ize:",IDC_STATIC,15,50,30,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_TAB_SIZE,45,50,35,12,ES_AUTOHSCROLL
+    CONTROL         "S&how tabs",IDC_SHOW_TABS,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,15,66,70,10
+    GROUPBOX        "Indent brackets",IDC_STATIC,100,5,65,60
+    CONTROL         "No",IDC_BRACES_NO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,110,20,50,10
+    CONTROL         "ANSI style",IDC_BRACES_ANSI,"Button",BS_AUTORADIOBUTTON,
+                    110,35,50,10
+    CONTROL         "GNU style",IDC_BRACES_GNU,"Button",BS_AUTORADIOBUTTON,
+                    110,50,50,10
+    CONTROL         "&Autoindent",IDC_AUTOINDENT,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,100,70,65,10
+END
+
+IDD_EDITOR_PAGE2 DIALOG DISCARDABLE  0, 0, 217, 86
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Compatibility"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "End of line",IDC_STATIC,5,5,50,75
+    CONTROL         "Auto",IDC_EOLN_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,15,20,35,10
+    CONTROL         "DOS",IDC_EOLN_DOS,"Button",BS_AUTORADIOBUTTON,15,35,35,
+                    10
+    CONTROL         "UNIX",IDC_EOLN_UNIX,"Button",BS_AUTORADIOBUTTON,15,50,
+                    35,10
+    CONTROL         "MAC",IDC_EOLN_MAC,"Button",BS_AUTORADIOBUTTON,15,65,35,
+                    10
+    CONTROL         "&Word wrapping",IDC_WORDWRAP,"Button",BS_AUTO3STATE | 
+                    WS_TABSTOP,65,10,65,10
+    CONTROL         "Show selection &margin",IDC_SEL_MARGIN,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,65,25,95,10
+    CONTROL         "&Backspace at start of line",IDC_BACKSP_AT_BOL,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,65,40,100,10
+    CONTROL         "&Space before left parenthese",IDC_FNBRACE,"Button",
+                    BS_AUTO3STATE | WS_TABSTOP,65,55,115,10
+END
+
+IDD_EDIT_CHARCONV DIALOG FIXED IMPURE  30, 73, 232, 206
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change character encoding"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Source encoding:",IDC_STATIC,5,5,70,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_SRC,80,5,145,175,CBS_DROPDOWNLIST | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Destination encoding:",IDC_STATIC,5,20,70,10,
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_DEST,80,20,145,175,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Proceed",IDOK,20,170,50,15,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,160,170,50,15
+    LTEXT           "Note: nowadays only czech accented characters are recognized.",
+                    IDC_STATIC,10,191,210,10,SS_CENTERIMAGE
+    CONTROL         "&Alphabet characters only",IDC_ALPHA_ONLY,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,40,95,10
+    CONTROL         "",IDC_PREVIEW,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    SS_SUNKEN | WS_GROUP,5,55,220,110
+    PUSHBUTTON      "P&review",IDPREVIEW,90,170,50,15
+END
+
+IDD_SPLASH DIALOG DISCARDABLE  0, 0, 253, 92
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_BIGICON,"Button",BS_OWNERDRAW | WS_DISABLED,6,6,
+                    38,40
+    LTEXT           "EditPad Version 1.8",IDC_STATIC,60,6,164,8,NOT WS_GROUP
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT,60,18,188,1
+    LTEXT           "This software is distributed ""as is"".  No warranty of any",
+                    IDC_STATIC,60,46,188,8
+    LTEXT           "kind is expressed or implied.  You use it at your own risk.",
+                    IDC_STATIC,60,54,188,8
+    LTEXT           "The author will not be liable for data loss, damages, loss",
+                    IDC_STATIC,60,62,188,8
+    LTEXT           "of profits or any other kind of loss while using or misusing",
+                    IDC_STATIC,60,70,188,8
+    LTEXT           "this software.",IDC_STATIC,60,78,188,8
+    LTEXT           "the copyright notice appears in all copies.",IDC_STATIC,
+                    60,38,188,8
+    LTEXT           "for any purpose and without fee is hereby granted, provided that",
+                    IDC_STATIC,60,30,188,8
+    LTEXT           "Permission to use, copy, modify, and distribute this software",
+                    IDC_STATIC,60,22,188,8
+END
+
+IDD_TIP DIALOG DISCARDABLE  40, 30, 279, 157
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Tip of the Day"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_STATIC1,"Static",SS_GRAYFRAME,8,8,264,121
+    CONTROL         "",IDC_BULB,"Static",SS_BITMAP | NOT WS_VISIBLE,16,16,20,
+                    20
+    LTEXT           "Some String",IDC_TIPSTRING,50,56,199,59,NOT WS_VISIBLE
+    CONTROL         "&Show tips on startup",IDC_STARTUP,"Button",
+                    BS_AUTOCHECKBOX | BS_TOP | WS_TABSTOP,7,140,79,12
+    PUSHBUTTON      "&Next tip",IDC_NEXTTIP,162,136,50,14
+    DEFPUSHBUTTON   "&Close",IDOK,222,136,50,14
+END
+
+IDD_EDFILEOPEN DIALOGEX 0, 0, 381, 186
+STYLE DS_3DLOOK | DS_NOFAILCREATE | DS_CONTROL | WS_CHILD | WS_VISIBLE | 
+    WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",stc32,0,0,270,150
+    LTEXT           "Open &as:",IDC_STATIC,5,155,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_FORMAT,53,155,127,160,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Encoding:",IDC_STATIC,5,170,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_ENCODING,53,170,127,160,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Per&form encoding conversion",IDC_RECODE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,190,170,110,10
+    CONTROL         "&Preview",IDC_PREVIEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,270,110,45,10
+    LTEXT           "",IDC_DESC,270,125,65,25
+    CONTROL         "",IDC_IMAGE,"Static",SS_BITMAP | SS_CENTERIMAGE | NOT 
+                    WS_VISIBLE,270,20,105,85,WS_EX_NOPARENTNOTIFY | 
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_TEXT,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,270,20,105,85,WS_EX_CLIENTEDGE
+END
+
+IDD_EDFILEADD DIALOGEX 0, 0, 381, 156
+STYLE DS_3DLOOK | DS_NOFAILCREATE | DS_CONTROL | WS_CHILD | WS_VISIBLE | 
+    WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "",stc32,0,0,270,150
+    CONTROL         "&Preview",IDC_PREVIEW,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,270,110,45,10
+    LTEXT           "",IDC_DESC,270,125,65,25
+    CONTROL         "",IDC_IMAGE,"Static",SS_BITMAP | SS_CENTERIMAGE | NOT 
+                    WS_VISIBLE,270,20,105,85,WS_EX_NOPARENTNOTIFY | 
+                    WS_EX_CLIENTEDGE
+    CONTROL         "",IDC_TEXT,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,270,20,105,85,WS_EX_CLIENTEDGE
+END
+
+IDD_EDITOR_PAGE3 DIALOG DISCARDABLE  0, 0, 217, 86
+STYLE WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Extended"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Extensions:",IDC_STATIC,5,5,40,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXTENSIONS,50,5,159,12,ES_AUTOHSCROLL
+    LTEXT           "Encodin&g:",IDC_STATIC,5,20,40,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_ENCODING,50,20,160,130,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_EDITPAD             ICON    DISCARDABLE     "res\\editpad.ico"
+IDI_EDITPADTYPE         ICON    DISCARDABLE     "res\\editpadt.ico"
+IDI_HLINK_URL           ICON    DISCARDABLE     "res\\hlnkurl.ico"
+IDI_EDITPADRICHTYPE     ICON    DISCARDABLE     "res\\editpadr.ico"
+IDI_EDITPADBINTYPE      ICON    DISCARDABLE     "res\\editpadb.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MARGIN_ICONS        BITMAP  DISCARDABLE     "res\\mg_icons.bmp"
+IDB_BITMAP48            BITMAP  DISCARDABLE     "res\\bitmap48.bmp"
+IDB_LIGHTBULB           BITMAP  DISCARDABLE     "res\\litebulb.bmp"
+IDB_LIGHTBULB2          BITMAP  DISCARDABLE     "res\\litbulb2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDR_MARGIN_CURSOR       CURSOR  DISCARDABLE     "res\\mg_cur.cur"
+IDC_HLINK               CURSOR  DISCARDABLE     "res\\hlink.cur"
+IDC_HLINK_BAD           CURSOR  DISCARDABLE     "res\\hlinkbad.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_DEFAULT_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "0",            ID_EDIT_TOGGLE_BOOKMARK0, VIRTKEY, CONTROL, NOINVERT
+    "0",            ID_EDIT_GO_BOOKMARK0,   VIRTKEY, ALT, NOINVERT
+    27,             ID_EDIT_MATCHBRACE,     ASCII,  NOINVERT
+    29,             ID_EDIT_MATCHBRACE,     ASCII,  NOINVERT
+    "1",            ID_EDIT_TOGGLE_BOOKMARK1, VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_EDIT_GO_BOOKMARK1,   VIRTKEY, ALT, NOINVERT
+    "2",            ID_EDIT_TOGGLE_BOOKMARK2, VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_EDIT_GO_BOOKMARK2,   VIRTKEY, ALT, NOINVERT
+    "3",            ID_EDIT_TOGGLE_BOOKMARK3, VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_EDIT_GO_BOOKMARK3,   VIRTKEY, ALT, NOINVERT
+    "4",            ID_EDIT_TOGGLE_BOOKMARK4, VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_EDIT_GO_BOOKMARK4,   VIRTKEY, ALT, NOINVERT
+    "5",            ID_EDIT_TOGGLE_BOOKMARK5, VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_EDIT_GO_BOOKMARK5,   VIRTKEY, ALT, NOINVERT
+    "6",            ID_EDIT_TOGGLE_BOOKMARK6, VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_EDIT_GO_BOOKMARK6,   VIRTKEY, ALT, NOINVERT
+    "7",            ID_EDIT_TOGGLE_BOOKMARK7, VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_EDIT_GO_BOOKMARK7,   VIRTKEY, ALT, NOINVERT
+    "8",            ID_EDIT_TOGGLE_BOOKMARK8, VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_EDIT_GO_BOOKMARK8,   VIRTKEY, ALT, NOINVERT
+    "9",            ID_EDIT_TOGGLE_BOOKMARK9, VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_EDIT_GO_BOOKMARK9,   VIRTKEY, ALT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_EDIT_FIND_INCREMENTAL_FORWARD, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    "E",            ID_EDIT_FIND_INCREMENTAL_BACKWARD, VIRTKEY, SHIFT, 
+                                                    CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTO,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTO_LAST_CHANGE, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "J",            ID_EDIT_CAPITALIZE,     VIRTKEY, CONTROL, NOINVERT
+    "K",            ID_EDIT_SWAPCASE,       VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_EDIT_LOWERCASE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_EDIT_UPPERCASE,      VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_BACK,    VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_WORD_BACK, VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_BACK,        ID_EDIT_REDO,           VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE_WORD,    VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_EDIT_LINE_DOWN,      VIRTKEY, NOINVERT
+    VK_DOWN,        ID_EDIT_SCROLL_DOWN,    VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_EDIT_EXT_LINE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_LINE_END,       VIRTKEY, NOINVERT
+    VK_END,         ID_EDIT_TEXT_END,       VIRTKEY, CONTROL, NOINVERT
+    VK_END,         ID_EDIT_EXT_LINE_END,   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_EXT_TEXT_END,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_FIND_PREVIOUS,  VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_HOME,           VIRTKEY, NOINVERT
+    VK_HOME,        ID_EDIT_TEXT_BEGIN,     VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_HOME,       VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_TEXT_BEGIN, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_INSERT,      ID_EDIT_SWITCH_OVRMODE, VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_CHAR_LEFT,      VIRTKEY, NOINVERT
+    VK_LEFT,        ID_EDIT_WORD_LEFT,      VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_CHAR_LEFT,  VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_WORD_LEFT,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_NEXT,        ID_EDIT_PAGE_DOWN,      VIRTKEY, NOINVERT
+    VK_NEXT,        ID_EDIT_EXT_PAGE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_PRIOR,       ID_EDIT_PAGE_UP,        VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_EDIT_EXT_PAGE_UP,    VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_EDIT_AUTOEXPAND,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_CHAR_RIGHT,     VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_EDIT_WORD_RIGHT,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_CHAR_RIGHT, VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_WORD_RIGHT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_SPACE,       ID_EDIT_AUTOCOMPLETE,   VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         ID_EDIT_TAB,            VIRTKEY, NOINVERT
+    VK_TAB,         ID_EDIT_UNTAB,          VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_EDIT_LINE_UP,        VIRTKEY, NOINVERT
+    VK_UP,          ID_EDIT_SCROLL_UP,      VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          ID_EDIT_EXT_LINE_UP,    VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_SENTENCE,       VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+IDR_RTF_ACCEL ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_CHAR_BOLD,           VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_CHAR_BOLD,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_PARA_CENTER,         VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CHAR_ITALIC,         VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CHAR_ITALIC,         VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "L",            ID_PARA_LEFT,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_PARA_RIGHT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_CHAR_UNDERLINE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_CHAR_UNDERLINE,      VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_PAUSE,       ID_VIEW_FULL_SCREEN,    VIRTKEY, NOINVERT
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY, ALT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDITOR_PAGE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 225
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_EDITOR_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_EDITOR_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+
+    IDD_EDFILEOPEN, DIALOG
+    BEGIN
+        RIGHTMARGIN, 271
+    END
+
+    IDD_EDFILEADD, DIALOG
+    BEGIN
+        RIGHTMARGIN, 271
+    END
+
+    IDD_EDITOR_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 79
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_EDIT_CHARCONV DLGINIT
+BEGIN
+    IDC_SRC, 0x403, 39, 0
+0x5448, 0x4c4d, 0x6520, 0x636e, 0x646f, 0x6e69, 0x2067, 0x666f, 0x6520, 
+0x6978, 0x7473, 0x6e69, 0x2067, 0x6361, 0x6563, 0x746e, 0x2073, 0x6e6f, 
+0x796c, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDIT_TEXT_NOT_FOUND "Cannot find string""%s"""
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENU_UNDO_FORMAT    "&Undo %s\tCtrl+Z"
+    IDS_MENU_REDO_FORMAT    "&Redo %s\tCtrl+Y"
+    IDS_MENU_UNDO_DEFAULT   "&Undo\tCtrl+Z"
+    IDS_MENU_REDO_DEFAULT   "&Redo\tCtrl+Y"
+    IDS_EDITOP_UNKNOWN      "Unknown"
+    IDS_EDITOP_PASTE        "Paste"
+    IDS_EDITOP_DELSELECTION "Delete Selection"
+    IDS_EDITOP_CUT          "Cut"
+    IDS_EDITOP_DELETE       "Delete"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITOP_TYPING       "Typing"
+    IDS_EDITOP_BACKSPACE    "Backspace"
+    IDS_EDITOP_INDENT       "Indent"
+    IDS_EDITOP_DRAGDROP     "Drag And Drop"
+    IDS_EDITOP_REPLACE      "Replace"
+    IDS_EDITOP_AUTOINDENT   "Auto Indent"
+    IDS_EDITOP_AUTOCOMPLETE "Auto Complete"
+    IDS_EDITOP_AUTOEXPAND   "Auto Expand"
+    IDS_EDITOP_LOWERCASE    "Lower case"
+    IDS_EDITOP_UPPERCASE    "Upper case"
+    IDS_EDITOP_SWAPCASE     "Swap case"
+    IDS_EDITOP_CAPITALIZE   "Capitalize"
+    IDS_EDITOP_SENTENCIZE   "Sentencize"
+    IDS_EDITOP_RECODE       "Character encoding change"
+    IDS_EDITOP_SPELL        "Spellchecking"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_SHEET_OPTIONS       "Options"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_TIME       "99.99. 99:99:99"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HLINK_PROPERTIES    "Properties"
+    IDS_RICHED_LOAD_FAIL    "Could not load the RichEdit control DLL.  The file RICHED32.DLL may be missing or corrupt."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TIP_DIDYOUKNOW      "Did you know..."
+    IDS_TIP_FILE_ABSENT     "Tips file does not exist in the prescribed directory."
+    IDS_TIP_FILE_CORRUPT    "Trouble reading the tips file."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FIND_INCREMENTAL_FORWARD "Incremental search: %s"
+    IDS_FIND_INCREMENTAL_BACKWARD "Incremental search backward: %s"
+    IDS_FIND_INCREMENTAL_FAILED "Incremental search failed: %s"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

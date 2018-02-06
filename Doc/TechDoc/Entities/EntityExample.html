@@ -1,0 +1,511 @@
+<pre>
+<font color=#007700>/* 
+Includes
+*/</font>
+<font color='#FF00FF'>#include</font> <font color=#999999>"stdafx.h"</font>
+<font color='#FF00FF'>#include</font> <font color=#999999>"Kapsul3D.h"</font>
+<font color='#FF00FF'>#include</font> <font color=#999999>"Entities\Light.h"</font>
+
+CKEntity *LCurEntity;
+CLight *CurLight;
+bool LIsCreating=false;
+<font color='#0000FF'>int</font> LSyncCreate;
+CString lxmlDatas,ltmpxml;
+CKDrawScene *LGDrawScene;
+MYPOINT Lspt,Lspt2,Lsdeb;
+CKSelectionInfos *LCurSel;
+bool LdaAddIt;
+CKMinMaxEnt Lm_MinMax;
+<font color='#0000FF'>int</font> CreateSeg=0;
+<font color='#0000FF'>double</font> tmpradius;
+<font color='#0000FF'>extern</font> MYPOINT sdeb;
+MYPOINT sfin;
+bool HasBeenSel=false;
+<font color='#0000FF'>extern</font> bool daAddIt;
+bool daAddIt1,daAddIt2;
+CKScene *GScene;
+
+<font color=#007700>/*
+Forward declaration
+*/</font>
+<font color='#0000FF'>void</font> LMouseDown(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos);
+<font color='#0000FF'>void</font> LMouseUp(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos);
+<font color='#0000FF'>void</font> MouseMove(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos);
+<font color='#0000FF'>void</font> RMouseDown(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos);
+<font color='#0000FF'>void</font> RMouseUp(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos);
+
+
+UINT __declspec(dllexport) Process_Light(<font color='#0000FF'>unsigned</font> <font color='#0000FF'>long</font> Msg,<font color='#0000FF'>unsigned</font> <font color='#0000FF'>long</font> wParam,<font color='#0000FF'>unsigned</font> <font color='#0000FF'>long</font> lParam)
+{
+UINT value=0;
+<font color='#0000FF'>switch</font>(Msg)
+{
+<font color=#007700>/*
+This message is sent to tell you what is the entity you have to work on. This message arrives very often (before drawing, to retrieve its values,before KM_GETSINGLE,KM_SELECTSINGLE,...). The entity sent in parameters is called the current entity.
+It works the same way for every entity.
+Check CompilData member of the entity instance (wParam is a pointer to the entity instance).
+If that member is NULL, you create your object instance and set the pointer in CompilData.
+If not, your instance is already in 'CompilData' so set the 'working-on' pointer.
+*/</font>
+<font color='#0000FF'>case</font> KM_SETENTITY:
+<font color='#0000FF'>if</font> (((CKEntity*)wParam)-&gtCompilData==NULL)
+{
+((CKEntity*)wParam)-&gtCompilData=<font color='#FF0000'>new</font> CLight;
+LSyncCreate=0;
+LIsCreating=true;
+}
+
+CurLight=(CLight*)((CKEntity*)wParam)-&gtCompilData;
+LCurEntity=(CKEntity*)wParam;
+
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+KM_FREEENTITY is called to free your class. Simply delete your instance is CompilData is not NULL.
+*/</font>
+<font color='#0000FF'>case</font> KM_FREEENTITY:
+<font color='#0000FF'>if</font> ( ((CKEntity*)wParam)-&gtCompilData!=NULL) <font color='#FF0000'>delete</font> (CLight*)((CKEntity*)wParam)-&gtCompilData;
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+Called to draw your stuff. An entity belongs to 1 and only 1 Scene. To retrieve the scene info (rendering parameters,...) Get the Scene pointer
+Thru the entity and call your draw member from your class.
+*/</font>
+<font color='#0000FF'>case</font> KM_DRAW:
+GScene=LCurEntity-&gtm_Scene;
+CurLight-&gtDraw(*LCurEntity-&gtm_Scene-&gtViewSize,lParam,0);
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+KM_ISCREATING report kapsul when you are building an entity. The light entity needs 2 mouse click to achieve construction.
+So , at the first click, we set the CreateSeg value to TRUE.
+When we receive mouse move message, if we are creating (CreateSeg is TRUE), we update our entity based on mouse position
+At the second click, we set CreateSeg to FALSE.
+That CreateSeg value helps us synchronize the built and we must return it to Kapsul otherwise, Kapsul won't know if we are building or not.
+By example, you can change the active view when an entity is being built.
+*/</font>
+<font color='#0000FF'>case</font> KM_ISCREATING:
+value=CreateSeg;
+<font color='#0000FF'>break</font>;
+
+<font color=#007700>/*
+Mouse message. see below
+
+/*/</font>
+<font color='#0000FF'>case</font> KM_LMOUSEDOWN:
+LMouseDown(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> KM_RMOUSEDOWN:
+RMouseDown(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> KM_LMOUSEUP:
+LMouseUp(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> KM_RMOUSEUP:
+RMouseUp(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> KM_MOUSEMOVE:
+MouseMove(LOWORD(wParam),HIWORD(wParam),(Vertex *)(lParam));
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+KM_GETXML and KM_SETXML are very important. They translate respectively from class member values to string and from string to class member values.
+The table where the properties are stored is wParam. You have to cast it.
+*/</font>
+<font color='#0000FF'>case</font> KM_GETXML:
+{
+CKHashTable *table=(CKHashTable *)wParam;
+
+table-&gtSetEntry(<font color=#999999>"Name"</font>,CurLight-&gtName);
+table-&gtSetEntry(<font color=#999999>"PositionX"</font>,CurLight-&gtSource.vx);
+table-&gtSetEntry(<font color=#999999>"PositionY"</font>,CurLight-&gtSource.vy);
+table-&gtSetEntry(<font color=#999999>"PositionZ"</font>,CurLight-&gtSource.vz);
+table-&gtSetEntry(<font color=#999999>"Color"</font>,(DWORD)(CurLight-&gtr*65536+CurLight-&gtg*256+CurLight-&gtb));
+
+<font color='#0000FF'>switch</font>(CurLight-&gtType)
+{
+<font color='#0000FF'>case</font> 0:
+table-&gtSetEntry(<font color=#999999>"Type"</font>,<font color=#999999>"Omni"</font>);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> 1:
+table-&gtSetEntry(<font color=#999999>"Type"</font>,<font color=#999999>"Spot"</font>);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> 2:
+table-&gtSetEntry(<font color=#999999>"Type"</font>,<font color=#999999>"Neon"</font>);
+<font color='#0000FF'>break</font>;
+}
+
+<font color='#0000FF'>switch</font>(CurLight-&gtSpotType)
+{
+<font color='#0000FF'>case</font> 0:
+table-&gtSetEntry(<font color=#999999>"SpotType"</font>,<font color=#999999>"Rectangular"</font>);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> 1:
+table-&gtSetEntry(<font color=#999999>"SpotType"</font>,<font color=#999999>"Circular"</font>);
+<font color='#0000FF'>break</font>;
+}
+
+table-&gtSetEntry(<font color=#999999>"TargetX"</font>,CurLight-&gtTarget.vx );
+table-&gtSetEntry(<font color=#999999>"TargetY"</font>,CurLight-&gtTarget.vy );
+table-&gtSetEntry(<font color=#999999>"TargetZ"</font>,CurLight-&gtTarget.vz );
+
+table-&gtSetEntry(<font color=#999999>"Radius"</font>,CurLight-&gtRadius);
+
+}
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+Add DrawViews() call at the end of the method to update your the MDI views. Don't call your rendering code directly.
+*/</font>
+<font color='#0000FF'>case</font> KM_SETXML:
+{
+CKHashTable *table=(CKHashTable *)wParam;
+
+CurLight-&gtName=table-&gtGetString(<font color=#999999>"Name"</font>);
+
+CurLight-&gtSource.vx=table-&gtGetFloat(<font color=#999999>"PositionX"</font>);
+CurLight-&gtSource.vy=table-&gtGetFloat(<font color=#999999>"PositionY"</font>);
+CurLight-&gtSource.vz=table-&gtGetFloat(<font color=#999999>"PositionZ"</font>);
+DWORD tmpcolor=table-&gtGetDWord(<font color=#999999>"Color"</font>);
+CurLight-&gtr=((<font color='#0000FF'>float</font>)((tmpcolor&0xff0000)&gt&gt16));
+CurLight-&gtg=((<font color='#0000FF'>float</font>)((tmpcolor&0xff00)&gt&gt8));
+CurLight-&gtb=((<font color='#0000FF'>float</font>)(tmpcolor&0xff));
+
+CString tmptype=table-&gtGetString(<font color=#999999>"Type"</font>);
+
+<font color='#0000FF'>if</font> (tmptype==<font color=#999999>"Omni"</font>)
+CurLight-&gtType = 0;
+<font color='#0000FF'>else</font>
+<font color='#0000FF'>if</font> (tmptype==<font color=#999999>"Spot"</font>)
+CurLight-&gtType = 1;
+<font color='#0000FF'>else</font>
+CurLight-&gtType = 2;
+
+tmptype=table-&gtGetString(<font color=#999999>"SpotType"</font>);
+
+
+<font color='#0000FF'>if</font> (tmptype==<font color=#999999>"Rectangular"</font>) 
+CurLight-&gtSpotType = 0;
+<font color='#0000FF'>else</font>
+CurLight-&gtSpotType = 1;
+
+CurLight-&gtTarget.vx=table-&gtGetFloat(<font color=#999999>"TargetX"</font>);
+CurLight-&gtTarget.vy=table-&gtGetFloat(<font color=#999999>"TargetY"</font>);
+CurLight-&gtTarget.vz=table-&gtGetFloat(<font color=#999999>"TargetZ"</font>);
+CurLight-&gtRadius=table-&gtGetFloat(<font color=#999999>"Radius"</font>);
+
+DrawViews();
+
+}
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+Return 1 to this message if your current entity is near the mouse click(mouse position is MAKELONG(X,Y) and set in wParam.
+Use the same code to retrieve screen coordinates(projection) from the entity and compare it to the mouse position (called Pythagore function to 
+get distance between).
+return 0 if the entity is too far.
+*/</font>
+<font color='#0000FF'>case</font> KM_GETSINGLE:
+<font color=#007700>// Get a X/Y coordinates and you must return an entity if you have 1 close to it.
+</font><font color=#007700>// we seek & project for the current entity
+</font>LGDrawScene=(CKDrawScene*)lParam;
+Lspt=LCurEntity-&gtm_Scene-&gtcSel-&gtGet2D(LGDrawScene-&gtGetIsoCoord(LOWORD(wParam),HIWORD(wParam),LCurEntity-&gtm_Scene-&gtActive));
+
+Lspt2=LCurEntity-&gtm_Scene-&gtcSel-&gtGet2D(CurLight-&gtSource);
+
+<font color='#0000FF'>if</font> (Pythagore(Lspt2.x-Lspt.x,Lspt2.y-Lspt.y)&lt7)
+{
+value=1;
+}
+<font color='#0000FF'>else</font>
+{
+value=0;
+}
+
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+this message is called to Select/Unselect the current entity. wParam is TRUE for selecting and FALSE for unselecting.
+That function always return 1.
+If you have to select the current entity, push all the entity vertex in the vertex modification buffer with the 
+AddBufVert function. The 1st parameter is the pointer to the vertex. The 2nd is the pointer to the entity (not the CompilData member).3rd parameter is 0.
+Don't Forget to set the Selected member of the Vertex to wParam. Tag the Selected member of the current entity too.
+
+
+*/</font>
+<font color='#0000FF'>case</font> KM_SELECTSINGLE:
+value=1;
+
+<font color='#0000FF'>if</font> ((bool)wParam) 
+{
+<font color='#0000FF'>if</font> (CurLight-&gtType==0)
+{
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtSource,LCurEntity,0); 
+}
+<font color='#0000FF'>else</font>
+{
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtSource,LCurEntity,0); 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtTarget,LCurEntity,0); 
+}
+}
+
+CurLight-&gtSource.Selected=(bool)wParam;
+CurLight-&gtTarget.Selected=(bool)wParam;
+LCurEntity-&gtSelected=(bool)wParam;
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+That message is simple: tag to false the selected member of Entity and of class.
+*/</font>
+<font color='#0000FF'>case</font> KM_UNSELECT:
+CurLight-&gtSelected=false;
+LCurEntity-&gtSelected=false;
+<font color='#0000FF'>break</font>;
+
+<font color=#007700>/*
+this message is sent when the user perfom a selection in the document. The selections can be select by rectangle/circle/fence/single. All the selection parameters are stored in the wParam value. Cast it to a CKSelectionInfos *. That structure contains the type of selection, the Min/Max position for a rectangle selection, the center and radius for a circle selection. Please note that a selection can also be used to remove items from selection (selection with CTRL down. Watch the selection user manual). 
+
+
+*/</font>
+<font color='#0000FF'>case</font> KM_SELECTION:
+LCurSel=(CKSelectionInfos *)wParam;
+
+sdeb=LCurEntity-&gtm_Scene-&gtcSel-&gtGet2D(CurLight-&gtSource);
+sfin=LCurEntity-&gtm_Scene-&gtcSel-&gtGet2D(CurLight-&gtTarget);
+
+daAddIt1=false;
+daAddIt2=false;
+
+<font color='#0000FF'>if</font> (CurLight-&gtType==0)
+{
+<font color=#007700>// omni
+</font><font color='#0000FF'>switch</font>(LCurSel-&gtTypeSel)
+{
+<font color='#0000FF'>case</font> SELECT_SINGLE:
+daAddIt1=(Pythagore((sdeb.x-LCurSel-&gtspt2.x),(sdeb.y-LCurSel-&gtspt2.y))&lt3);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_CIRCLE:
+daAddIt1=(Pythagore((sdeb.x-LCurSel-&gtspt.x),(sdeb.y-LCurSel-&gtspt.y))&ltLCurSel-&gtLength);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_QUAD:
+daAddIt1=( (((sdeb.x&gt=LCurSel-&gtspt.x)&&(sdeb.x&lt=LCurSel-&gtspt2.x))||((sdeb.x&lt=LCurSel-&gtspt.x)&&(sdeb.x&gt=LCurSel-&gtspt2.x)))&&
+(((sdeb.y&gt=LCurSel-&gtspt.y)&&(sdeb.y&lt=LCurSel-&gtspt2.y))||((sdeb.y&lt=LCurSel-&gtspt.y)&&(sdeb.y&gt=LCurSel-&gtspt2.y))) );
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_FENCE:
+daAddIt1=LCurSel-&gtdaSh-&gtIsVertInShape(CurLight-&gtSource,LCurSel-&gtView);
+<font color='#0000FF'>break</font>;
+}
+}
+<font color='#0000FF'>else</font>
+{
+<font color=#007700>// spot
+</font><font color='#0000FF'>switch</font>(LCurSel-&gtTypeSel)
+{
+<font color='#0000FF'>case</font> SELECT_SINGLE:
+<font color='#0000FF'>if</font> (LCurSel-&gtWholeSelect==SELECT_WHOLE) 
+{
+daAddIt1=(SegDistance(sdeb,sfin,LCurSel-&gtspt2)&lt3);
+daAddIt2=daAddIt1;
+}
+<font color='#0000FF'>if</font> (LCurSel-&gtWholeSelect==SELECT_VERTEX) 
+{
+daAddIt1=(Pythagore((sdeb.x-LCurSel-&gtspt2.x),(sdeb.y-LCurSel-&gtspt2.y))&lt3);
+daAddIt2=(Pythagore((sfin.x-LCurSel-&gtspt2.x),(sfin.y-LCurSel-&gtspt2.y))&lt3);
+}
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_CIRCLE:
+daAddIt1=(Pythagore((sdeb.x-LCurSel-&gtspt.x),(sdeb.y-LCurSel-&gtspt.y))&ltLCurSel-&gtLength);
+daAddIt2=(Pythagore((sfin.x-LCurSel-&gtspt.x),(sfin.y-LCurSel-&gtspt.y))&ltLCurSel-&gtLength);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_QUAD:
+daAddIt1=( (((sdeb.x&gt=LCurSel-&gtspt.x)&&(sdeb.x&lt=LCurSel-&gtspt2.x))||((sdeb.x&lt=LCurSel-&gtspt.x)&&(sdeb.x&gt=LCurSel-&gtspt2.x)))&&
+(((sdeb.y&gt=LCurSel-&gtspt.y)&&(sdeb.y&lt=LCurSel-&gtspt2.y))||((sdeb.y&lt=LCurSel-&gtspt.y)&&(sdeb.y&gt=LCurSel-&gtspt2.y))) );
+daAddIt2=( (((sfin.x&gt=LCurSel-&gtspt.x)&&(sfin.x&lt=LCurSel-&gtspt2.x))||((sfin.x&lt=LCurSel-&gtspt.x)&&(sfin.x&gt=LCurSel-&gtspt2.x)))&&
+(((sfin.y&gt=LCurSel-&gtspt.y)&&(sfin.y&lt=LCurSel-&gtspt2.y))||((sfin.y&lt=LCurSel-&gtspt.y)&&(sfin.y&gt=LCurSel-&gtspt2.y))) );
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> SELECT_FENCE:
+daAddIt1=LCurSel-&gtdaSh-&gtIsVertInShape(CurLight-&gtSource,LCurSel-&gtView);
+daAddIt2=LCurSel-&gtdaSh-&gtIsVertInShape(CurLight-&gtTarget,LCurSel-&gtView);
+<font color='#0000FF'>break</font>;
+}
+}
+
+<font color='#0000FF'>if</font> (LCurSel-&gtWholeSelect==SELECT_WHOLE) 
+{
+<font color='#0000FF'>if</font> (CurLight-&gtType==0)
+{
+<font color='#0000FF'>if</font> (daAddIt1)
+{
+<font color='#0000FF'>if</font> ((!CurLight-&gtSource.Selected)&&(LCurSel-&gtAddIt)) 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtSource,LCurEntity,0); 
+CurLight-&gtSource.Selected=LCurSel-&gtAddIt;
+} 
+
+CurLight-&gtSelected=daAddIt1;
+LCurEntity-&gtSelected=daAddIt1;
+
+}
+<font color='#0000FF'>else</font>
+{
+<font color='#0000FF'>if</font> (LCurSel-&gtCrossing) daAddIt=daAddIt1 || daAddIt2;
+<font color='#0000FF'>else</font> daAddIt=daAddIt1 && daAddIt2;
+
+<font color=#007700>// Add it if OK!
+</font><font color='#0000FF'>if</font> (daAddIt)
+{
+<font color='#0000FF'>if</font> ((!CurLight-&gtSource.Selected)&&(LCurSel-&gtAddIt)) 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtSource,LCurEntity,0); 
+CurLight-&gtSource.Selected=LCurSel-&gtAddIt;
+
+<font color='#0000FF'>if</font> ((!CurLight-&gtTarget.Selected)&&(LCurSel-&gtAddIt)) 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtTarget,LCurEntity,0); 
+CurLight-&gtTarget.Selected=LCurSel-&gtAddIt;
+
+CurLight-&gtSelected=LCurSel-&gtAddIt;
+LCurEntity-&gtSelected=LCurSel-&gtAddIt;
+
+}
+}
+}
+<font color='#0000FF'>else</font>
+{
+<font color='#0000FF'>if</font> (daAddIt1)
+{
+<font color='#0000FF'>if</font> ((!CurLight-&gtSource.Selected)&&(LCurSel-&gtAddIt)) 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtSource,LCurEntity,0); 
+CurLight-&gtSource.Selected=LCurSel-&gtAddIt;
+}
+
+<font color='#0000FF'>if</font> (daAddIt2) 
+{
+<font color='#0000FF'>if</font> ((!CurLight-&gtTarget.Selected)&&(LCurSel-&gtAddIt)) 
+LCurEntity-&gtm_Scene-&gtAddBufVert(&CurLight-&gtTarget,LCurEntity,0); 
+CurLight-&gtTarget.Selected=LCurSel-&gtAddIt;
+}
+}
+<font color='#0000FF'>break</font>;
+<font color=#007700>/*
+when receiving this message, fill a CKMinMaxEnt structure and return a pointer to it. So, you need to declare that structure in a global manner.
+That structure is used to build a bounding box for frustum culling. It's very important to fill it carrefully or your stuff won't be visible correctly. 
+*/</font>
+<font color='#0000FF'>case</font> KM_GETMINMAX:
+Lm_MinMax.Min=CurLight-&gtGetMinOf()-Vertex(CurLight-&gtRadius,CurLight-&gtRadius,CurLight-&gtRadius);
+Lm_MinMax.Max=CurLight-&gtGetMaxOf()+Vertex(CurLight-&gtRadius,CurLight-&gtRadius,CurLight-&gtRadius);
+value=(<font color='#0000FF'>int</font>)&Lm_MinMax;
+<font color='#0000FF'>break</font>; 
+
+<font color='#0000FF'>default</font>:
+<font color='#0000FF'>break</font>;
+}
+
+<font color='#0000FF'>return</font> value;
+}
+
+<font color=#007700>/*
+Watch CreateSeg info above. 
+*/</font>
+
+<font color='#0000FF'>void</font> LMouseDown(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos)
+{
+<font color='#0000FF'>if</font> (CreateSeg==0)
+{
+CurLight-&gtSource=*Pos;
+CurLight-&gtTarget=Vertex(0,0,0);
+CurLight-&gtRadius=1;
+CreateSeg=1;
+}
+<font color='#0000FF'>else</font>
+{
+<font color='#0000FF'>if</font> ((CreateSeg==1)&&(CurLight-&gtType==0))
+{
+CreateSeg=0;
+LIsCreating=0;
+}
+<font color='#0000FF'>else</font>
+{
+<font color='#0000FF'>if</font> (CreateSeg==2)
+{
+CreateSeg=0;
+LIsCreating=0;
+}
+<font color='#0000FF'>else</font>
+CreateSeg=2;
+
+}
+}
+
+}
+
+<font color='#0000FF'>void</font> LMouseUp(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos)
+{
+
+}
+
+<font color=#007700>/*
+If CreateSeg!=0, we are creating a light. Depending on Type of light (omni,spot,neon), we update the radius/target position of light.
+We use LStatus and RStatus to display string in the status bar.
+
+*/</font>
+
+<font color='#0000FF'>void</font> MouseMove(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos)
+{
+<font color='#0000FF'>if</font> (CreateSeg!=0)
+{
+<font color='#0000FF'>switch</font> (CurLight-&gtType)
+{
+<font color='#0000FF'>case</font> 0:
+CurLight-&gtRadius=Pythagore3D(CurLight-&gtSource,(*Pos));
+RStatus(<font color=#999999>"Omni light radius : %d"</font>,(<font color='#0000FF'>int</font>)(CurLight-&gtRadius));
+LStatus(<font color=#999999>"Click to end omni light creation."</font>);
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> 1:
+<font color='#0000FF'>if</font> (CreateSeg==1)
+{
+CurLight-&gtTarget=*Pos;
+CurLight-&gtRadius=1;
+LStatus(<font color=#999999>"Click to set spot light target."</font>);
+}
+<font color='#0000FF'>else</font>
+{
+CurLight-&gtRadius=Pythagore3D(CurLight-&gtTarget,(*Pos));
+CurLight-&gtRadius/=2;
+RStatus(<font color=#999999>"Spot light radius : %5.2f"</font>,CurLight-&gtRadius);
+LStatus(<font color=#999999>"Click to end spot light creation."</font>);
+}
+<font color='#0000FF'>break</font>;
+<font color='#0000FF'>case</font> 2:
+<font color='#0000FF'>if</font> (CreateSeg==1)
+{
+CurLight-&gtTarget=*Pos;
+CurLight-&gtRadius=1;
+LStatus(<font color=#999999>"Click to set neon light end."</font>);
+}
+<font color='#0000FF'>else</font>
+{
+CurLight-&gtRadius=Pythagore3D(CurLight-&gtTarget,(*Pos));
+RStatus(<font color=#999999>"Neon light radius : %5.2"</font>,CurLight-&gtRadius);
+LStatus(<font color=#999999>"Click to end neon light creation."</font>);
+}
+<font color='#0000FF'>break</font>;
+}
+tmpradius=CurLight-&gtRadius;
+DrawViews();
+}
+<font color='#0000FF'>else</font>
+{
+LStatus(<font color=#999999>"Click to set light source."</font>);
+}
+
+}
+
+<font color='#0000FF'>void</font> RMouseDown(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos)
+{
+}
+
+<font color=#007700>/*
+when user is right clicking, Stop the current build process. CreateSeg=0.
+*/</font>
+
+<font color='#0000FF'>void</font> RMouseUp(<font color='#0000FF'>int</font> X,<font color='#0000FF'>int</font> Y,Vertex *Pos)
+{
+<font color='#0000FF'>if</font> (CurLight!=NULL)
+{
+CurLight=NULL;
+CreateSeg=0;
+LIsCreating=0;
+}
+
+}
+</pre>

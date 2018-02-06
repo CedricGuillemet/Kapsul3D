@@ -1,0 +1,53 @@
+[OPTIONS]
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=KapsulDoc.chm
+Contents file=Table of Contents.hhc
+Default topic=Index.html
+Display compile progress=No
+Full-text search=Yes
+Index file=Index.hhk
+Language=0x40c French (France)
+Title=Kapsul Documentation V0.1
+
+
+[FILES]
+Entities\Index.html
+TechDoc\Entities\Custom Properties.html
+TechDoc\Entities\EntityExample.html
+TechDoc\Entities\EntitySystem.html
+TechDoc\Entities\Index.html
+Index.html
+TechDoc\Index.html
+TechDoc\Plugins\Messages\KM_WRITEFILE.html
+TechDoc\Plugins\Messages\KM_CLOSE.html
+TechDoc\Plugins\Messages\KM_DRAW.html
+TechDoc\Plugins\Messages\KM_GETBITMAP.html
+TechDoc\Plugins\Messages\KM_GETFILEDESC.html
+TechDoc\Plugins\Messages\KM_GETFILTER.html
+TechDoc\Plugins\Messages\KM_GETINFOS.html
+TechDoc\Plugins\Messages\KM_GETNAME.html
+TechDoc\Plugins\Messages\KM_GETREADSUPPORT.html
+TechDoc\Plugins\Messages\KM_GETSECONDARYTYPE.html
+TechDoc\Plugins\Messages\KM_GETTYPE.html
+TechDoc\Plugins\Messages\KM_GETWRITESUPPORT.html
+TechDoc\Plugins\Messages\KM_ISCREATING.html
+TechDoc\Plugins\Messages\KM_ISPROPERTY.html
+TechDoc\Plugins\Messages\KM_KEYDOWN.html
+TechDoc\Plugins\Messages\KM_KEYUP.html
+TechDoc\Plugins\Messages\KM_LMOUSEDOWN.html
+TechDoc\Plugins\Messages\KM_LMOUSEUP.html
+TechDoc\Plugins\Messages\KM_MOUSEMOVE.html
+TechDoc\Plugins\Messages\KM_MOVEWINDOW.html
+TechDoc\Plugins\Messages\KM_OPEN.html
+TechDoc\Plugins\Messages\KM_READFILE.html
+TechDoc\Plugins\Messages\KM_RMOUSEDOWN.html
+TechDoc\Plugins\Messages\KM_RMOUSEUP.html
+TechDoc\Plugins\Messages\KM_SAVEDESK.html
+TechDoc\Plugins\Messages\KM_SETDESK.html
+TechDoc\Plugins\Messages\KM_SETOBJECT.html
+TechDoc\Plugins\Messages\KM_SETVIEW.html
+TechDoc\Plugins\Messages\Index.html
+
+[INFOTYPES]
+

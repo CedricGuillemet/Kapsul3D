@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IOAsc - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E5.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../inc/" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/IOAsc.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\Common\3DObjectStuff.cpp"
+"D:\KapsulCVS\src\IOAsc\Interface.cpp"
+"D:\KapsulCVS\src\IOAsc\IOAsc.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E5.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E6.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../inc/" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/IOAsc.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\IOAsc\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E6.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E7.tmp" with contents
+[
+Kore.lib opengl32.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/IOAsc.pdb" /debug /machine:I386 /def:".\IOAsc.def" /out:"../../plugins/IOAsc.dll" /implib:"Debug/IOAsc.lib" /pdbtype:sept /libpath:"../../lib/" 
+.\Debug\3DObjectStuff.obj
+.\Debug\Interface.obj
+.\Debug\IOAsc.obj
+.\Debug\stdafx.obj
+.\Debug\PlgRes.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1E7.tmp"
+<h3>Output Window</h3>
+Compiling...
+stdafx.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+3DObjectStuff.cpp
+Interface.cpp
+IOAsc.cpp
+Generating Code...
+Linking...
+   Creating library Debug/IOAsc.lib and object Debug/IOAsc.exp
+
+
+
+<h3>Results</h3>
+IOAsc.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

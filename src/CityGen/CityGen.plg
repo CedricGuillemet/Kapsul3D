@@ -1,0 +1,41 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CityGen - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Release/CityRes.res" /d "NDEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\CityGen\CityRes.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13A.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Release/CityGen.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\KapsulCVS\src\CityGen\CityDiag.cpp"
+"D:\KapsulCVS\src\CityGen\CityGen.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13A.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13B.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /Fp"Release/CityGen.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\KapsulCVS\src\CityGen\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13B.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13C.tmp" with contents
+[
+opengl32.lib Kore.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/CityGen.pdb" /machine:I386 /out:"../workspace/plugins/CityGen.dll" /implib:"Release/CityGen.lib" 
+.\Release\CityDiag.obj
+.\Release\CityGen.obj
+.\Release\stdafx.obj
+.\Release\CityRes.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP13C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+D:\KAPSULCVS\SRC\KORE\Entity.h(93) : warning C4800: 'unsigned int' : forcing value to bool 'true' or 'false' (performance warning)
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

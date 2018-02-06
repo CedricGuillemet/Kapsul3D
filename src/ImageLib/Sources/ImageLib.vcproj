@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding = "Windows-1252"?>
+<VisualStudioProject
+	ProjectType="Visual C++"
+	Version="7.00"
+	Name="ImageLib"
+	ProjectGUID="{21C39506-4467-4BA3-8D23-C57C07A7799A}"
+	SccProjectName=""
+	SccLocalPath="">
+	<Platforms>
+		<Platform
+			Name="Win32"/>
+	</Platforms>
+	<Configurations>
+		<Configuration
+			Name="Debug MultiThread|Win32"
+			OutputDirectory=".\Compilation\Debug MultiThread"
+			IntermediateDirectory=".\Compilation\Debug MultiThread"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32,_DEBUG,_LIB"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="1"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Debug MultiThread/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Debug MultiThread/"
+				ObjectFile=".\Compilation\Debug MultiThread/"
+				ProgramDataBaseFileName=".\Compilation\Debug MultiThread/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLibDMT.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Debug MultiThread DLL|Win32"
+			OutputDirectory=".\Compilation\Debug MultiThread DLL"
+			IntermediateDirectory=".\Compilation\Debug MultiThread DLL"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32,_DEBUG,_LIB"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Debug MultiThread DLL/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Debug MultiThread DLL/"
+				ObjectFile=".\Compilation\Debug MultiThread DLL/"
+				ProgramDataBaseFileName=".\Compilation\Debug MultiThread DLL/"
+				BrowseInformation="1"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLibDMTD.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release MultiThread|Win32"
+			OutputDirectory=".\Compilation\Release MultiThread"
+			IntermediateDirectory=".\Compilation\Release MultiThread"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32,NDEBUG,_LIB"
+				StringPooling="TRUE"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Release MultiThread/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Release MultiThread/"
+				ObjectFile=".\Compilation\Release MultiThread/"
+				ProgramDataBaseFileName=".\Compilation\Release MultiThread/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLibMT.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory=".\Compilation\Release"
+			IntermediateDirectory=".\Compilation\Release"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				GlobalOptimizations="TRUE"
+				InlineFunctionExpansion="2"
+				EnableIntrinsicFunctions="TRUE"
+				FavorSizeOrSpeed="1"
+				OptimizeForProcessor="2"
+				PreprocessorDefinitions="WIN32,NDEBUG,_LIB"
+				StringPooling="TRUE"
+				RuntimeLibrary="4"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Release/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Release/"
+				ObjectFile=".\Compilation\Release/"
+				ProgramDataBaseFileName=".\Compilation\Release/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLib.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Release MultiThread DLL|Win32"
+			OutputDirectory=".\Compilation\Release MultiThread DLL"
+			IntermediateDirectory=".\Compilation\Release MultiThread DLL"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				InlineFunctionExpansion="1"
+				PreprocessorDefinitions="WIN32,NDEBUG,_LIB"
+				StringPooling="TRUE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="TRUE"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Release MultiThread DLL/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Release MultiThread DLL/"
+				ObjectFile=".\Compilation\Release MultiThread DLL/"
+				ProgramDataBaseFileName=".\Compilation\Release MultiThread DLL/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLibMTD.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="NDEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+		<Configuration
+			Name="Debug|Win32"
+			OutputDirectory=".\Compilation\Debug"
+			IntermediateDirectory=".\Compilation\Debug"
+			ConfigurationType="4"
+			UseOfMFC="0"
+			ATLMinimizesCRunTimeLibraryUsage="FALSE"
+			CharacterSet="2">
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32,_DEBUG,_LIB"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="5"
+				UsePrecompiledHeader="2"
+				PrecompiledHeaderFile=".\Compilation\Debug/ImageLib.pch"
+				AssemblerListingLocation=".\Compilation\Debug/"
+				ObjectFile=".\Compilation\Debug/"
+				ProgramDataBaseFileName=".\Compilation\Debug/"
+				WarningLevel="3"
+				SuppressStartupBanner="TRUE"
+				DebugInformationFormat="4"/>
+			<Tool
+				Name="VCCustomBuildTool"/>
+			<Tool
+				Name="VCLibrarianTool"
+				OutputFile="..\..\Librairies\ImageLibD.lib"
+				SuppressStartupBanner="TRUE"/>
+			<Tool
+				Name="VCMIDLTool"/>
+			<Tool
+				Name="VCPostBuildEventTool"/>
+			<Tool
+				Name="VCPreBuildEventTool"/>
+			<Tool
+				Name="VCPreLinkEventTool"/>
+			<Tool
+				Name="VCResourceCompilerTool"
+				PreprocessorDefinitions="_DEBUG"
+				Culture="1036"/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter
+			Name="Header Files"
+			Filter="h;hpp;hxx;hm;inl">
+			<Filter
+				Name="Jpeg Header"
+				Filter="">
+				<File
+					RelativePath=".\Sources Jpeg\jpeglib.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="Tiff Header"
+				Filter="">
+				<File
+					RelativePath=".\Sources Tiff\tif_msrc.h">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tiffiop.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="Png Header"
+				Filter="">
+				<File
+					RelativePath=".\Sources Png\png.h">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngconf.h">
+				</File>
+			</Filter>
+			<Filter
+				Name="Zlib Header"
+				Filter="">
+				<File
+					RelativePath=".\Sources Zlib\deflate.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infblock.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infcodes.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inffast.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inffixed.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inftrees.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infutil.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\trees.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\zconf.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\zlib.h">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\zutil.h">
+				</File>
+			</Filter>
+		</Filter>
+		<Filter
+			Name="Source Files"
+			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat">
+			<Filter
+				Name="Jpeg Source"
+				Filter="">
+				<File
+					RelativePath=".\Sources Jpeg\jcapimin.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcapistd.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jccoefct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jccolor.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcdctmgr.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jchuff.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcinit.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcmainct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcmarker.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcmaster.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcomapi.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcparam.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcphuff.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcprepct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jcsample.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jctrans.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdapimin.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdapistd.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdatadst.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdatasrc.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdcoefct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdcolor.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jddctmgr.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdhuff.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdinput.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdmainct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdmarker.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdmaster.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdmerge.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdphuff.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdpostct.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdsample.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jdtrans.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jerror.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jfdctflt.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jfdctfst.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jfdctint.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jidctflt.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jidctfst.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jidctint.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jidctred.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jmemansi.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jmemmgr.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jquant1.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jquant2.c">
+				</File>
+				<File
+					RelativePath=".\Sources Jpeg\jutils.c">
+				</File>
+			</Filter>
+			<Filter
+				Name="Tiff Source"
+				Filter="">
+				<File
+					RelativePath=".\Sources Tiff\fax3sm.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_aux.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_close.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_codec.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_compress.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_dir.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_dirinfo.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_dirread.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_dirwrite.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_dumpmode.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_error.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_fax3.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_file.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_flush.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_getimage.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_jpeg.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_lzw.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_msrc.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_next.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_open.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_packbits.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_predict.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_read.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_strip.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_swab.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_thunder.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_tile.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_warning.c">
+				</File>
+				<File
+					RelativePath=".\Sources Tiff\tif_write.c">
+				</File>
+			</Filter>
+			<Filter
+				Name="Png Source"
+				Filter="">
+				<File
+					RelativePath=".\Sources Png\png.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngerror.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngget.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngmem.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngread.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngrio.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngrtran.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngrutil.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngset.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngtrans.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngwio.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngwrite.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngwtran.c">
+				</File>
+				<File
+					RelativePath=".\Sources Png\pngwutil.c">
+				</File>
+			</Filter>
+			<Filter
+				Name="Zlib Source"
+				Filter="">
+				<File
+					RelativePath=".\Sources Zlib\adler32.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\crc32.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\deflate.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infblock.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infcodes.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inffast.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inflate.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\inftrees.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\infutil.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\trees.c">
+				</File>
+				<File
+					RelativePath=".\Sources Zlib\zutil.c">
+				</File>
+			</Filter>
+		</Filter>
+	</Files>
+	<Globals>
+	</Globals>
+</VisualStudioProject>

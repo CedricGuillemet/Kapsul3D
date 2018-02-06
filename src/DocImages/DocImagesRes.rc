@@ -1,0 +1,803 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 12, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\CImageDemo.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.fra\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.fra\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CImageDemo.ico"
+IDR_CIMAGETYPE          ICON    DISCARDABLE     "res\\CImageDemoDoc.ico"
+IDI_POUR_MILLE          ICON    DISCARDABLE     "res\\pour_mil.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_EDITION_CONTRASTE
+    BUTTON      ID_EDITION_CORRECTIONDESCOULEURS
+    BUTTON      ID_EDITION_ROTATION90
+    BUTTON      ID_EDITION_ROTATION180
+    BUTTON      ID_EDITION_ROTATION270
+    SEPARATOR
+    BUTTON      ID_EDITION_MIROIRHORIZONTAL
+    BUTTON      ID_EDITION_MIROIRVERTICAL
+    BUTTON      ID_EDITION_NGATIF
+    SEPARATOR
+    BUTTON      32774
+    SEPARATOR
+    BUTTON      ID_FILTRES24BITS_CRATIONFILTRE
+    SEPARATOR
+    BUTTON      ID_EDITION_INFOS
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Nouveau\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "&Ouvrir...\tCtrl+O",          ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "C&onfiguration de l'impression...", ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Fichier récent",              ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_APP_EXIT
+    END
+    POPUP "&Affichage"
+    BEGIN
+        MENUITEM "&Barre d'outils",             ID_VIEW_TOOLBAR
+        MENUITEM "Barre d'é&tat",               ID_VIEW_STATUS_BAR
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&A propos de CImageDemo...",  ID_APP_ABOUT
+    END
+END
+
+IDR_CIMAGETYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&Fichier"
+    BEGIN
+        MENUITEM "&Nouveau\tCtrl+N",            ID_FILE_NEW
+        MENUITEM "&Ouvrir...\tCtrl+O",          ID_FILE_OPEN
+        MENUITEM "&Fermer",                     ID_FILE_CLOSE
+        MENUITEM "&Enregistrer\tCtrl+S",        ID_FILE_SAVE
+        MENUITEM "En&registrer sous...",        ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Imprimer...\tCtrl+P",        ID_FILE_PRINT
+        MENUITEM "Aperçu a&vant impression",    ID_FILE_PRINT_PREVIEW
+        MENUITEM "C&onfiguration de l'impression...", ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Fichier récent",              ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Quitter",                    ID_APP_EXIT
+    END
+    POPUP "&Edition"
+    BEGIN
+        MENUITEM "&Copier",                     ID_EDIT_COPY
+        MENUITEM "Co&ller",                     ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "&Lumière et Contraste...",    ID_EDITION_CONTRASTE
+        MENUITEM "Correction des couleurs...",  ID_EDITION_CORRECTIONDESCOULEURS
+
+        MENUITEM SEPARATOR
+        MENUITEM "Création/application filtre à Matrice...", 
+                                                ID_FILTRES24BITS_CRATIONFILTRE
+
+        MENUITEM SEPARATOR
+        POPUP "C&onvertir en"
+        BEGIN
+            MENUITEM "2&4 bits",                    ID_EDITION_CONVERTIREN_24BITS
+
+            MENUITEM "&256 couleurs",               ID_EDITION_CONVERTIREN_256COULEURS
+
+            MENUITEM "&16 couleurs",                ID_EDITION_CONVERTIREN_16COULEURS
+
+            MENUITEM "2&56 Niveaux de gris",        ID_EDITION_CONVERTIREN_256NIVEAUXDEGRIS
+
+            MENUITEM "1&6 Niveaux de gris",         ID_EDITION_CONVERTIREN_16NIVEAUXDEGRIS
+
+            MENUITEM "&Noir et Blanc",              ID_EDITION_CONVERTIREN_NOIRETBLANC
+
+            MENUITEM SEPARATOR
+            MENUITEM "Utiliser Dithering &Photo",   ID_EDITION_CONVERTIREN_PHOTO
+
+        END
+        POPUP "Sélectionner canal"
+        BEGIN
+            MENUITEM "&Rouge",                      ID_EDITION_CANAL_ROUGE
+            MENUITEM "&Vert",                       ID_EDITION_CANAL_VERT
+            MENUITEM "&Bleu",                       ID_EDITION_CANAL_BLEU
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Rotation &90°",               ID_EDITION_ROTATION90
+        MENUITEM "Rotation 1&80°",              ID_EDITION_ROTATION180
+        MENUITEM "Rotation 2&70°",              ID_EDITION_ROTATION270
+        MENUITEM SEPARATOR
+        MENUITEM "Miroir &horizontal",          ID_EDITION_MIROIRHORIZONTAL
+        MENUITEM "Miroir &Vertical",            ID_EDITION_MIROIRVERTICAL
+        MENUITEM "&Négatif",                    ID_EDITION_NGATIF
+        MENUITEM SEPARATOR
+        MENUITEM "&Dump Image",                 ID_EDITION_DUMPIMAGE
+        MENUITEM "&Undump Image",               ID_EDITION_UNDUMPIMAGE
+        MENUITEM SEPARATOR
+        MENUITEM "&Infos...",                   ID_EDITION_INFOS
+    END
+    POPUP "&Affichage"
+    BEGIN
+        MENUITEM "Transparent",                 ID_AFFICHAGE_TRANSPARENT
+        MENUITEM SEPARATOR
+        MENUITEM "&Barre d'outils",             ID_VIEW_TOOLBAR
+        MENUITEM "Barre d'é&tat",               ID_VIEW_STATUS_BAR
+    END
+    POPUP "Fe&nêtre"
+    BEGIN
+        MENUITEM "&Nouvelle fenêtre",           ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Mosaïque",                   ID_WINDOW_TILE_HORZ
+        MENUITEM "&Réorganiser les icônes",     ID_WINDOW_ARRANGE
+    END
+    POPUP "&?"
+    BEGIN
+        MENUITEM "&A propos de CImageDemo...",  ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 228, 90
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "A propos de CImageDemo"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "CImageDemo - Démonstaration de CImage",IDC_STATIC,18,16,
+                    135,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,188,7,32,14,WS_GROUP
+    LTEXT           "Par P. Mignard",IDC_STATIC,61,32,48,8
+END
+
+IDD_CONTRASTE DIALOG DISCARDABLE  0, 0, 359, 134
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Lumière et contraste"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,57,111,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,123,111,50,14
+    CONTROL         "Slider1",IDC_LUMIERE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,0,25,212,17
+    CONTROL         "Slider2",IDC_CONTRASTE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,0,75,212,17
+    CONTROL         "Button1",IDC_IMAGE,"Button",BS_OWNERDRAW | WS_GROUP,215,
+                    0,144,133
+    LTEXT           "Lumière:",IDC_STATIC,80,12,28,8
+    LTEXT           "Contraste:",IDC_STATIC,77,62,33,8
+    CTEXT           "( 0 )",IDC_INDIC_LUMIERE,116,12,31,8,NOT WS_GROUP
+    CTEXT           "( 0 )",IDC_INDIC_CONTRASTE,116,62,31,8,NOT WS_GROUP
+END
+
+IDD_CORRECT_COULEURS DIALOG DISCARDABLE  0, 0, 316, 178
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Correction des couleurs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Rouge:",IDC_STATIC,52,8,24,8
+    EDITTEXT        IDC_ROUGE,80,5,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin1",IDC_SPIN_ROUGE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,116,5,10,
+                    14
+    ICON            IDI_POUR_MILLE,IDC_STATIC,124,2,20,20
+    LTEXT           "&Vert:",IDC_STATIC,60,28,16,8
+    EDITTEXT        IDC_VERT,80,25,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin2",IDC_SPIN_VERT,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,116,25,10,
+                    14
+    ICON            IDI_POUR_MILLE,IDC_STATIC,124,22,20,20
+    LTEXT           "&Bleu:",IDC_STATIC,59,48,17,8
+    EDITTEXT        IDC_BLEU,80,45,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Spin3",IDC_SPIN_BLEU,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,116,45,11,
+                    14
+    ICON            IDI_POUR_MILLE,IDC_STATIC,124,42,20,20
+    LTEXT           "Correction du &Gamma:",IDC_STATIC,5,78,71,8
+    EDITTEXT        IDC_GAMMA,80,75,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_GAMMA,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,116,75,10,14
+    LTEXT           "&Saturation:",IDC_STATIC,41,98,35,8
+    EDITTEXT        IDC_SATURATION,80,95,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_SATURATION,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,116,95,10,14
+    LTEXT           "&Teinte:",IDC_STATIC,53,118,23,8
+    EDITTEXT        IDC_TEINTE,80,115,40,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_TEINTE,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS,116,115,10,14
+    CONTROL         "Button1",IDC_IMAGE,"Button",BS_OWNERDRAW | WS_GROUP,152,
+                    0,164,177
+    DEFPUSHBUTTON   "OK",IDOK,19,158,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,85,158,50,14
+END
+
+IDD_FILTRES DIALOGEX 0, 0, 474, 213
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Affectation de filtre"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Filtres intégrés à CImage:",IDC_STATIC,343,6,80,8
+    LISTBOX         IDC_FILTRES_CIMAGE,339,18,133,190,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "&Matrice",IDC_STATIC,4,3,184,182,WS_GROUP
+    EDITTEXT        IDC_MATRICE1,10,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE2,26,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE3,42,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE4,58,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE5,74,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE6,90,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE7,106,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE8,122,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE9,138,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE10,154,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE11,170,15,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE12,10,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE13,26,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE14,42,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE15,58,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE16,74,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE17,90,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE18,106,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE19,122,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE20,138,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE21,154,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE22,170,30,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE23,10,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE24,26,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE25,42,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE26,58,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE27,74,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE28,90,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE29,106,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE30,122,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE31,138,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE32,154,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE33,170,45,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE34,10,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE35,26,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE36,42,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE37,58,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE38,74,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE39,90,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE40,106,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE41,122,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE42,138,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE43,154,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE44,170,60,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE45,10,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE46,26,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE47,42,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE48,58,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE49,74,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE50,90,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE51,106,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE52,122,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE53,138,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE54,154,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE55,170,75,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE56,10,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE57,26,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE58,42,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE59,58,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE60,74,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE61,88,90,17,15,ES_CENTER | ES_AUTOHSCROLL,
+                    WS_EX_DLGMODALFRAME
+    EDITTEXT        IDC_MATRICE62,106,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE63,122,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE64,138,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE65,154,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE66,170,90,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE67,10,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE68,26,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE69,42,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE70,58,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE71,74,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE72,90,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE73,106,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE74,122,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE75,138,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE76,154,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE77,170,105,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE78,10,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE79,26,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE80,42,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE81,58,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE82,74,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE83,90,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE84,106,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE85,122,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE86,138,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE87,154,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE88,170,120,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE89,10,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE90,26,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE91,42,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE92,58,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE93,74,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE94,90,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE95,106,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE96,122,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE97,138,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE98,154,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE99,170,135,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE100,10,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE101,26,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE102,42,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE103,58,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE104,74,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE105,90,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE106,106,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE107,122,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE108,138,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE109,154,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE110,170,150,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE111,10,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE112,26,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE113,42,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE114,58,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE115,74,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE116,90,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE117,106,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE118,122,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE119,138,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE120,154,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_MATRICE121,170,165,13,14,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Button1",IDC_IMAGE,"Button",BS_OWNERDRAW | WS_GROUP,193,
+                    6,144,133
+    LTEXT           "nKoef:",IDC_STATIC,206,146,22,8
+    LTEXT           "1",IDC_NKOEF,230,146,24,8
+    LTEXT           "nBias:",IDC_STATIC,267,146,20,8
+    EDITTEXT        IDC_NBIAS,293,143,24,14,ES_AUTOHSCROLL
+    LTEXT           "nRows:",IDC_STATIC,229,165,25,8
+    EDITTEXT        IDC_NROWS,258,162,22,14,ES_AUTOHSCROLL | ES_NUMBER
+    PUSHBUTTON      "&Copier le filtre",IDC_COPIER_FILTRE,44,192,50,14
+    DEFPUSHBUTTON   "&Appliquer",IDC_APPLIQUER,110,192,50,14
+    PUSHBUTTON      "OK",IDOK,176,192,50,14
+    PUSHBUTTON      "Annuler",IDCANCEL,242,192,50,14
+END
+
+IDD_PALETTE DIALOGEX 0, 0, 103, 300
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Color palette"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COLORPICKER,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,2,108,97,71
+    CONTROL         "",IDC_COLORSLIDER,"Static",SS_BLACKFRAME | NOT 
+                    WS_VISIBLE,2,180,39,112
+    CONTROL         "",IDC_COLORWELL,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,
+                    47,262,52,31
+    CONTROL         "R",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,59,
+                    181,27,12
+    CONTROL         "G",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,59,193,27,12
+    CONTROL         "B",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,59,207,27,12
+    CONTROL         "H",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,59,221,27,12
+    CONTROL         "S",IDC_RADIO5,"Button",BS_AUTORADIOBUTTON,59,235,27,12
+    CONTROL         "V",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,59,249,27,12
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040C04B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Application MFC CImageDemo\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CImageDemo\0"
+            VALUE "LegalCopyright", "Copyright (C) 1998\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CImageDemo.EXE\0"
+            VALUE "ProductName", "Application CImageDemo\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Traduction", 0x40c, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_CONTRASTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 352
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 127
+    END
+
+    IDD_CORRECT_COULEURS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 171
+    END
+
+    IDD_FILTRES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 467
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 206
+    END
+
+    IDD_PALETTE, DIALOG
+    BEGIN
+        LEFTMARGIN, 2
+        RIGHTMARGIN, 99
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 293
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "CImageDemo"
+    IDR_CIMAGETYPE          "\nCImage\nCImage\n\n\nCImageDemo.Document\nCImage Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "CImageDemo"
+    AFX_IDS_IDLEMESSAGE     "Prêt"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "MAJ"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "DEF"
+    ID_INDICATOR_OVR        "ECR"
+    ID_INDICATOR_REC        "ENR"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Crée un nouveau document\nNouveau"
+    ID_FILE_OPEN            "Ouvre un document existant\nOuvrir"
+    ID_FILE_CLOSE           "Ferme le document actif\nFermer"
+    ID_FILE_SAVE            "Enregistre le document actif\nEnregistrer"
+    ID_FILE_SAVE_AS         "Enregistre le document actif sous un nouveau nom\nEnregistrer sous"
+    ID_FILE_PAGE_SETUP      "Change les options d'impression\nMise en page"
+    ID_FILE_PRINT_SETUP     "Change les options d'imprimante et d'impression\nConfiguration de l'impression"
+    ID_FILE_PRINT           "Imprime le document actif\nImprimer"
+    ID_FILE_PRINT_PREVIEW   "Affiche des pages entières\nAperçu avant impression"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Affiche des informations sur le programme, le numéro de version et le copyright\nA propos de"
+    ID_APP_EXIT             "Ferme l'application ; propose d'enregistrer les documents\nQuitter"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Ouvre ce document"
+    ID_FILE_MRU_FILE2       "Ouvre ce document"
+    ID_FILE_MRU_FILE3       "Ouvre ce document"
+    ID_FILE_MRU_FILE4       "Ouvre ce document"
+    ID_FILE_MRU_FILE5       "Ouvre ce document"
+    ID_FILE_MRU_FILE6       "Ouvre ce document"
+    ID_FILE_MRU_FILE7       "Ouvre ce document"
+    ID_FILE_MRU_FILE8       "Ouvre ce document"
+    ID_FILE_MRU_FILE9       "Ouvre ce document"
+    ID_FILE_MRU_FILE10      "Ouvre ce document"
+    ID_FILE_MRU_FILE11      "Ouvre ce document"
+    ID_FILE_MRU_FILE12      "Ouvre ce document"
+    ID_FILE_MRU_FILE13      "Ouvre ce document"
+    ID_FILE_MRU_FILE14      "Ouvre ce document"
+    ID_FILE_MRU_FILE15      "Ouvre ce document"
+    ID_FILE_MRU_FILE16      "Ouvre ce document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Passe au volet de fenêtre suivant\nVolet suivant"
+    ID_PREV_PANE            "Revient au volet précédent\nVolet précédent"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Ouvre une nouvelle fenêtre pour le document actif\nNouvelle fenêtre"
+    ID_WINDOW_ARRANGE       "Réorganise les icônes en bas de la fenêtre\nRéorganise les icônes"
+    ID_WINDOW_CASCADE       "Réorganise les fenêtres en cascade\nCascade"
+    ID_WINDOW_TILE_HORZ     "Réorganise les fenêtres en une mosaïque\nMosaïque"
+    ID_WINDOW_TILE_VERT     "Réorganise les fenêtres en une mosaïque\nMosaïque"
+    ID_WINDOW_SPLIT         "Fractionne la fenêtre active en deux volets\nFractionner"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Efface la sélection\nEffacer"
+    ID_EDIT_CLEAR_ALL       "Efface tout\nEffacer tout"
+    ID_EDIT_COPY            "Copie la sélection et la place dans le Presse-papiers\nCopier"
+    ID_EDIT_CUT             "Supprime la sélection et la place dans le Presse-papiers\nCopier"
+    ID_EDIT_FIND            "Recherche le texte spécifié\nRechercher"
+    ID_EDIT_PASTE           "Insère le contenu du Presse-papiers\nColler"
+    ID_EDIT_REPEAT          "Répète la dernière action\nRépéter"
+    ID_EDIT_REPLACE         "Remplace le texte spécifique par un texte différent\nRemplacer"
+    ID_EDIT_SELECT_ALL      "Sélectionne le document entier\nSélectionner tout"
+    ID_EDIT_UNDO            "Annule la dernière action\nAnnuler"
+    ID_EDIT_REDO            "Rétablit l'action précédemment annulée\nRétablir"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Affiche ou masque la barre d'outils\nBarre d'outils"
+    ID_VIEW_STATUS_BAR      "Affiche ou masque la barre d'état\nBarre d'état"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change la taille de la fenêtre"
+    AFX_IDS_SCMOVE          "Change la position de la fenêtre"
+    AFX_IDS_SCMINIMIZE      "Réduit la fenêtre en icône"
+    AFX_IDS_SCMAXIMIZE      "Agrandit la fenêtre au format de l'écran"
+    AFX_IDS_SCNEXTWINDOW    "Passe à la fenêtre de document suivante"
+    AFX_IDS_SCPREVWINDOW    "Passe à la fenêtre de document précédente"
+    AFX_IDS_SCCLOSE         "Ferme la fenêtre active et propose l'enregistrement des documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restaure la fenêtre à sa taille d'origine"
+    AFX_IDS_SCTASKLIST      "Active la liste des tâches"
+    AFX_IDS_MDICHILD        "Active cette fenêtre"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Ferme le mode d'aperçu avant impression\nFermer l'aperçu"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDITION_INFOS        "Afficher les informations sur l'image\nInfos de l'image"
+    ID_EDITION_CONTRASTE    "Régler la lumière et le contraste\nLumière et contraste"
+    ID_EDITION_CANAL_ROUGE  "Conserver uniquement canal Rouge\nCanal Rouge"
+    ID_EDITION_CANAL_VERT   "Conserver uniquement canal Vert\nCanal Vert"
+    ID_EDITION_CANAL_BLEU   "Conserver uniquement canal Bleu\nCanal Bleu"
+    ID_EDITION_CONVERTIREN_PHOTO 
+                            "Utilise la procédure de dithering (rendu photo) pour la réduction de couleurs\nDithering Photo"
+    ID_AFFICHAGE_TRANSPARENT 
+                            "Utilise le mode transparent lors de l'affichage\nTransparent"
+    ID_EDITION_DUMPIMAGE    "Dump L'image dans un fichier temporaire. L'image n'est plus accesible."
+    ID_EDITION_UNDUMPIMAGE  "Récupère l'image mise dans un fichier temporaire."
+    ID_EDITION_CORRECTIONDESCOULEURS 
+                            "Permet d'effectuer un correction des couleurs\nCorrection des couleurs"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDITION_ROTATION90   "Effectuer une rotation de 90°\nRotation 90°"
+    ID_EDITION_ROTATION180  "Effectuer une rotation de 180°\nRotation 180°"
+    ID_EDITION_ROTATION270  "Effectuer une rotation de 270°\nRotation 270°"
+    ID_EDITION_CONVERTIREN_24BITS "Convertir en 24 BPP\n->24BPP"
+    ID_EDITION_CONVERTIREN_256COULEURS 
+                            "Convertir en 256 couleurs\n->256 couleurs"
+    ID_EDITION_CONVERTIREN_16COULEURS 
+                            "Convertir en 16 couleurs\n->16 couleurs"
+    ID_EDITION_CONVERTIREN_256NIVEAUXDEGRIS 
+                            "Convertir en 256 Niveaux de Gris\n->256 NG"
+    ID_EDITION_CONVERTIREN_16NIVEAUXDEGRIS 
+                            "Convertir en 16 niveaux de Gris\n->16 NG"
+    ID_EDITION_CONVERTIREN_NOIRETBLANC "Convertir en Noir et Blanc\n->N&B"
+    ID_EDITION_MIROIRHORIZONTAL 
+                            "Effectuer un miroir horizontal\nMiroir horizontal"
+    ID_EDITION_MIROIRVERTICAL "Effectuer un miroir vertical\nMiroir vertical"
+    ID_EDITION_NGATIF       "Passer l'image en négatif\nNégatif"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FILE_FILTERS        "Bitmap Windows (*.bmp)|*.bmp|Bitmap OS/2 (*.bmp)|*.bmp|Windows compressé (*.rle)|*.rle|ZSoft (*.pcx)|*.pcx|Targa non compressé (*.tga)|*.tga|Targa compressé RLE (*.tga)|*.tga|Compuserve GIF (*.gif)|*.gif|Fichier JPEG (*.jpg)|*.jpg|TIFF non compressé (*.tif)|*.tif|TIFF compressé Packbits (*.tif)|*.tif|TIFF compressé LZW (*.tif)|*.tif|TIFF compressé JPEG (*.tif)|*.tif|Portable Network Graphics (*.png)|*.png|"
+    IDS_SAVEFILE_ERROR      "Erreur lors de la sauvegarde du fichier"
+    IDS_ERR_MATRICE         "nRows doit être impaire et compris entre 3 et 11."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILTRES24BITS_FLOU_FAIBLE 
+                            "Effectue un effet de flou faible sur l'image\nFlou faible"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILTRES24BITS_CRATIONFILTRE 
+                            "Création d'un filtre à l'aide d'une matrice\nCréation filtre"
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE 12, 1
+#pragma code_page(1252)
+#endif
+#include "res\CImageDemo.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.fra\afxres.rc"          // Standard components
+#include "l.fra\afxprint.rc"        // printing/print preview resources
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

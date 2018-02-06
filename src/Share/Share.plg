@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Share - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2FD.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/Share.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ   /c 
+"D:\KapsulCVS\src\Share\ShareDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2FD.tmp" 
+Creating command line "link.exe glu32.lib opengl32.lib glaux.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/Share.pdb" /debug /machine:I386 /out:"Debug/Share.exe" /pdbtype:sept  .\Debug\Share.obj .\Debug\ShareDlg.obj .\Debug\StdAfx.obj .\Debug\Share.res "
+<h3>Output Window</h3>
+Compiling...
+ShareDlg.cpp
+D:\KapsulCVS\src\Share\ShareDlg.cpp(271) : warning C4101: 'wc' : unreferenced local variable
+D:\KapsulCVS\src\Share\ShareDlg.cpp(272) : warning C4101: 'dwExStyle' : unreferenced local variable
+D:\KapsulCVS\src\Share\ShareDlg.cpp(273) : warning C4101: 'dwStyle' : unreferenced local variable
+D:\KapsulCVS\src\Share\ShareDlg.cpp(353) : warning C4101: 'wc' : unreferenced local variable
+D:\KapsulCVS\src\Share\ShareDlg.cpp(354) : warning C4101: 'dwExStyle' : unreferenced local variable
+D:\KapsulCVS\src\Share\ShareDlg.cpp(355) : warning C4101: 'dwStyle' : unreferenced local variable
+Linking...
+
+
+
+<h3>Results</h3>
+Share.exe - 0 error(s), 6 warning(s)
+</pre>
+</body>
+</html>

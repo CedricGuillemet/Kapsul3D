@@ -1,0 +1,54 @@
+<html>
+<head>
+	<META http-equiv="Content-Language" content="en">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<META NAME="Author" CONTENT="la crapule(lacrapul@club-internet.fr">
+	<META name="Description" content="Kapsul HQ">
+	<META name="Keywords" content="3D,modeler,mapping,sdk,plugins">
+	<META NAME="Identifier-URL" CONTENT="http://www.kapsulcentral.fr.st">
+	<META NAME="Date-Creation-yyyymmdd" content="20001210">
+	<META NAME="Robots" CONTENT="index,follow,all">
+	<META NAME="revisit-after" CONTENT="7 days">
+	<META NAME="Reply-to" CONTENT="lacrapul@club-internet.fr">
+	<META NAME="Category" CONTENT="Internet">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<title>Kapsul reference manual</title>
+	<link rel=stylesheet type="text/css" href="finalcss.css">
+</head>
+<body bgcolor="#cccccc">
+
+<font size="2">
+
+<STRONG><font size=4>Private datas (meta datas)</font></strong></b>&nbsp;&nbsp;</dt></dd><UL>
+
+Kapsul provide an easy way for handling your datas. This means, K (for Kapsul) <br>
+can read/write metadatas in its format (.KDK), and make them visible to you when <br>
+the plugin is active. This is available through simple methods. This technic permits <br>
+that you do not have to handle specific files. Metadatas are used in plugin like <br>
+Skeleton for example. K doesn’t know how to handle Skeleton keyframing (without plugin).<br>
+ This permits me to load/save keyframing movement and use it thru the DLL.Here is how it woks :<br>
+At « opening » state or when the desk change, it looks for metadata in the current desk. <br>
+If datas are present, it fills its own fields. At closing or at saving desk (KM_CLOSE or KM_SAVEDESK),<br>
+ it exchange back its own fields inside metadatas. Metadatas are only a free memory space available <br>
+by a « key ». this key is usually the name of the plugin.<br>
+<br>
+<strong>Examples :</strong><br>
+CprivateData * pd = dk->AddPrivate("SKELETTON.DLL");<br>
+<br>
+This code simply retrieve or add a private data pointer. If the desk already has metadata,<br>
+ it retrieve it, otherwise, it create a new space.<br>
+<br>
+After having this, you get a pointer to your datas this way :<br>
+<br>
+ptr=(long*)pd->lpBits;<br>
+<br>
+No private datas means a NULL pointer in return. A valuable pointer is returned otherwise.<br>
+<br>
+To set a size or a new size, process like this :<br>
+<br>
+ptr=(long*)pd->Allocate(TotalSize);<br>
+<br>
+this allocate a TotalSize memory inside the desk. Use it like you want after. Your data remains unchanged.<br>
+<br>
+
+</html>

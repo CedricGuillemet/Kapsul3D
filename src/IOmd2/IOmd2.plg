@@ -1,0 +1,47 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IOmd2 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FD.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/IOmd2.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\IOmd2\Interface.cpp"
+"D:\KapsulCVS\src\IOmd2\IOmd2.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FD.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FE.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/IOmd2.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\IOmd2\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FE.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FF.tmp" with contents
+[
+opengl32.lib Kore.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/iomd2.pdb" /debug /machine:I386 /def:".\IOmd2.def" /out:"../workspace/plugins/iomd2.dll" /implib:"Debug/iomd2.lib" /pdbtype:sept 
+.\Debug\Interface.obj
+.\Debug\IOmd2.obj
+.\Debug\stdafx.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP1FF.tmp"
+<h3>Output Window</h3>
+Compiling...
+stdafx.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+Interface.cpp
+IOmd2.cpp
+Generating Code...
+Linking...
+   Creating library Debug/iomd2.lib and object Debug/iomd2.exp
+
+
+
+<h3>Results</h3>
+iomd2.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

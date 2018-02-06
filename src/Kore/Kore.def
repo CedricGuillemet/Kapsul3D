@@ -1,0 +1,6 @@
+; Kore.def : Declares the module parameters for the DLL.
+
+LIBRARY      "Kore"
+
+EXPORTS
+    ; Explicit exports can go here

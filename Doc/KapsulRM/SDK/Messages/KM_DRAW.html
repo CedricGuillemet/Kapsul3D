@@ -1,0 +1,74 @@
+<html>
+<head>
+	<META http-equiv="Content-Language" content="en">
+	<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+	<META NAME="Author" CONTENT="la crapule(lacrapul@club-internet.fr">
+	<META name="Description" content="Kapsul HQ">
+	<META name="Keywords" content="3D,modeler,mapping,sdk,plugins">
+	<META NAME="Identifier-URL" CONTENT="http://www.kapsulcentral.fr.st">
+	<META NAME="Date-Creation-yyyymmdd" content="20001210">
+	<META NAME="Robots" CONTENT="index,follow,all">
+	<META NAME="revisit-after" CONTENT="7 days">
+	<META NAME="Reply-to" CONTENT="lacrapul@club-internet.fr">
+	<META NAME="Category" CONTENT="Internet">
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+	<title>Kapsul reference manual</title>
+	<link rel=stylesheet type="text/css" href="finalcss.css">
+</head>
+<body bgcolor="#cccccc">
+<div align="center"><br>
+<table border="0" cellpadding="0" cellspacing="0" color="#000000">
+<tr>
+<td>
+<font size="2">
+
+<STRONG><font size=4>KM_DRAW</font></STRONG><BR><BR><ul>
+<STRONG>Parameters :</STRONG><br>
+<br>
+wParam : int State :		State of the view to draw<br>
+ lParam : int WichOne : 		Zero-based indiced of the view<br>
+<br>
+<STRONG>Return values :</STRONG><br>
+(INT) value of the things to draw.<br>
+<br>
+<STRONG>Remarks :</STRONG><br>
+If the Editor configuration has four views visible, the message occurs four times at each <br>
+redraw of the MDI window.<br>
+<br>
+State value is 0 four WireFrame drawing. View is mapped otherwise. Not so much state <br>
+for the moment.<br>
+WichOne indicates the indice of the view to be drawn (goes from 0 to 3) for all the view.<br>
+With this INT, you can retrieves more information on the to-be-drawn view. <br>
+<br>
+(dk->ViewType[WichOne]==9) is TRUE if the to-be-drawn view is a camera. Is that <br>
+case :<br>
+dk->cam[WichOne] is a Pointer to a « Camera » object used to draw the view.<br>
+<br>
+<STRONG>The API you must use is OpenGL.</STRONG><br>
+<br>
+The return value tells Kapsul what to draw after.<br>
+<br>
+It can be one or a combination of :<br>
+<br>
+ PLUGIN_CAMERA <br>
+ PLUGIN_OBJECT<br>
+ PLUGIN_SHAPE<br>
+ PLUGIN_PARTICLE<br>
+ PLUGIN_SKELETTON<br>
+ PLUGIN_LIGHT<br>
+ PLUGIN_GRID<br>
+ PLUGIN_AXIS<br>
+<br>
+ PLUGIN_ALL  corresponds to	PLUGIN_CAMERA|PLUGIN_OBJECT|PLUGIN_SHAPE|<br>
+ PLUGIN_PARTICLE|PLUGIN_SKELETTON|PLUGIN_LIGHT<br>
+|PLUGIN_GRID|PLUGIN_AXIS PLUGIN_NONE corresponds to 0<br>
+
+<BR>
+
+</font>
+
+</td>
+</tr>
+</table>
+</html>
+

@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: StdPlugin - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Debug/StdPluginRes.res" /d "_DEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\StdPlugin\StdPluginRes.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../inc/" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/StdPlugin.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\StdPlugin\PluginDiag.cpp"
+"D:\KapsulCVS\src\StdPlugin\StdPlugin.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29A.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../inc/" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXEXT" /D "_WINDLL" /D "_AFXDLL" /Fp"Debug/StdPlugin.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\KapsulCVS\src\StdPlugin\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29B.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29C.tmp" with contents
+[
+opengl32.lib Kore.lib /nologo /subsystem:windows /dll /incremental:yes /pdb:"Debug/StdPlugin.pdb" /debug /machine:I386 /out:"../workspace/plugins/StdPlugin.dll" /implib:"Debug/StdPlugin.lib" /pdbtype:sept /libpath:"../../lib/" 
+.\Debug\PluginDiag.obj
+.\Debug\stdafx.obj
+.\Debug\StdPlugin.obj
+.\Debug\StdPluginRes.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP29C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+c:\dxsdk\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+PluginDiag.cpp
+StdPlugin.cpp
+Generating Code...
+Linking...
+   Creating library Debug/StdPlugin.lib and object Debug/StdPlugin.exp
+
+
+
+<h3>Results</h3>
+StdPlugin.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

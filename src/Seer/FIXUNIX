@@ -1,0 +1,30 @@
+echo fixUnix by PPodsiadly for SeeR
+echo Changes filenames to lowercase, CRLF to LF and removes eXecute attribut
+if [ "$1" = "" ];then 
+echo Error: no path specified!
+exit 1
+else
+echo Working on $1.
+fi
+
+rm $1/examples/*.ilk >/dev/nul
+rm $1/examples/*.exe >/dev/nul
+rm $1/examples/*.idb >/dev/nul
+rm $1/examples/*.pdb >/dev/nul
+rm $1/examples/*.pch >/dev/nul
+rm $1/examples/*.obj >/dev/nul
+
+rm $1/lib/* >/dev/nul
+
+for i in $1/src/* $1/* $1/examples/* $1/seerc/* $1/docs/*
+do
+if [ -f $i ];then
+z=`echo $i|tr "[A-Z]" "[a-z]"`
+
+echo Changing $z
+mv $i $z.dos
+fromdos <$z.dos >$z
+chmod a-x  $z
+rm $z.dos
+fi
+done

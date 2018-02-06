@@ -1,0 +1,157 @@
+<HTML>
+<head>
+<STYLE>
+A:visited {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:hover {
+        COLOR: #8D8D8D; TEXT-DECORATION: none
+}
+A:link {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+A:active {
+        COLOR: #FE7C07; TEXT-DECORATION: none
+}
+</STYLE>
+
+<TITLE>Custom Properties</TITLE>
+</head>
+<BODY bgcolor="#000000" text="#FFFFFF">
+<a name="p0"></a>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR>
+<TD VALIGN="TOP" COLSPAN=4>
+<B><FONT SIZE=4><P>1 ) Custom properties for built-in primitives</B></FONT></TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP" COLSPAN=3>
+<a name="pa"></a>
+<B><I><P>a) Entity.xml</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=4>
+<P>All properties are described inside the entity.xml file. That file ins't used for properties storing. Here is an part of it. That file is used for the Entity system too.<BR>
+</TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="77%" VALIGN="TOP" COLSPAN=3>
+<FONT FACE="Arial"><P>&lt;Entity&gt;<BR>
+&lt;desc value="Mesh" /<BR>
+&lt;Group value="Mesh User Defined 1"&gt;<BR>
+&lt;Groupvalues name="Integer1" type="integer" default="42"/&gt;<BR>
+&lt;Groupvalues name="String1" type="string" /&gt;<BR>
+&lt;/Group<BR>
+<BR>
+&lt;Group value="Mesh User Defined 2"&gt;<BR>
+&lt;Groupvalues name="Slider1" type="slider" value0="10" value1="50" default="30"/&gt;<BR>
+&lt;Groupvalues name="color1" type="color" /&gt;<BR>
+&lt;/Group&gt;<BR>
+&lt;/Entity&gt;</FONT></TD>
+<TD WIDTH="23%" VALIGN="TOP">
+<P><IMG SRC="Obj-props.gif" WIDTH=178 HEIGHT=381></P>
+<FONT FACE="Arial" SIZE=1><P>The given result.</FONT></TD>
+</TR>
+</table>
+
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH=488 VALIGN="TOP" COLSPAN=3>
+<P>That xml code describes the additionnal properties for all meshes. It’s encapsulate in the &lt;Entity tag. The second tag &lt;desc value= &quot; Mesh &quot; / indicate what the description is for. The other values for that tag are :<BR>
+- Shape<BR>
+- Camera<BR>
+- Skeleton<BR>
+- Patch</P>
+<P><BR>
+</TD>
+<TD WIDTH=282 VALIGN="TOP" COLSPAN=2>
+<P><IMG SRC="Object-properties.gif" WIDTH=280 HEIGHT=325></P>
+<FONT SIZE=1><P>You get the object inspector with by asking 'properties' from the context </P>
+<P>menu. The Object to inspect in the one just under the mouse click.</FONT></TD>
+</TR>
+</table>
+<a name="pb"></a>
+<TABLE CELLSPACING=0 BORDER=0 CELLPADDING=4 WIDTH=770>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP" COLSPAN=3>
+<B><I><P>b) Listing properties</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=4>
+<P>Properties are grouped in the &lt;Group tag. The 'value' attribute inside it set the group name.<BR>
+The properties themselves are given in the &lt;groupvalues tag. Here is how it is composed:<BR>
+<BR>
+&lt;Groupvalues name="name_of_property" type="property_type" [ value0="X" [ value1="Y" [value2="Z" [...]]] [default="XX"] /&gt;<BR>
+<BR>
+What is inside '[]' is not necessary.<BR>
+The name of property must not have space chars.<BR>
+The type attributes give the property type and by the way, the control that will be placed in the object inspector.<BR>
+The complete list of type is:<BR>
+- integer<BR>
+- float<BR>
+- color (stored in format 0x00RRGGBB hexadecimal value)<BR>
+- string<BR>
+- slider<BR>
+- combo (store selected string)<BR>
+<BR>
+the default attribute set the default value for that property at primitive creation.<BR>
+The valueX attributes are used depending upon the type.<BR>
+For The combo box, the valueX gives all the combo box string.<BR>
+For the slider, value0 gives the minimum value and value1 set the maximum.<BR>
+</TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP" COLSPAN=3>
+<a name="pc"></a>
+<B><I><P>c) How properties are used in kapsul</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=4>
+<P>Now let's look at what that description give in Kapsul. I build a simple sphere, right click on it and select the property menu item.<BR>
+<img src="Object-properties.gif"><BR>
+<BR>
+Once clicked, the object inspector appears in the build bar displaying object properties.<BR>
+<img src="Obj-props.gif"><BR>
+<BR>
+Note that the 'defaults' props group contains built-in properties. You can modify them but cannot remove them from the object inspector. This default list can change between two versions.<BR>
+<BR>
+You can see what the color control gives and how the default values appears.&nbsp;<BR>
+</TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP" COLSPAN=3>
+<a name="pd"></a>
+<B><I><P>d) Saving and loading properties&nbsp;</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=4>
+<P> Now, take a look at the IOTXT plugin. here is a snippet:<BR>
+<BR>
+Loading properties works like this:<BR>
+<BR>
+daMesh-m_Table.ReadFromDisk(fp,daMesh,PLUGIN_MESH);<BR>
+<BR>
+where daMesh is a pointer to a mesh object, m_table is the properties container. fp is a FILE *. The last parameter gives the type of primitive because the mtehod is not part of the Mesh class but of a CKHashTable class. The ReadFromDisk method simplify the loading/saving in kapsul. It produce/read properties formatted that manner:<BR>
+<BR>
+{<BR>
+Name="Mesh000"<BR>
+Color="0x2AA5"<BR>
+AutoUV="1"<BR>
+PrefabName=""<BR>
+[...]<BR>
+}<BR>
+<BR>
+In your File plugin, you can bypassing the ReadFromDisk/SaveFromDisk by looking at the CKHaskTable class. SaveFromDisk works the same manner and has the same parameters.<BR>
+</TD>
+</TR>
+<TR><TD WIDTH="6%" VALIGN="TOP">&nbsp;</TD>
+<TD WIDTH="94%" VALIGN="TOP" COLSPAN=3>
+<a name="pe"></a>
+<B><I><P>e) End note</B></I></TD>
+</TR>
+<TR><TD VALIGN="TOP" COLSPAN=4>
+<P>Such kind of customisability can help you a lot while setting mesh/shape parameters for your in-game envirronement. Allowing artists more flexibily. Moreover, you can add properties in entity.xml without losing ascendant compatibily.<BR>
+</TD>
+</TR>
+</TABLE>
+
+<P><BR>
+</P></BODY>
+</HTML>

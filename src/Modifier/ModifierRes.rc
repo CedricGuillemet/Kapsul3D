@@ -1,0 +1,480 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODDIAG DIALOG DISCARDABLE  0, 0, 100, 99
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Divide",IDC_ODIVIDE,5,5,45,14
+    PUSHBUTTON      "Explode",IDC_OEXPLODE,51,5,45,14
+    PUSHBUTTON      "Extrud",IDC_OEXTRUD,51,20,45,14
+    PUSHBUTTON      "Fractalize",IDC_OFRACTALIZE,5,20,45,14
+    PUSHBUTTON      "Lathe",IDC_OLATHE,5,35,45,14
+    PUSHBUTTON      "BSP/CSG",IDC_OBSP,51,35,45,14
+    PUSHBUTTON      "Normals",IDC_ONORMALS,5,50,45,14
+    PUSHBUTTON      "Path",IDC_OPATH,5,65,45,14
+    PUSHBUTTON      "Spherize",IDC_OSPHERIZE,51,65,45,14
+    PUSHBUTTON      "Tesselate",IDC_OTESSELATE,51,50,45,14
+    PUSHBUTTON      "UV mapping",IDC_OUVMAPPING,5,80,45,14
+    PUSHBUTTON      "Lightmaps",IDC_LIGHTMAP,51,80,45,14
+END
+
+IDD_MODIFIER DIALOG DISCARDABLE  0, 0, 96, 80
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Button2",IDC_RX,2,6,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_SX,24,6,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_RY,2,28,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_SY,24,28,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_RZ,2,51,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_SZ,24,51,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_HOLLOW,46,6,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_CSGMERGE,68,6,22,22,BS_BITMAP
+    PUSHBUTTON      "Button2",IDC_CSGSUB,46,29,22,22,BS_BITMAP
+    CONTROL         "Check1",IDC_CLIPPER,"Button",BS_AUTOCHECKBOX | 
+                    BS_BITMAP | BS_PUSHLIKE | WS_TABSTOP,68,29,22,22
+END
+
+IDD_EXTRUD DIALOG DISCARDABLE  0, 0, 96, 54
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Steps",IDC_LIBSTEPS,3,6,19,8
+    EDITTEXT        IDC_STEPS,37,4,42,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPINSTEPS,"msctls_updown32",UDS_ARROWKEYS,80,
+                    4,11,14
+    LTEXT           "Length",IDC_LIBLENGTH,3,23,23,8
+    EDITTEXT        IDC_LENGTH,37,21,42,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPINLENGTH,"msctls_updown32",UDS_ARROWKEYS,
+                    80,21,11,14
+    LTEXT           "Scale",IDC_LIBSCALE,3,39,19,8
+    EDITTEXT        IDC_SCALE,37,36,42,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPINSCALE,"msctls_updown32",UDS_ARROWKEYS,80,
+                    36,11,14
+END
+
+IDD_SPHERIZE DIALOG DISCARDABLE  0, 0, 96, 24
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Factor",IDC_STATIC,2,7,21,8
+    EDITTEXT        IDC_EDIT1,30,5,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,5,
+                    11,14
+END
+
+IDD_LATHE DIALOGEX 0, 0, 102, 40
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Shape",IDC_SHAPE,4,4,32,12
+    LTEXT           "",IDC_SHAPENAME,40,4,57,12,0,WS_EX_STATICEDGE
+    LTEXT           "Steps",IDC_STATIC,2,24,19,8
+    EDITTEXT        IDC_EDIT1,33,22,51,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,86,22,
+                    11,14
+END
+
+IDD_PATH DIALOGEX 0, 0, 102, 161
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Shape",IDC_SHAPE,4,4,32,12
+    PUSHBUTTON      "Path",IDC_PATH,4,20,32,12
+    LTEXT           "",IDC_SHAPENAME,40,4,57,12,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_PATHNAME,40,20,57,12,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Scale X",IDC_SCALE,6,39,44,12
+    PUSHBUTTON      "Rotate X",IDC_ROTATE,50,39,44,12
+    CONTROL         "Splined path",IDC_SPLINEDPATH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,5,81,55,10
+    LTEXT           "Steps",IDC_STATIC,2,95,19,8
+    EDITTEXT        IDC_STEPSPATH,24,94,56,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPINPATH,"msctls_updown32",UDS_ARROWKEYS,83,
+                    94,11,14
+    CONTROL         "Splined shape",IDC_SPLINEDSHAPE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,111,61,10
+    LTEXT           "Steps",IDC_STATIC,2,127,19,8
+    EDITTEXT        IDC_STEPSSHAPE,24,125,56,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPINSHAPE,"msctls_updown32",UDS_ARROWKEYS,83,
+                    125,11,14
+    PUSHBUTTON      "Rotate Y",IDC_ROTATEY,50,51,44,12
+    PUSHBUTTON      "Rotate Z",IDC_ROTATEZ,50,64,44,12
+    PUSHBUTTON      "Scale Y",IDC_SCALEY,6,51,44,12
+    CONTROL         "Capping",IDC_CAPPING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,3,147,88,10
+END
+
+IDD_UVPARAM DIALOG DISCARDABLE  0, 0, 96, 41
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "U",IDC_STATIC,6,7,8,8
+    EDITTEXT        IDC_EDIT1,30,5,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,5,
+                    11,14
+    EDITTEXT        IDC_EDIT3,30,21,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN2,"msctls_updown32",UDS_ARROWKEYS,84,21,
+                    11,14
+    LTEXT           "V",IDC_STATIC,6,23,8,8
+END
+
+IDD_EXPLODE DIALOG DISCARDABLE  0, 0, 96, 23
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Decal",IDC_STATIC,2,6,20,8
+    EDITTEXT        IDC_EDIT1,30,4,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,4,
+                    11,14
+END
+
+IDD_NORMALS DIALOG DISCARDABLE  0, 0, 96, 22
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Flip normals",IDC_FLIPNORMALS,4,5,44,13
+    PUSHBUTTON      "Unify normals",IDC_UNIFYNORMALS,48,5,44,13
+END
+
+IDD_SUBDIVIDE DIALOG DISCARDABLE  0, 0, 96, 23
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Steps",IDC_STATIC,2,7,19,8
+    EDITTEXT        IDC_EDIT1,30,5,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,5,
+                    11,14
+END
+
+IDD_FRACTALIZE DIALOG DISCARDABLE  0, 0, 96, 39
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Strength",IDC_STATIC,3,7,28,8
+    EDITTEXT        IDC_EDIT1,35,5,47,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,5,
+                    11,14
+    PUSHBUTTON      "New seed",IDC_NEWSEED,23,22,50,14
+END
+
+IDD_DIVIDE DIALOG DISCARDABLE  0, 0, 96, 22
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Div 3",IDC_DIV2,4,5,44,13
+    PUSHBUTTON      "Div 4",IDC_DIV3,48,5,44,13
+END
+
+IDD_UVEDIT DIALOGEX 0, 0, 102, 109
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "LoadMap",IDC_LOADMAP,7,5,87,14
+    COMBOBOX        IDC_CBVIEW,47,22,48,90,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Map view",IDC_STATIC,3,23,32,12
+    PUSHBUTTON      "Object",IDC_SELOBJECT,3,38,34,11
+    LTEXT           "-",IDC_OBJNAME,39,38,55,11,0,WS_EX_STATICEDGE
+    CONTROL         "Check1",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,8,61,51,15
+    PUSHBUTTON      "Save UV Tex",IDC_SAVEBMP,9,83,50,14
+END
+
+IDD_CALCTEX DIALOG DISCARDABLE  0, 0, 102, 96
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Planar",IDC_MAPPLANAR,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,5,5,46,14
+    CONTROL         "Cube",IDC_MAPCUBE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,51,5,45,14
+    CONTROL         "Spherical",IDC_MAPSPHERICAL,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,5,19,46,14
+    CONTROL         "Cylindrical",IDC_MAPCYL,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,51,19,45,14
+    CONTROL         "Layer 1",IDC_LAYER1,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,9,48,39,10
+    GROUPBOX        "Coordinate layer",IDC_STATIC,5,36,90,40
+    CONTROL         "Layer 3",IDC_LAYER3,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,51,48,39,10
+    CONTROL         "Layer 2",IDC_LAYER2,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,9,62,39,10
+    CONTROL         "Layer 4",IDC_LAYER4,"Button",BS_AUTORADIOBUTTON | 
+                    BS_PUSHLIKE,51,62,39,10
+    PUSHBUTTON      "Apply",IDC_APPLY,23,79,50,14
+END
+
+IDD_PRECALC DIALOGEX 0, 0, 102, 124
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_MSIZE,45,27,53,150,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Size",IDC_STATIC,2,29,14,8
+    COMBOBOX        IDC_DENSITY,45,10,53,162,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Lumel/coord",IDC_STATIC,3,12,41,8
+    PUSHBUTTON      "Calculate",IDC_CALCULATE,25,92,50,14
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",NOT 
+                    WS_VISIBLE | WS_BORDER,4,111,91,6
+    CONTROL         "Write raw lightmaps",IDC_WRITERAW,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,43,88,10
+    CONTROL         "Round fragments",IDC_ROUND,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,56,88,10
+    PUSHBUTTON      "Ambiant",IDC_AMBIANT,7,68,35,16
+    LTEXT           "Static",IDC_COL,43,69,55,15,NOT WS_VISIBLE,
+                    WS_EX_CLIENTEDGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_HOLLOW              BITMAP  DISCARDABLE     "res\\hollow.bmp"
+IDB_CSGSUB              BITMAP  DISCARDABLE     "res\\csgsub.bmp"
+IDB_CSGMERGE            BITMAP  DISCARDABLE     "res\\csgmerge.bmp"
+IDB_CLIPPER             BITMAP  DISCARDABLE     "res\\clipper.bmp"
+IDB_SZ                  BITMAP  DISCARDABLE     "res\\bitmap5.bmp"
+IDB_SY                  BITMAP  DISCARDABLE     "res\\bitmap3.bmp"
+IDB_SX                  BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_RZ                  BITMAP  DISCARDABLE     "res\\bitmap6.bmp"
+IDB_RY                  BITMAP  DISCARDABLE     "res\\bitmap4.bmp"
+IDB_RX                  BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
+IDB_BITMAPHOT           BITMAP  DISCARDABLE     "res\\bmp00002.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MODDIAG, DIALOG
+    BEGIN
+        VERTGUIDE, 50
+    END
+
+    IDD_MODIFIER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 73
+    END
+
+    IDD_EXTRUD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 47
+    END
+
+    IDD_SPHERIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+
+    IDD_LATHE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 33
+    END
+
+    IDD_PATH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_UVPARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 34
+    END
+
+    IDD_EXPLODE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_NORMALS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 15
+    END
+
+    IDD_SUBDIVIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 16
+    END
+
+    IDD_FRACTALIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 32
+    END
+
+    IDD_DIVIDE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 89
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 15
+    END
+
+    IDD_UVEDIT, DIALOG
+    BEGIN
+        RIGHTMARGIN, 100
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_CALCTEX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+
+    IDD_PRECALC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 117
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER_FOUND       CURSOR  DISCARDABLE     "selsingl.cur"
+IDC_POINTER_NOTFOUND    CURSOR  DISCARDABLE     "cur00001.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_UVEDIT DLGINIT
+BEGIN
+    IDC_CBVIEW, 0x403, 1, 0
+"\000" 
+    0
+END
+
+IDD_PRECALC DLGINIT
+BEGIN
+    IDC_MSIZE, 0x403, 8, 0
+0x3231, 0x7838, 0x3231, 0x0038, 
+    IDC_MSIZE, 0x403, 8, 0
+0x3532, 0x7836, 0x3532, 0x0036, 
+    IDC_MSIZE, 0x403, 8, 0
+0x3135, 0x7832, 0x3135, 0x0032, 
+    IDC_MSIZE, 0x403, 10, 0
+0x3031, 0x3432, 0x3178, 0x3230, 0x0034, 
+    IDC_DENSITY, 0x403, 2, 0
+0x0032, 
+    IDC_DENSITY, 0x403, 2, 0
+0x0034, 
+    IDC_DENSITY, 0x403, 2, 0
+0x0038, 
+    IDC_DENSITY, 0x403, 3, 0
+0x3631, "\000" 
+    0
+END
+
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

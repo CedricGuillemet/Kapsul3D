@@ -1,0 +1,9 @@
+; KOGLRenderer.def : Declares the module parameters for the DLL.
+
+LIBRARY      "KOGLRenderer"
+DESCRIPTION  'KOGLRenderer Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateRenderInterface
+	DeleteRenderInterface

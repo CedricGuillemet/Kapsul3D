@@ -1,0 +1,43 @@
+#--------------------------------------------------------------------
+#	Compuware Corporation Merged License Certificate
+#	Product License file:	C:\Program Files\LICENSE.DAT
+#	Master License file:	C:\Program Files\LICENSE.DAT
+#	Backup License file:	C:\Program Files\LICENSE.001
+#
+#WARNING
+# The associated software product is confidential and proprietary
+# to Compuware Corporation. No use or disclosure is permitted
+# other than as expressly set forth by written license with
+# Compuware Corporation.
+#
+# Copyright (C) Compuware Corp. 1999
+#
+# Created: Sat May 26 22:25:46 2001
+# If you have any questions regarding this document, please contact
+# the Compuware Hotline: 1-800-538-7822 Toll Free (North America only)
+# For International and European customers, please contact your local
+# Compuware subsidiary or distributor.
+#
+#--------------------------------------------------------------------
+#
+#
+#
+# SERVER RECORDS SECTION: 0, 1 or 3 per certificate
+# NOTE: You may edit the host name on the server line(s) (1st arg.),
+#       or the port address on the server line (3rd arg.).
+#       Any other changes to the license server section will
+#       invalidate this license.
+#--------------------------------------------------------------------
+# DAEMON RECORDS SECTION: 0 to N per certificate
+# NOTE: You may edit the path to the daemon on the
+#       daemon line (2nd arg).  Any other changes to
+#       this section will invalidate this license.
+#--------------------------------------------------------------------
+# PACKAGE RECORDS SECTION: 0 to N per certificate
+#--------------------------------------------------------------------
+# FEATURE RECORDS SECTION: 1 to N per certificate
+FEATURE 332 compuware 06.60 1-jan-0000 0 \
+ACCA58E47ACC9E0B1BDC \
+VENDOR_STRING=131505;0;PERM HOSTID=ANY \
+ck=155
+# End of certificate

@@ -1,0 +1,3 @@
+LIBRARY "edtlib"
+DESCRIPTION 'edtlib Windows Dynamic Link Library for EditPad program family'
+EXPORTS

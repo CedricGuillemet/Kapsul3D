@@ -1,0 +1,67 @@
+# Microsoft Developer Studio Generated Dependency File, included by Infos.mak
+
+.\InfosRes.rc : \
+	".\res\bitmap1.bmp"\
+	
+
+.\ModInfos.cpp : \
+	"..\..\..\sources\cimage\imagelib\headers\jconfig.h"\
+	"..\..\..\sources\cimage\imagelib\headers\jmorecfg.h"\
+	"..\..\..\sources\cimage\imagelib\headers\jpeglib.h"\
+	"..\..\..\sources\cimage\imagelib\headers\png.h"\
+	"..\..\..\sources\cimage\imagelib\headers\pngconf.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tif_dir.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tif_msrc.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tiff.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tiffcomp.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tiffconf.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tiffio.h"\
+	"..\..\..\sources\cimage\imagelib\headers\tiffiop.h"\
+	"..\..\..\sources\cimage\imagelib\headers\zconf.h"\
+	"..\..\..\sources\cimage\imagelib\headers\zlib.h"\
+	"..\Core\Bone.h"\
+	"..\core\buttonbar.h"\
+	"..\Core\Camera.h"\
+	"..\Core\Desk.h"\
+	"..\Core\Emitter.h"\
+	"..\Core\Face.h"\
+	"..\Core\font\font.h"\
+	"..\Core\font\gltga.h"\
+	"..\Core\font\tga.h"\
+	"..\Core\font\utility.h"\
+	"..\Core\GenericLib.h"\
+	"..\Core\GenericThread.h"\
+	"..\core\headers.h"\
+	"..\Core\Image.h"\
+	"..\Core\Kapsul3D.h"\
+	"..\Core\KeyFrame.h"\
+	"..\Core\LibContainer.h"\
+	"..\Core\Light.h"\
+	"..\Core\Maps.h"\
+	"..\Core\Material.h"\
+	"..\Core\Maths.h"\
+	"..\Core\Matrix.h"\
+	"..\Core\Object.h"\
+	"..\Core\OGLView.h"\
+	"..\Core\Particle.h"\
+	"..\Core\Plan.h"\
+	"..\Core\PrivateData.h"\
+	"..\Core\Quat.h"\
+	"..\Core\Script.h"\
+	"..\Core\Segment.h"\
+	"..\core\selectcam.h"\
+	"..\Core\Selection.h"\
+	"..\Core\Shape.h"\
+	"..\Core\skeletton.h"\
+	"..\Core\SkyBox.h"\
+	"..\Core\Texture.h"\
+	"..\Core\Utils.h"\
+	"..\Core\VertBuf.h"\
+	"..\Core\Vertex.h"\
+	".\ModdInfos.h"\
+	
+
+.\stdafx.cpp : \
+	".\stdafx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

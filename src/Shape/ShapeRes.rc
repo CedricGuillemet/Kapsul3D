@@ -1,0 +1,162 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_POINTER_INSERT      CURSOR  DISCARDABLE     "arrow.cur"
+IDC_POINTER_APPEND      CURSOR  DISCARDABLE     "arrowcop.cur"
+IDC_POINTER_CLOSE       CURSOR  DISCARDABLE     "res\\pointer.cur"
+IDC_POINTER_COLAPPSE    CURSOR  DISCARDABLE     "res\\pointer_.cur"
+IDC_POINTER_MOVEDOT     CURSOR  DISCARDABLE     "res\\pointer1.cur"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// French (France) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_FRA)
+#ifdef _WIN32
+LANGUAGE LANG_FRENCH, SUBLANG_FRENCH
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MODDIAG DIALOG DISCARDABLE  0, 0, 102, 80
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+IDD_EDIT DIALOG DISCARDABLE  0, 0, 102, 44
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Line",IDC_LINE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,4,4,44,12
+    CONTROL         "Arc",IDC_ARC,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,48,4,44,12
+    CONTROL         "Quad",IDC_QUAD,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,4,16,44,12
+    CONTROL         "NGon",IDC_NGON,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,48,16,44,12
+    CONTROL         "Star",IDC_STAR,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,4,28,44,12
+END
+
+IDD_PARAM DIALOG DISCARDABLE  0, 0, 101, 24
+STYLE WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Steps",IDC_STEP,4,6,19,8
+    EDITTEXT        IDC_EDIT1,30,4,52,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN1,"msctls_updown32",UDS_ARROWKEYS,84,4,
+                    11,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_EDIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 95
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_PARAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 94
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 17
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_STARIN              BITMAP  DISCARDABLE     "res\\StarIn.bmp"
+IDB_ARCIN               BITMAP  DISCARDABLE     "res\\CurveIn.bmp"
+IDB_LINEIN              BITMAP  DISCARDABLE     "res\\LineIn.bmp"
+IDB_NGONIN              BITMAP  DISCARDABLE     "res\\NgonIn.bmp"
+IDB_QUADIN              BITMAP  DISCARDABLE     "res\\QuadIn.bmp"
+#endif    // French (France) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

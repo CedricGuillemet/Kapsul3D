@@ -1,0 +1,9 @@
+; IOFile.def : Declares the module parameters for the DLL.
+
+LIBRARY      "IOFile"
+DESCRIPTION  'IOFile Windows Dynamic Link Library'
+
+EXPORTS
+    ; Explicit exports can go here
+	CreateFileInterface
+	DeleteFileInterface

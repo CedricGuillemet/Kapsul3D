@@ -1,0 +1,54 @@
+[OPTIONS]
+Compatibility=1.1
+Compiled file=KapsulRM.chm
+Default topic=index.html
+Display compile progress=No
+Language=0x40c French (France)
+
+
+[FILES]
+copyright.html
+index.html
+main.html
+Menuav.html
+titre.html
+vide.html
+SDK\index.html
+SDK\main.html
+SDK\menu.html
+SDK\Menuav.html
+SDK\Messages\index.html
+SDK\Messages\KM_CLOSE.html
+SDK\Messages\KM_DRAW.html
+SDK\Messages\KM_GETBITMAP.html
+SDK\Messages\KM_GETFILEDESC.html
+SDK\Messages\KM_GETFILTER.html
+SDK\Messages\KM_GETINFOS.html
+SDK\Messages\KM_GETNAME.html
+SDK\Messages\KM_GETREADSUPPORT.html
+SDK\Messages\KM_GETSECONDARYTYPE.html
+SDK\Messages\KM_GETTYPE.html
+SDK\Messages\KM_GETWRITESUPPORT.html
+SDK\Messages\KM_ISCREATING.html
+SDK\Messages\KM_ISPROPERTY.html
+SDK\Messages\KM_KEYDOWN.html
+SDK\Messages\KM_KEYUP.html
+SDK\Messages\KM_LMOUSEDOWN.html
+SDK\Messages\KM_LMOUSEUP.html
+SDK\Messages\KM_MOUSEMOVE.html
+SDK\Messages\KM_MOVEWINDOW.html
+SDK\Messages\KM_OPEN.html
+SDK\Messages\KM_READFILE.html
+SDK\Messages\KM_RMOUSEDOWN.html
+SDK\Messages\KM_RMOUSEUP.html
+SDK\Messages\KM_SAVEDESK.html
+SDK\Messages\KM_SETDESK.html
+SDK\Messages\KM_SETOBJECT.html
+SDK\Messages\KM_SETVIEW.html
+SDK\Messages\KM_WRITEFILE.html
+SDK\Messages\menu.html
+SDK\Messages\Menuav.html
+SDK\Messages\Messages.html
+SDK\metadata\index.html
+SDK\metadata\Menuav.html
+SDK\metadata\metadata.html

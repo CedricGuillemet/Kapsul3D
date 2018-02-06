@@ -1,0 +1,909 @@
+# Microsoft Developer Studio Generated Dependency File, included by ImageLib.mak
+
+".\Sources Jpeg\jcapimin.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcapistd.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jccoefct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jccolor.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcdctmgr.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jchuff.c" : \
+	".\sources jpeg\jchuff.h"\
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcinit.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcmainct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcmarker.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcmaster.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcomapi.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcparam.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcphuff.c" : \
+	".\sources jpeg\jchuff.h"\
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcprepct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jcsample.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jctrans.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdapimin.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdapistd.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdatadst.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdatasrc.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdcoefct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdcolor.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jddctmgr.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdhuff.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdhuff.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdinput.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdmainct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdmarker.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdmaster.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdmerge.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdphuff.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdhuff.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdpostct.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdsample.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jdtrans.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jerror.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	".\sources jpeg\jversion.h"\
+	
+
+".\Sources Jpeg\jfdctflt.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jfdctfst.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jfdctint.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jidctflt.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jidctfst.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jidctint.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jidctred.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jdct.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jmemansi.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmemsys.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jmemmgr.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmemsys.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jquant1.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jquant2.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Jpeg\jutils.c" : \
+	".\sources jpeg\jconfig.h"\
+	".\sources jpeg\jerror.h"\
+	".\sources jpeg\jinclude.h"\
+	".\sources jpeg\jmorecfg.h"\
+	".\sources jpeg\jpegint.h"\
+	".\Sources Jpeg\jpeglib.h"\
+	
+
+".\Sources Tiff\fax3sm.c" : \
+	".\sources tiff\tif_fax3.h"\
+	".\sources tiff\tiff.h"\
+	
+
+".\Sources Tiff\tif_aux.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_close.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_codec.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_compress.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_dir.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_dirinfo.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_dirread.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_dirwrite.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_dumpmode.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_error.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_fax3.c" : \
+	".\sources tiff\t4.h"\
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tif_fax3.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_file.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_flush.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_getimage.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_jpeg.c" : \
+	".\sources tiff\jconfig.h"\
+	".\sources tiff\jerror.h"\
+	".\sources tiff\jmorecfg.h"\
+	".\sources tiff\jpeglib.h"\
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_lzw.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tif_predict.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_msrc.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\Sources Tiff\tif_msrc.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_next.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_open.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_packbits.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_predict.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tif_predict.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_read.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_strip.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_swab.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_thunder.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_tile.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_warning.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Tiff\tif_write.c" : \
+	".\sources tiff\tif_dir.h"\
+	".\sources tiff\tiff.h"\
+	".\sources tiff\tiffcomp.h"\
+	".\sources tiff\tiffconf.h"\
+	".\sources tiff\tiffio.h"\
+	".\Sources Tiff\tiffiop.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	
+
+".\Sources Png\png.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngerror.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngget.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngmem.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngread.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngrio.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngrtran.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngrutil.c" : \
+	".\Sources Png\png.h"\
+	".\sources png\pngasmrd.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngset.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngtrans.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngwio.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngwrite.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngwtran.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Png\pngwutil.c" : \
+	".\Sources Png\png.h"\
+	".\Sources Png\pngconf.h"\
+	{$(INCLUDE)}"zconf.h"\
+	{$(INCLUDE)}"zlib.h"\
+	
+
+".\Sources Zlib\adler32.c" : \
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	
+
+".\Sources Zlib\crc32.c" : \
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	
+
+".\Sources Zlib\deflate.c" : \
+	".\Sources Zlib\deflate.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\infblock.c" : \
+	".\Sources Zlib\infblock.h"\
+	".\Sources Zlib\infcodes.h"\
+	".\Sources Zlib\inftrees.h"\
+	".\Sources Zlib\infutil.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\infcodes.c" : \
+	".\Sources Zlib\infblock.h"\
+	".\Sources Zlib\infcodes.h"\
+	".\Sources Zlib\inffast.h"\
+	".\Sources Zlib\inftrees.h"\
+	".\Sources Zlib\infutil.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\inffast.c" : \
+	".\Sources Zlib\infblock.h"\
+	".\Sources Zlib\infcodes.h"\
+	".\Sources Zlib\inffast.h"\
+	".\Sources Zlib\inftrees.h"\
+	".\Sources Zlib\infutil.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\inflate.c" : \
+	".\Sources Zlib\infblock.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\inftrees.c" : \
+	".\Sources Zlib\inffixed.h"\
+	".\Sources Zlib\inftrees.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\infutil.c" : \
+	".\Sources Zlib\infblock.h"\
+	".\Sources Zlib\infcodes.h"\
+	".\Sources Zlib\inftrees.h"\
+	".\Sources Zlib\infutil.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\trees.c" : \
+	".\Sources Zlib\deflate.h"\
+	".\Sources Zlib\trees.h"\
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	
+
+".\Sources Zlib\zutil.c" : \
+	".\Sources Zlib\zconf.h"\
+	".\Sources Zlib\zlib.h"\
+	".\Sources Zlib\zutil.h"\
+	

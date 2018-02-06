@@ -1,0 +1,154 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: KapsulSE - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Debug/KapsulSE.res" /d "_DEBUG" /d "_AFXDLL" "D:\Eden\KapsulCVS\src\KapsulSE\KapsulSE.rc"" 
+Creating temporary file "C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP350.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/KapsulSE.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Eden\KapsulCVS\src\KapsulSE\AboutDlg.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\Animate.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\AnimOutput.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\BackWorldCap.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\BCMenu.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\ChildFrm.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\ChooseMode.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\ChoosePrim.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\ChooseSel.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\CKProject.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\CoolDialogBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\CoolScroll.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\CSkyView.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\DeskDoc.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\FOToolBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KapsulDoc.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KapsulSE.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KapsulView.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KInstall.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KMainEdit.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KMaterialEditor.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KRenderIt.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KSelectRenderer.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KStatusBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\KViewEdit.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MainFrm.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MatBrowser.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MltiTree.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MyAnimateBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MyDeskBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MyStatusBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\MyToolBar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\NbFrames.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\NewFolder.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\NewProject.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\Options.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\OptionsEditing.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\OptionsIncPaths.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\OptionsMapPaths.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\OptionsPrefabPaths.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\OutputDump.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\PathDropList.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\ProjectTree.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\scbarcf.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\scbarg.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\SelectCam.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\SelTypeDoc.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\sizecbar.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\SkyBoxEd.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\SortStringArray.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\Splash.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\SplitPath.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\TipDlg.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\TrCtrlVw.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\TScrollDlg.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\TVTestDlg.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\TweakUV.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\webbrowser2.cpp"
+"D:\Eden\KapsulCVS\src\KapsulSE\WinAppEx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP350.tmp" 
+Creating temporary file "C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP351.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/KapsulSE.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\Eden\KapsulCVS\src\KapsulSE\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP351.tmp" 
+Creating temporary file "C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP352.tmp" with contents
+[
+Kore.lib opengl32.lib glu32.lib Htmlhelp.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/KapsulSE.pdb" /debug /machine:I386 /out:"../workspace/KapsulSE.exe" /pdbtype:sept 
+.\Debug\AboutDlg.obj
+.\Debug\Animate.obj
+.\Debug\AnimOutput.obj
+.\Debug\BackWorldCap.obj
+.\Debug\BCMenu.obj
+.\Debug\ChildFrm.obj
+.\Debug\ChooseMode.obj
+.\Debug\ChoosePrim.obj
+.\Debug\ChooseSel.obj
+.\Debug\CKProject.obj
+.\Debug\CoolDialogBar.obj
+.\Debug\CoolScroll.obj
+.\Debug\CSkyView.obj
+.\Debug\DeskDoc.obj
+.\Debug\FOToolBar.obj
+.\Debug\KapsulDoc.obj
+.\Debug\KapsulSE.obj
+.\Debug\KapsulView.obj
+.\Debug\KInstall.obj
+.\Debug\KMainEdit.obj
+.\Debug\KMaterialEditor.obj
+.\Debug\KRenderIt.obj
+.\Debug\KSelectRenderer.obj
+.\Debug\KStatusBar.obj
+.\Debug\KViewEdit.obj
+.\Debug\MainFrm.obj
+.\Debug\MatBrowser.obj
+.\Debug\MltiTree.obj
+.\Debug\MyAnimateBar.obj
+.\Debug\MyDeskBar.obj
+.\Debug\MyStatusBar.obj
+.\Debug\MyToolBar.obj
+.\Debug\NbFrames.obj
+.\Debug\NewFolder.obj
+.\Debug\NewProject.obj
+.\Debug\Options.obj
+.\Debug\OptionsEditing.obj
+.\Debug\OptionsIncPaths.obj
+.\Debug\OptionsMapPaths.obj
+.\Debug\OptionsPrefabPaths.obj
+.\Debug\OutputDump.obj
+.\Debug\PathDropList.obj
+.\Debug\ProjectTree.obj
+.\Debug\scbarcf.obj
+.\Debug\scbarg.obj
+.\Debug\SelectCam.obj
+.\Debug\SelTypeDoc.obj
+.\Debug\sizecbar.obj
+.\Debug\SkyBoxEd.obj
+.\Debug\SortStringArray.obj
+.\Debug\Splash.obj
+.\Debug\SplitPath.obj
+.\Debug\StdAfx.obj
+.\Debug\TipDlg.obj
+.\Debug\TrCtrlVw.obj
+.\Debug\TScrollDlg.obj
+.\Debug\TVTestDlg.obj
+.\Debug\TweakUV.obj
+.\Debug\webbrowser2.obj
+.\Debug\WinAppEx.obj
+.\Debug\KapsulSE.res
+]
+Creating command line "link.exe @C:\DOCUME~1\Cedric\LOCALS~1\Temp\RSP352.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+cl.exe terminated at user request.
+
+</pre>
+</body>
+</html>

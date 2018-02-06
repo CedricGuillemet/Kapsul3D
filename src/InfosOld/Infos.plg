@@ -1,0 +1,50 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Infos - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x40c /fo"Release/InfosRes.res" /d "NDEBUG" /d "_AFXDLL" "D:\KapsulCVS\src\Infos\InfosRes.rc"" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A2.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../../inc/" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /FR"Release/" /Fp"Release/Infos.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\KapsulCVS\src\Infos\DumpInfos.cpp"
+"D:\KapsulCVS\src\Infos\ModInfos.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A2.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../../inc/" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_AFXEXT" /FR"Release/" /Fp"Release/Infos.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\KapsulCVS\src\Infos\stdafx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A3.tmp" 
+Creating temporary file "C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A4.tmp" with contents
+[
+opengl32.lib Kore.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/infos.pdb" /machine:I386 /out:"../../plugins/infos.dll" /implib:"Release/infos.lib" /libpath:"../../lib" 
+.\Release\DumpInfos.obj
+.\Release\ModInfos.obj
+.\Release\stdafx.obj
+.\Release\InfosRes.res
+]
+Creating command line "link.exe @C:\DOCUME~1\CEDRIC~1.KAP\LOCALS~1\Temp\RSP2A4.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+stdafx.cpp
+C:\DXSDK\INCLUDE\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+Compiling...
+DumpInfos.cpp
+ModInfos.cpp
+Generating Code...
+Linking...
+   Creating library Release/infos.lib and object Release/infos.exp
+
+
+
+<h3>Results</h3>
+infos.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

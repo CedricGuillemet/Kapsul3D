@@ -1,0 +1,598 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "../../../include/agl/MFC/resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FONTTYPE            BITMAP  DISCARDABLE     "res\\fonttype.bmp"
+IDB_BTN_EXPLORER        BITMAP  DISCARDABLE     "res\\btn_explorer.bmp"
+IDB_BUTTON_IMAGES       BITMAP  DISCARDABLE     "res\\button_images.bmp"
+IDB_BTN_ARROW           BITMAP  DISCARDABLE     "res\\btn_arro.bmp"
+IDB_TREE_CTRL_OPTIONS   BITMAP  DISCARDABLE     "res\\tree_opt.bmp"
+IDB_LIGHTBULB           BITMAP  DISCARDABLE     "res\\litebulb.bmp"
+IDB_LIGHTBULB2          BITMAP  DISCARDABLE     "res\\litbulb2.bmp"
+IDR_MARGIN_ICONS        BITMAP  DISCARDABLE     "res\\mg_icons.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\aglMFC.rc2""       // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""             // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Alias25\0"
+            VALUE "FileDescription", "aglMFC DLL\0"
+            VALUE "FileVersion", "1, 0, 0, 0\0"
+            VALUE "InternalName", "aglMFC\0"
+            VALUE "LegalCopyright", "Copyright © 2001 Alias25, All Rights Reserved\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "aglMFC.dll\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "aglMFC Dynamic Link Library\0"
+            VALUE "ProductVersion", "1, 0, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_VSPLITBAR           CURSOR  DISCARDABLE     "res\\vsplitba.cur"
+IDC_HSPLITBAR           CURSOR  DISCARDABLE     "res\\hsplitba.cur"
+IDC_HLINK               CURSOR  DISCARDABLE     "res\\hlink.cur"
+IDC_HLINK_BAD           CURSOR  DISCARDABLE     "res\\hlinkbad.cur"
+IDR_MARGIN_CURSOR       CURSOR  DISCARDABLE     "res\\mg_cur.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_HLINK_URL           ICON    DISCARDABLE     "res\\hlnkurl.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_POPUP_HLINK MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Open",                       ID_POPUP_OPEN
+        MENUITEM "&Edit",                       ID_POPUP_EDIT
+        MENUITEM "&Print",                      ID_POPUP_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "Copy Shor&tcut",              ID_POPUP_COPYSHORTCUT
+        MENUITEM "Add to &Favorites",           ID_POPUP_ADDTOFAVORITES
+        MENUITEM "Add to &Desktop",             ID_POPUP_ADDTODESKTOP
+        MENUITEM SEPARATOR
+        MENUITEM "P&roperties",                 ID_POPUP_PROPERTIES
+    END
+END
+
+IDR_POPUP_HEX_EDIT MENU DISCARDABLE 
+BEGIN
+    POPUP "_POPUP_"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+    END
+END
+
+IDR_INT_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "Setup"
+    BEGIN
+        MENUITEM "&Intelligent Mode",           ID_INTMODE
+        MENUITEM "&Menu Setup",                 32771
+    END
+    POPUP "Only ID Defined"
+    BEGIN
+        MENUITEM "&Shows full Menues",          ID_SHOWFULL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_DEFAULT_ACCEL ACCELERATORS DISCARDABLE 
+BEGIN
+    "0",            ID_EDIT_TOGGLE_BOOKMARK0, VIRTKEY, CONTROL, NOINVERT
+    "0",            ID_EDIT_GO_BOOKMARK0,   VIRTKEY, ALT, NOINVERT
+    27,             ID_EDIT_MATCHBRACE,     ASCII,  NOINVERT
+    29,             ID_EDIT_MATCHBRACE,     ASCII,  NOINVERT
+    "1",            ID_EDIT_TOGGLE_BOOKMARK1, VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_EDIT_GO_BOOKMARK1,   VIRTKEY, ALT, NOINVERT
+    "2",            ID_EDIT_TOGGLE_BOOKMARK2, VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_EDIT_GO_BOOKMARK2,   VIRTKEY, ALT, NOINVERT
+    "3",            ID_EDIT_TOGGLE_BOOKMARK3, VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_EDIT_GO_BOOKMARK3,   VIRTKEY, ALT, NOINVERT
+    "4",            ID_EDIT_TOGGLE_BOOKMARK4, VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_EDIT_GO_BOOKMARK4,   VIRTKEY, ALT, NOINVERT
+    "5",            ID_EDIT_TOGGLE_BOOKMARK5, VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_EDIT_GO_BOOKMARK5,   VIRTKEY, ALT, NOINVERT
+    "6",            ID_EDIT_TOGGLE_BOOKMARK6, VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_EDIT_GO_BOOKMARK6,   VIRTKEY, ALT, NOINVERT
+    "7",            ID_EDIT_TOGGLE_BOOKMARK7, VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_EDIT_GO_BOOKMARK7,   VIRTKEY, ALT, NOINVERT
+    "8",            ID_EDIT_TOGGLE_BOOKMARK8, VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_EDIT_GO_BOOKMARK8,   VIRTKEY, ALT, NOINVERT
+    "9",            ID_EDIT_TOGGLE_BOOKMARK9, VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_EDIT_GO_BOOKMARK9,   VIRTKEY, ALT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_EDIT_FIND_INCREMENTAL_FORWARD, VIRTKEY, CONTROL, 
+                                                    NOINVERT
+    "E",            ID_EDIT_FIND_INCREMENTAL_BACKWARD, VIRTKEY, SHIFT, 
+                                                    CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTO,           VIRTKEY, CONTROL, NOINVERT
+    "G",            ID_EDIT_GOTO_LAST_CHANGE, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "J",            ID_EDIT_CAPITALIZE,     VIRTKEY, CONTROL, NOINVERT
+    "K",            ID_EDIT_SWAPCASE,       VIRTKEY, CONTROL, NOINVERT
+    "L",            ID_EDIT_LOWERCASE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_EDIT_UPPERCASE,      VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_BACK,    VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_WORD_BACK, VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_BACK,        ID_EDIT_REDO,           VIRTKEY, SHIFT, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE_WORD,    VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_EDIT_LINE_DOWN,      VIRTKEY, NOINVERT
+    VK_DOWN,        ID_EDIT_SCROLL_DOWN,    VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_EDIT_EXT_LINE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_LINE_END,       VIRTKEY, NOINVERT
+    VK_END,         ID_EDIT_TEXT_END,       VIRTKEY, CONTROL, NOINVERT
+    VK_END,         ID_EDIT_EXT_LINE_END,   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_EXT_TEXT_END,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_FIND_PREVIOUS,  VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_HOME,           VIRTKEY, NOINVERT
+    VK_HOME,        ID_EDIT_TEXT_BEGIN,     VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_HOME,       VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_TEXT_BEGIN, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_INSERT,      ID_EDIT_UNTAB,          VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_CHAR_LEFT,      VIRTKEY, NOINVERT
+    VK_LEFT,        ID_EDIT_WORD_LEFT,      VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_CHAR_LEFT,  VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_WORD_LEFT,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_NEXT,        ID_EDIT_PAGE_DOWN,      VIRTKEY, NOINVERT
+    VK_NEXT,        ID_EDIT_EXT_PAGE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_PRIOR,       ID_EDIT_PAGE_UP,        VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_EDIT_EXT_PAGE_UP,    VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_EDIT_AUTOEXPAND,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_CHAR_RIGHT,     VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_EDIT_WORD_RIGHT,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_CHAR_RIGHT, VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_WORD_RIGHT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_SPACE,       ID_EDIT_AUTOCOMPLETE,   VIRTKEY, CONTROL, NOINVERT
+    VK_TAB,         ID_EDIT_TAB,            VIRTKEY, NOINVERT
+    VK_TAB,         ID_EDIT_UNTAB,          VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_EDIT_LINE_UP,        VIRTKEY, NOINVERT
+    VK_UP,          ID_EDIT_SCROLL_UP,      VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          ID_EDIT_EXT_LINE_UP,    VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_SENTENCE,       VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EDIT_REPLACE DIALOG FIXED IMPURE  36, 44, 237, 90
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Replace"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,5,5,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_TEXT,55,5,115,30,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Re&place with:",IDC_STATIC,5,20,45,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_REPLACE_WITH,55,20,115,30,CBS_DROPDOWN | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,40,90,10
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,55,90,10
+    CONTROL         "R&egular Expression",IDC_EDIT_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,70,90,10
+    GROUPBOX        "Replace in",IDC_STATIC,100,40,70,45,WS_GROUP
+    CONTROL         "&Selection",IDC_EDIT_SCOPE_SELECTION,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,105,55,60,10
+    CONTROL         "Wh&ole file",IDC_EDIT_SCOPE_WHOLE_FILE,"Button",
+                    BS_AUTORADIOBUTTON,105,70,60,10
+    DEFPUSHBUTTON   "&Find Next",IDC_EDIT_SKIP,180,5,50,15,WS_GROUP
+    PUSHBUTTON      "&Replace",IDC_EDIT_REPLACE,180,25,50,15
+    PUSHBUTTON      "Replace &All",IDC_EDIT_REPLACE_ALL,180,45,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,180,65,50,15
+END
+
+IDD_EDIT_FIND DIALOG FIXED IMPURE  30, 73, 237, 76
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Find"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Fi&nd what:",IDC_STATIC,5,5,42,10,SS_CENTERIMAGE
+    COMBOBOX        IDC_EDIT_TEXT,55,5,115,30,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Match &whole word only",IDC_EDIT_WHOLE_WORD,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,5,25,90,10
+    CONTROL         "Match &case",IDC_EDIT_MATCH_CASE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,40,90,10
+    CONTROL         "R&egular Expression",IDC_EDIT_REGEXP,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,5,55,90,10
+    GROUPBOX        "Direction",IDC_STATIC,100,25,70,45,WS_GROUP
+    CONTROL         "&Up",IDC_EDIT_DIRECTION_UP,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,111,40,54,10
+    CONTROL         "&Down",IDC_EDIT_DIRECTION_DOWN,"Button",
+                    BS_AUTORADIOBUTTON,110,55,55,10
+    DEFPUSHBUTTON   "&Find Next",IDOK,180,5,50,15,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,180,25,50,15
+END
+
+IDD_EDIT_GOTO DIALOG FIXED IMPURE  30, 73, 167, 47
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Go to line"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Line number:",-1,5,5,42,10,SS_CENTERIMAGE
+    EDITTEXT        IDC_NUMBER,55,5,45,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "&OK",IDOK,110,5,50,15,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,110,25,50,15
+END
+
+IDD_FONTPAGE DIALOG DISCARDABLE  13, 54, 232, 226
+STYLE WS_CHILD | WS_CAPTION | WS_SYSMENU
+CAPTION "Font"
+FONT 8, "Helv"
+BEGIN
+    LTEXT           "&Font:",stc1,5,5,175,10
+    COMBOBOX        IDC_FONT,5,15,175,85,CBS_SIMPLE | CBS_OWNERDRAWFIXED | 
+                    CBS_AUTOHSCROLL | CBS_SORT | CBS_HASSTRINGS | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "&Size:",stc3,190,5,35,10
+    COMBOBOX        IDC_FONTSIZE,190,15,35,85,CBS_SIMPLE | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Sc&ript:",stc2,5,95,60,10
+    COMBOBOX        IDC_SCRIPT,65,95,125,54,CBS_DROPDOWNLIST | 
+                    CBS_DISABLENOSCROLL | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Sample",grp2,5,150,220,70,WS_GROUP
+    CTEXT           "AaBbYyZz",IDC_SAMPLE,10,160,210,55,SS_NOPREFIX | 
+                    SS_CENTERIMAGE
+    COMBOBOX        IDC_ENCODING,65,115,125,160,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Default &encoding:",IDC_STATIC,5,115,60,10
+    CONTROL         "Per&form encoding conversion automatically",IDC_RECODE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,65,135,160,10
+END
+
+IDD_NAME DIALOGEX 0, 0, 179, 44
+STYLE DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Name"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    EDITTEXT        IDC_EDIT_NAME,7,7,165,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,122,23,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,68,23,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_FONTPAGE DLGINIT
+BEGIN
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0038, 
+    IDC_FONTSIZE, 0x403, 2, 0
+0x0039, 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3031, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3131, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3231, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3431, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3631, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3831, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3032, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3232, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3432, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3632, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3832, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3633, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3834, "\000" 
+    IDC_FONTSIZE, 0x403, 3, 0
+0x3237, "\000" 
+    IDC_SCRIPT, 0x403, 8, 0
+0x6557, 0x7473, 0x7265, 0x006e, 
+    IDC_SCRIPT, 0x403, 7, 0
+0x6548, 0x7262, 0x7765, "\000" 
+    IDC_SCRIPT, 0x403, 7, 0
+0x7241, 0x6261, 0x6369, "\000" 
+    IDC_SCRIPT, 0x403, 6, 0
+0x7247, 0x6565, 0x006b, 
+    IDC_SCRIPT, 0x403, 8, 0
+0x7554, 0x6b72, 0x7369, 0x0068, 
+    IDC_SCRIPT, 0x403, 7, 0
+0x6142, 0x746c, 0x6369, "\000" 
+    IDC_SCRIPT, 0x403, 17, 0
+0x6543, 0x746e, 0x6172, 0x206c, 0x7545, 0x6f72, 0x6570, 0x6e61, "\000" 
+    IDC_SCRIPT, 0x403, 9, 0
+0x7943, 0x6972, 0x6c6c, 0x6369, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_NAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 172
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HIDE                "Hide docked window"
+    IDS_EXPAND              "Expand docked window"
+    IDS_CONTRACT            "Contract docked window"
+    IDC_TABCTRLBAR          "Tabbed Window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_TREEOPTIONS_OK      "OK"
+    IDS_TREEOPTIONS_TRUE    "True"
+    IDS_TREEOPTIONS_FALSE   "False"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDIT_TEXT_NOT_FOUND "Cannot find string""%s"""
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_MENU_UNDO_FORMAT    "&Undo %s\tCtrl+Z"
+    IDS_MENU_REDO_FORMAT    "&Redo %s\tCtrl+Y"
+    IDS_MENU_UNDO_DEFAULT   "&Undo\tCtrl+Z"
+    IDS_MENU_REDO_DEFAULT   "&Redo\tCtrl+Y"
+    IDS_EDITOP_UNKNOWN      "Unknown"
+    IDS_EDITOP_PASTE        "Paste"
+    IDS_EDITOP_DELSELECTION "Delete Selection"
+    IDS_EDITOP_CUT          "Cut"
+    IDS_EDITOP_DELETE       "Delete"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_EDITOP_TYPING       "Typing"
+    IDS_EDITOP_BACKSPACE    "Backspace"
+    IDS_EDITOP_INDENT       "Indent"
+    IDS_EDITOP_DRAGDROP     "Drag And Drop"
+    IDS_EDITOP_REPLACE      "Replace"
+    IDS_EDITOP_AUTOINDENT   "Auto Indent"
+    IDS_EDITOP_AUTOCOMPLETE "Auto Complete"
+    IDS_EDITOP_AUTOEXPAND   "Auto Expand"
+    IDS_EDITOP_LOWERCASE    "Lower case"
+    IDS_EDITOP_UPPERCASE    "Upper case"
+    IDS_EDITOP_SWAPCASE     "Swap case"
+    IDS_EDITOP_CAPITALIZE   "Capitalize"
+    IDS_EDITOP_SENTENCIZE   "Sentencize"
+    IDS_EDITOP_RECODE       "Character encoding change"
+    IDS_EDITOP_SPELL        "Spellchecking"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_FIND_INCREMENTAL_FORWARD "Incremental search: %s"
+    IDS_FIND_INCREMENTAL_BACKWARD "Incremental search backward: %s"
+    IDS_FIND_INCREMENTAL_FAILED "Incremental search failed: %s"
+    ID_FILE_TREE            "File Tree"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_TIME       "99.99. 99:99:99\n"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_INDICATOR_READ  "Read"
+    ID_EDIT_INDICATOR_CRLF  "AUTO\n"
+    ID_EDIT_INDICATOR_POSITION "Ln 9999, Col 9999"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_SHOWFULL             "Shows full Menues"
+    ID_INTMODE              "Enable/Disable Intelligent Mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_MENU                "Displays Toolbar/Menu bar setup dialog"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\aglMFC.rc2"       // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"             // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

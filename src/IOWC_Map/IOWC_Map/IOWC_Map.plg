@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: IOmd2 - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\Dexter\IMPOST~1\Temp\RSP1F3.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /I "../../inc/" /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "_WINDLL" /D "_AFXDLL" /FR"Release/" /Fp"Release/IOWC_Map.pch" /YX"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"D:\BackUp\esque\Kapsul\src\IOWC_Map\IOWC_Map.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\Dexter\IMPOST~1\Temp\RSP1F3.tmp" 
+Creating temporary file "C:\DOCUME~1\Dexter\IMPOST~1\Temp\RSP1F4.tmp" with contents
+[
+Kore.lib opengl32.lib /nologo /subsystem:windows /dll /incremental:no /pdb:"Release/iowc_map.pdb" /machine:I386 /out:"../../plugins/iowc_map.dll" /implib:"Release/iowc_map.lib" /libpath:"..\../lib" 
+.\Release\BrushConverter.obj
+.\Release\fmath.obj
+.\Release\IOWC_Map.obj
+.\Release\stdafx.obj
+]
+Creating command line "link.exe @C:\DOCUME~1\Dexter\IMPOST~1\Temp\RSP1F4.tmp"
+<h3>Output Window</h3>
+Compiling...
+IOWC_Map.cpp
+Linking...
+   Creating library Release/iowc_map.lib and object Release/iowc_map.exp
+Creating command line "bscmake.exe /nologo /o"Release/IOWC_Map.bsc"  .\Release\BrushConverter.sbr .\Release\fmath.sbr .\Release\IOWC_Map.sbr .\Release\stdafx.sbr"
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+iowc_map.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
